@@ -762,3 +762,10 @@ span.card-archive-list-count {
     background-color: var(--lyx-black-acrylic2)!important;
 }
 /* Page页面模糊背景 End*/
+
+/* 加载动画 Start*/
+.loading-img {
+  background: url(https://bu.dusays.com/2022/10/29/635d11ccac58c.png) no-repeat center center;
+  background-size: cover;
+}
+/* 加载动画 End*/
