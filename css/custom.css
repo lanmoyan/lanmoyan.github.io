@@ -769,3 +769,161 @@ span.card-archive-list-count {
   background-size: cover;
 }
 /* 加载动画 End*/
+
+/* Twikoo评论系统样式 Start*/
+/* 设置文字内容 :nth-child(1)的作用是选择第几个 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(1):before {
+  content: '输入QQ号会自动获取昵称和头像🐧';
+}
+
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(2):before {
+  content: '收到回复将会发送到您的邮箱📧';
+}
+
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(3):before {
+  content: '可以通过昵称访问您的网站🔗';
+}
+
+/* 当用户点击输入框时显示 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::before,
+.el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::after {
+  display: block;
+}
+
+/* 主内容区 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend::before {
+  /* 先隐藏起来 */
+  display: none;
+  /* 绝对定位 */
+  position: absolute;
+  /* 向上移动60像素 */
+  top: -60px;
+  /* 文字强制不换行，防止left:50%导致的文字换行 */
+  white-space: nowrap;
+  /* 圆角 */
+  border-radius: 10px;
+  /* 距离左边50% */
+  left: 50%;
+  /* 然后再向左边挪动自身的一半，即可实现居中 */
+  transform: translate(-50%);
+  /* 填充 */
+  padding: 14px 18px;
+  background: #444;
+  color: #fff;
+}
+
+/* 小角标 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend::after {
+  display: none;
+  content: '';
+  position: absolute;
+  /* 内容大小（宽高）为0且边框大小不为0的情况下，每一条边（4个边）都是一个三角形，组成一个正方形。
+  我们先将所有边框透明，再给其中的一条边添加颜色就可以实现小三角图标 */
+  border: 12px solid transparent;
+  border-top-color: #444;
+  left: 50%;
+  transform: translate(-50%, -48px);
+}
+/* Twikoo评论系统样式 End*/
+
+/* 文章目录 Start*/
+#aside-content #card-toc .toc-content {
+  margin: 10px -18px;
+}
+ #aside-content #card-toc .toc-content .toc-link.active {
+  line-height: 1.2;
+  border-radius: 12px;
+  border-left-color: var(--heo-hovertext);
+  background-color: var(--heo-card-bg);
+  color: var(--heo-lighttext);
+  font-weight: bold;
+  font-size: 20px;
+}
+[data-theme=dark].toc .toc-item.active .toc-link .toc-text {
+  color: var(--heo-white);
+}
+#aside-content #card-toc .toc-content .toc-item.active .toc-link {
+  opacity: 1;
+  border-radius: 8px;
+}
+#aside-content #card-toc .toc-content .toc-link {
+  line-height: 1.2;
+  padding: 8px;
+  border-left: 0px solid transparent;
+  border-radius: 12px;
+  color: var(--heo-secondtext);
+  cursor: default;
+}
+#aside-content #card-toc .toc-content .toc-link:not(.active) span {
+  opacity: 0.6;
+  cursor: pointer;
+  filter: blur(1px);
+  transition: 0.3s;
+}
+#aside-content #card-toc:hover .toc-content .toc-link:not(.active) span {
+  filter: blur(0px);
+  opacity: 1;
+}
+#aside-content #card-toc .toc-content .toc-link:not(.active) span:hover {
+  color: var(--heo-lighttext);
+}
+/* 文章目录 End*/
+
+/*评论背景 Start*/
+#twikoo .tk-content {
+  background: rgb(213 213 213 / 60%);
+  padding: 10px 15px;
+  border-radius: 7px;
+}
+/*评论背景 End*/
+
+/* 侧边栏个人信息卡片 Start*/
+#aside-content>.card-widget.card-info {
+  background: #fff url(https://bu.dusays.com/2022/12/01/6388c220aa2f6.png) top 33% center no-repeat;
+  position: relative;
+}
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 黑夜模式适配 */
+[data-theme="dark"] #aside-content > .card-widget.card-info {
+  background: #191919ee;
+}
+
+/* 个人信息Follow me按钮 */
+#aside-content > .card-widget.card-info > #card-info-btn {
+  background-color: #3b70fc;
+  border-radius: 8px;
+}
+/* 侧边栏个人信息卡片 End*/
