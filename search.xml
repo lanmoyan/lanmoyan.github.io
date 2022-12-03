@@ -178,33 +178,22 @@
     
     
     <entry>
+      <title>便携小空调 - 为你的夏日带去清凉!</title>
+      <link href="/air-conditioner/index.html"/>
+      <url>/air-conditioner/index.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>终于为博客安装上了便携小空调</p></blockquote><style>.copyright-box a {  border-bottom: none !important;  padding: 0 !important;}</style><p><div id="air-conditioner-vue"></div></p><script defer data-pjax src="/js/AirConditioner.js"></script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>网站监控 - 不错不错，没有404</title>
       <link href="/WebsiteStatus/index.html"/>
       <url>/WebsiteStatus/index.html</url>
       
         <content type="html"><![CDATA[<iframe src="https://status.asever.top/" width="100%" frameborder="0" scrolling="auto" height="2500px"></iframe>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>cc</title>
-      <link href="/cc/index.html"/>
-      <url>/cc/index.html</url>
-      
-        <content type="html"><![CDATA[<p>为了保持文章质量，并保持互联网的开放共享精神，保持页面流量的稳定，综合考虑下本站的所有原创文章均采用cc协议中比较严格的署名-非商业性使用-禁止演绎 4.0 国际)标准。这篇文章主要想能够更加清楚明白的介绍本站的协议标准和要求。方便您合理的使用本站的文章。</p><p>本站无广告嵌入和商业行为。违反协议的行为不仅会损害原作者的创作热情，而且会影响整个版权环境。强烈呼吁您能够在转载时遵守协议。遵守协议的行为几乎不会对您的目标产生负面影响，鼓励创作环境是每个创作者的期望。</p><h2 id="博客的分类介绍">博客的分类介绍</h2><p><kbd>经验分享</kbd>包含原创内容，原创内容的非商用转载必须为完整转载且标注出处的带有超链接功能的完整url链接（需能点击）或访问原文之类字样的超链接。</p><p><kbd>转载内容</kbd>为转载内容，均标注了出处。建议使用原链接打开，尊重原作者。所有转载内容尽可能为完整转载（如果有部分内容有问题可能会由部分删减和补充）并进行样式调整以适合本博客。如果转载该部分内容需要联系原作者。</p><h2 id="你可以做什么">你可以做什么？</h2><p>只要您遵守本页的许可，您可以自由地共享文章的内容 — 在任何媒介以任何形式复制、发行本作品。并且无需通知作者。</p><h2 id="你需要遵守什么样的许可">你需要遵守什么样的许可？</h2><h3 id="署名">署名</h3><p>您必须标注内容的来源，您需要在文章开头部分（或者明显位置）标注原文章链接（建议使用超链接提升阅读体验）。</p><h3 id="禁止商用">禁止商用</h3><p>本站内容免费向互联网所有用户提供，分享本站文章时禁止商业性使用、禁止在转载页面中插入广告（例如谷歌广告、百度广告）、禁止阅读的拦截行为（例如关注公众号、下载App后观看文章）。</p><h3 id="禁止演绎">禁止演绎</h3><ul><li>分享全部内容（无修改）</li></ul><p>您需要在文章开头部分（或者明显位置）标注原文章链接（建议使用超链接）</p><ul><li>分享部分截取内容或者衍生创作<br>目前本站全部原创文章的衍生品禁止公开分享和分发。如有更好的修改建议，可以在对应文章下留言。如有衍生创作需求，可以在评论中联系。</li></ul><h3 id="什么内容会被版权保护">什么内容会被版权保护</h3><p>包括但不限于：</p><ul><li>文章封面图片</li><li>文章标题和正文</li><li>站点图片素材（不含主题自带素材）</li></ul><h3 id="例外情况">例外情况</h3><p>本着友好互相进步的原则，被本站友链收录的博客允许博客文章内容的衍生品的分享和分发，但仍需标注出处。</p><p>本着互联网开放精神，您可以在博客文章下方留言要求授权博文的衍生品的分享和分发，标注您的网站地址。</p><p>网站源代码协议<br>网站源代码（仅包含<kbd>css</kbd>、<kbd>js</kbd>）的代码部分</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -222,17 +211,6 @@
     
     
     <entry>
-      <title>便携小空调 - 为你的夏日带去清凉!</title>
-      <link href="/air-conditioner/index.html"/>
-      <url>/air-conditioner/index.html</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>终于为博客安装上了便携小空调</p></blockquote><style>.copyright-box a {  border-bottom: none !important;  padding: 0 !important;}</style><p><div id="air-conditioner-vue"></div></p><script defer data-pjax src="/js/AirConditioner.js"></script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>comment</title>
       <link href="/comment/index.html"/>
       <url>/comment/index.html</url>
@@ -244,11 +222,22 @@
     
     
     <entry>
-      <title>cookies</title>
-      <link href="/cookies/index.html"/>
-      <url>/cookies/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
-        <content type="html"><![CDATA[<p>我使用Cookies来保持我的网站和我开发的软件的可靠性，安全性和个性化。当您接受Cookies时，这有助于通过我识别您的身份、记住您的偏好、或提供个性化用户体验来帮助我改善网站。</p><p>本政策应与我的 <a href="https://asever.top/privacy/">隐私政策</a> 一起阅读，该隐私政策解释了我如何使用个人信息。</p><p>如果您对我使用您的个人信息或Cookies的方式有任何疑问，请通过 <a href="mailto:1227124782@qq.com">邮件</a> 与我联系。</p><p>如果您想管理您的Cookies，请按照下面“如何管理Cookies”部分中的说明进行操作。</p><h2 id="什么是cookies">什么是Cookies？</h2><p>Cookies是一种小型文本文件，当您访问网站时，网站可能会将这些文件放在您的计算机或设备上。Cookies会帮助网站或其他网站在您下次访问时识别您的设备。网站信标、像素或其他类似文件也可以做同样的事情。我在此政策中使用术语“Cookies”来指代以这种方式收集信息的所有文件。</p><p>Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色模式还是浅色模式，分析我网站的效果。</p><p>大多数网站使用Cookies来收集和保留有关其访问者的个人信息。大多数Cookies收集一般信息，例如访问者如何到达和使用我的网站，他们使用的设备，他们的互联网协议地址（IP地址），他们正在查看的页面及其大致位置（例如，我将能够认识到您正在从北京访问我的网站）。</p><h2 id="cookies的目的">Cookies的目的</h2><p>Cookies分为以下类别:</p><ul><li>授权</li><li>安全措施</li><li>偏好、功能和服务</li><li>个性化广告</li><li>网站性能、分析和研究</li><li>我的网站上的第三方Cookies</li></ul><p>我还在我的网站上使用属于上述类别的第三方Cookies，用于以下目的：</p><ul><li>帮助我监控网站上的流量；</li><li>识别欺诈或非人为性流量；</li><li>协助市场调研；</li><li>改善网站功能；</li><li>监督我的版权协议和隐私政策的遵守情况。</li></ul><div class="table-container"><table><thead><tr><th>第三方服务商</th><th>用途</th></tr></thead><tbody><tr><td>baidu.com</td><td>用于统计站内访问情况，进行针对性优化</td></tr><tr><td>ibruce.info</td><td>busuanzi统计，用于区分访问pv数量和uv数量，在文章处展示人气</td></tr></tbody></table></div><h2 id="如何管理cookies">如何管理Cookies？</h2><p>您可以选择在Internet浏览器中启用或禁用Cookie。大多数互联网浏览器还允许您选择是要禁用所有Cookie还是仅禁用第三方Cookie。默认情况下，大多数互联网浏览器都接受Cookie，但这可以更改。有关详细信息，请参阅Internet浏览器中的帮助菜单或设备随附的文档。</p><p>以下链接提供了有关如何在所有主流浏览器中控制Cookie的说明：</p><ul><li><a href="https://support.google.com/chrome/answer/95647?hl=en">Google Chrome</a></li><li><a href="https://support.microsoft.com/en-us/topic/description-of-cookies-ad01aa7e-66c9-8ab2-7898-6652c100999d">IE</a></li><li><a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac">Safari（桌面版）</a></li><li><a href="https://support.apple.com/en-us/HT201265">Safari（移动版）</a></li><li><a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer">火狐浏览器</a></li><li><a href="http://support.google.com/ics/nexus/bin/answer.py?hl=en&amp;answer=2425067">Android浏览器</a></li></ul><p>如您使用其他浏览器，请参阅浏览器制造商提供的文档。<br>有关Cookies以及如何管理Cookies的更多信息，请访问：</p><p><a href="https://zh.wikipedia.org/wiki/Cookie">wikipedia.org</a> 、 <a href="https://www.allaboutcookies.org/">allaboutCookies.org</a> 或 <a href="https://www.aboutcookies.org/">aboutCookies.org</a></p><p>更多信息<br>有关我数据处理的更多信息，请参阅我的 <a href="https://asever.top/privacy/">隐私政策</a>。如果您对此Cookie政策有任何疑问，请通过 <a href="mailto:1227124782@qq.com">邮件</a>或者<a href="https://asever.top/comments/">留言</a>与我联系。</p><p>对此Cookie政策的更改<br>我可能对此Cookie政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在我的主页或应用上明确指出该政策已更新。</p>]]></content>
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>cc</title>
+      <link href="/cc/index.html"/>
+      <url>/cc/index.html</url>
+      
+        <content type="html"><![CDATA[<p>为了保持文章质量，并保持互联网的开放共享精神，保持页面流量的稳定，综合考虑下本站的所有原创文章均采用cc协议中比较严格的署名-非商业性使用-禁止演绎 4.0 国际)标准。这篇文章主要想能够更加清楚明白的介绍本站的协议标准和要求。方便您合理的使用本站的文章。</p><p>本站无广告嵌入和商业行为。违反协议的行为不仅会损害原作者的创作热情，而且会影响整个版权环境。强烈呼吁您能够在转载时遵守协议。遵守协议的行为几乎不会对您的目标产生负面影响，鼓励创作环境是每个创作者的期望。</p><h2 id="博客的分类介绍">博客的分类介绍</h2><p><kbd>经验分享</kbd>包含原创内容，原创内容的非商用转载必须为完整转载且标注出处的带有超链接功能的完整url链接（需能点击）或访问原文之类字样的超链接。</p><p><kbd>转载内容</kbd>为转载内容，均标注了出处。建议使用原链接打开，尊重原作者。所有转载内容尽可能为完整转载（如果有部分内容有问题可能会由部分删减和补充）并进行样式调整以适合本博客。如果转载该部分内容需要联系原作者。</p><h2 id="你可以做什么">你可以做什么？</h2><p>只要您遵守本页的许可，您可以自由地共享文章的内容 — 在任何媒介以任何形式复制、发行本作品。并且无需通知作者。</p><h2 id="你需要遵守什么样的许可">你需要遵守什么样的许可？</h2><h3 id="署名">署名</h3><p>您必须标注内容的来源，您需要在文章开头部分（或者明显位置）标注原文章链接（建议使用超链接提升阅读体验）。</p><h3 id="禁止商用">禁止商用</h3><p>本站内容免费向互联网所有用户提供，分享本站文章时禁止商业性使用、禁止在转载页面中插入广告（例如谷歌广告、百度广告）、禁止阅读的拦截行为（例如关注公众号、下载App后观看文章）。</p><h3 id="禁止演绎">禁止演绎</h3><ul><li>分享全部内容（无修改）</li></ul><p>您需要在文章开头部分（或者明显位置）标注原文章链接（建议使用超链接）</p><ul><li>分享部分截取内容或者衍生创作<br>目前本站全部原创文章的衍生品禁止公开分享和分发。如有更好的修改建议，可以在对应文章下留言。如有衍生创作需求，可以在评论中联系。</li></ul><h3 id="什么内容会被版权保护">什么内容会被版权保护</h3><p>包括但不限于：</p><ul><li>文章封面图片</li><li>文章标题和正文</li><li>站点图片素材（不含主题自带素材）</li></ul><h3 id="例外情况">例外情况</h3><p>本着友好互相进步的原则，被本站友链收录的博客允许博客文章内容的衍生品的分享和分发，但仍需标注出处。</p><p>本着互联网开放精神，您可以在博客文章下方留言要求授权博文的衍生品的分享和分发，标注您的网站地址。</p><p>网站源代码协议<br>网站源代码（仅包含<kbd>css</kbd>、<kbd>js</kbd>）的代码部分</p>]]></content>
       
     </entry>
     
@@ -266,9 +255,64 @@
     
     
     <entry>
+      <title></title>
+      <link href="/css/progress_bar.css"/>
+      <url>/css/progress_bar.css</url>
+      
+        <content type="html"><![CDATA[.pace {    -webkit-pointer-events: none;    pointer-events: none;    -webkit-user-select: none;    -moz-user-select: none;    user-select: none;    z-index: 2000;    position: fixed;    margin: auto;    top: 10px;    left: 0;    right: 0;    height: 8px;    border-radius: 8px;    width: 4rem;    background: #eaecf2;    border: 1px #e3e8f7;    overflow: hidden;  }    .pace-inactive .pace-progress {    opacity: 0;    transition: 0.3s ease-in;  }    .pace .pace-progress {    -webkit-box-sizing: border-box;    -moz-box-sizing: border-box;    -ms-box-sizing: border-box;    -o-box-sizing: border-box;    box-sizing: border-box;    -webkit-transform: translate3d(0, 0, 0);    -moz-transform: translate3d(0, 0, 0);    -ms-transform: translate3d(0, 0, 0);    -o-transform: translate3d(0, 0, 0);    transform: translate3d(0, 0, 0);    max-width: 200px;    position: absolute;    z-index: 2000;    display: block;    top: 0;    right: 100%;    height: 100%;    width: 100%;    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);    animation: gradient 1.5s ease infinite;    background-size: 200%;  }    .pace.pace-inactive {    opacity: 0;    transition: 0.3s;    top: -8px;  }  @keyframes gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>cookies</title>
+      <link href="/cookies/index.html"/>
+      <url>/cookies/index.html</url>
+      
+        <content type="html"><![CDATA[<p>我使用Cookies来保持我的网站和我开发的软件的可靠性，安全性和个性化。当您接受Cookies时，这有助于通过我识别您的身份、记住您的偏好、或提供个性化用户体验来帮助我改善网站。</p><p>本政策应与我的 <a href="https://asever.top/privacy/">隐私政策</a> 一起阅读，该隐私政策解释了我如何使用个人信息。</p><p>如果您对我使用您的个人信息或Cookies的方式有任何疑问，请通过 <a href="mailto:1227124782@qq.com">邮件</a> 与我联系。</p><p>如果您想管理您的Cookies，请按照下面“如何管理Cookies”部分中的说明进行操作。</p><h2 id="什么是cookies">什么是Cookies？</h2><p>Cookies是一种小型文本文件，当您访问网站时，网站可能会将这些文件放在您的计算机或设备上。Cookies会帮助网站或其他网站在您下次访问时识别您的设备。网站信标、像素或其他类似文件也可以做同样的事情。我在此政策中使用术语“Cookies”来指代以这种方式收集信息的所有文件。</p><p>Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色模式还是浅色模式，分析我网站的效果。</p><p>大多数网站使用Cookies来收集和保留有关其访问者的个人信息。大多数Cookies收集一般信息，例如访问者如何到达和使用我的网站，他们使用的设备，他们的互联网协议地址（IP地址），他们正在查看的页面及其大致位置（例如，我将能够认识到您正在从北京访问我的网站）。</p><h2 id="cookies的目的">Cookies的目的</h2><p>Cookies分为以下类别:</p><ul><li>授权</li><li>安全措施</li><li>偏好、功能和服务</li><li>个性化广告</li><li>网站性能、分析和研究</li><li>我的网站上的第三方Cookies</li></ul><p>我还在我的网站上使用属于上述类别的第三方Cookies，用于以下目的：</p><ul><li>帮助我监控网站上的流量；</li><li>识别欺诈或非人为性流量；</li><li>协助市场调研；</li><li>改善网站功能；</li><li>监督我的版权协议和隐私政策的遵守情况。</li></ul><div class="table-container"><table><thead><tr><th>第三方服务商</th><th>用途</th></tr></thead><tbody><tr><td>baidu.com</td><td>用于统计站内访问情况，进行针对性优化</td></tr><tr><td>ibruce.info</td><td>busuanzi统计，用于区分访问pv数量和uv数量，在文章处展示人气</td></tr></tbody></table></div><h2 id="如何管理cookies">如何管理Cookies？</h2><p>您可以选择在Internet浏览器中启用或禁用Cookie。大多数互联网浏览器还允许您选择是要禁用所有Cookie还是仅禁用第三方Cookie。默认情况下，大多数互联网浏览器都接受Cookie，但这可以更改。有关详细信息，请参阅Internet浏览器中的帮助菜单或设备随附的文档。</p><p>以下链接提供了有关如何在所有主流浏览器中控制Cookie的说明：</p><ul><li><a href="https://support.google.com/chrome/answer/95647?hl=en">Google Chrome</a></li><li><a href="https://support.microsoft.com/en-us/topic/description-of-cookies-ad01aa7e-66c9-8ab2-7898-6652c100999d">IE</a></li><li><a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac">Safari（桌面版）</a></li><li><a href="https://support.apple.com/en-us/HT201265">Safari（移动版）</a></li><li><a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer">火狐浏览器</a></li><li><a href="http://support.google.com/ics/nexus/bin/answer.py?hl=en&amp;answer=2425067">Android浏览器</a></li></ul><p>如您使用其他浏览器，请参阅浏览器制造商提供的文档。<br>有关Cookies以及如何管理Cookies的更多信息，请访问：</p><p><a href="https://zh.wikipedia.org/wiki/Cookie">wikipedia.org</a> 、 <a href="https://www.allaboutcookies.org/">allaboutCookies.org</a> 或 <a href="https://www.aboutcookies.org/">aboutCookies.org</a></p><p>更多信息<br>有关我数据处理的更多信息，请参阅我的 <a href="https://asever.top/privacy/">隐私政策</a>。如果您对此Cookie政策有任何疑问，请通过 <a href="mailto:1227124782@qq.com">邮件</a>或者<a href="https://asever.top/comments/">留言</a>与我联系。</p><p>对此Cookie政策的更改<br>我可能对此Cookie政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在我的主页或应用上明确指出该政策已更新。</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>即刻短文</title>
       <link href="/essay/index.html"/>
       <url>/essay/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>友情链接</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[<details class="folding-tag"><summary> ✅友链交换须知 ꉂ(ˊᗜˋ) </summary>              <div class="content">              <p>友链模板如下：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">陌颜小屋</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">https://blog.asever.top</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">https://bu.dusays.com/2022/10/29/635d11ccac58c.png</span></span><br><span class="line">  <span class="attr">descr:</span> <span class="string">愿永不忘初心！</span></span><br></pre></td></tr></table></figure><p>申请要求：<br>1.先友后链，申请友链请前先添加本博客，本站信息在上方模板<br>2.头像尽量https，且贵站能够正常访问<br>3.文章数量大于3篇，主要是为了确保您有动力和毅力维护博客<br>4.😀请一定要积极向上，且符合社会主义核心价值观<br>※ 为保证友链质量，申请的友链将经过筛选，通过审核将会收到我的回复邮件。原则上过去已添加友链不会轻易删除，如遇死链，将会暂时放入失联友链中；如遇严重违反上述申请条件的博客，将会被直接移除。</p>              </div>            </details><details class="folding-tag"><summary> 📋友情链接页免责声明 </summary>              <div class="content">              <p>本博客遵守中华人民共和国相关法律。本页内容仅作为方便学习而产生的快速链接的链接方式，对与友情链接中存在的链接、好文推荐链接等均为其他网站。我本人能力有限无法逐个甄别每篇文章的每个字，并无法获知是否在收录后原作者是否对链接增加了违反法律甚至其他破坏用户计算机等行为。因为部分友链网站甚至没有做备案、域名并未做实名认证等，所以友链网站均可能存在风险，请您须知。</p><p>所以在我力所能及的情况下，我会包括但不限于：</p><ul><li>针对收录的博客中的绝大多数内容通过标题来鉴别是否存在有风险的内容</li><li>在收录的友链好文推荐中检查是否存在风险内容</li></ul><p>但是您在访问的时候，仍然无法避免，包括但不限于：</p><ul><li>作者更换了超链接的指向，替换成了其他内容</li><li>作者的服务器被恶意攻击、劫持、被注入恶意内容</li><li>作者的域名到期，被不法分子用作他用</li><li>作者修改了文章内容，增加钓鱼网站、广告等无效信息</li><li>不完善的隐私保护对用户的隐私造成了侵害、泄漏</li></ul><p>最新文章部分为机器抓取，本站作者未经过任何审核和筛选，本着友链信任原则添加的。如果您发现其中包含违反中华人民共和国法律的内容，请即使联系和举报。该友链会被拉黑。</p><p>如果因为从本页跳转给您造成了损失，深表歉意，并且建议用户如果发现存在问题在本页面进行回复。通常会很快处理。如果长时间无法得到处理，建议通过邮件联系。</p>              </div>            </details>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>音乐馆</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
+      
+        <content type="html"><![CDATA[<p><strong>2022/11/27</strong></p><h3 id="万物有灵"><a href="#万物有灵-✨" class="headerlink" title="万物有灵 ✨"></a>万物有灵 ✨</h3>  <div class="aplayer no-destroy" data-id="6854173103" data-server="netease" data-type="playlist" data-order="list" data-preload="auto" data-autoplay="false" data-mutex="true"></div>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -288,77 +332,11 @@
     
     
     <entry>
-      <title>友情链接</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[<details class="folding-tag"><summary> ✅友链交换须知 ꉂ(ˊᗜˋ) </summary>              <div class="content">              <p>友链模板如下：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">陌颜小屋</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">https://blog.asever.top</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">https://bu.dusays.com/2022/10/29/635d11ccac58c.png</span></span><br><span class="line">  <span class="attr">descr:</span> <span class="string">愿永不忘初心！</span></span><br></pre></td></tr></table></figure><p>申请要求：<br>1.先友后链，申请友链请前先添加本博客，本站信息在上方模板<br>2.头像尽量https，且贵站能够正常访问<br>3.文章数量大于3篇，主要是为了确保您有动力和毅力维护博客<br>4.😀请一定要积极向上，且符合社会主义核心价值观<br>※ 为保证友链质量，申请的友链将经过筛选，通过审核将会收到我的回复邮件。原则上过去已添加友链不会轻易删除，如遇死链，将会暂时放入失联友链中；如遇严重违反上述申请条件的博客，将会被直接移除。</p>              </div>            </details><details class="folding-tag"><summary> 📋友情链接页免责声明 </summary>              <div class="content">              <p>本博客遵守中华人民共和国相关法律。本页内容仅作为方便学习而产生的快速链接的链接方式，对与友情链接中存在的链接、好文推荐链接等均为其他网站。我本人能力有限无法逐个甄别每篇文章的每个字，并无法获知是否在收录后原作者是否对链接增加了违反法律甚至其他破坏用户计算机等行为。因为部分友链网站甚至没有做备案、域名并未做实名认证等，所以友链网站均可能存在风险，请您须知。</p><p>所以在我力所能及的情况下，我会包括但不限于：</p><ul><li>针对收录的博客中的绝大多数内容通过标题来鉴别是否存在有风险的内容</li><li>在收录的友链好文推荐中检查是否存在风险内容</li></ul><p>但是您在访问的时候，仍然无法避免，包括但不限于：</p><ul><li>作者更换了超链接的指向，替换成了其他内容</li><li>作者的服务器被恶意攻击、劫持、被注入恶意内容</li><li>作者的域名到期，被不法分子用作他用</li><li>作者修改了文章内容，增加钓鱼网站、广告等无效信息</li><li>不完善的隐私保护对用户的隐私造成了侵害、泄漏</li></ul><p>最新文章部分为机器抓取，本站作者未经过任何审核和筛选，本着友链信任原则添加的。如果您发现其中包含违反中华人民共和国法律的内容，请即使联系和举报。该友链会被拉黑。</p><p>如果因为从本页跳转给您造成了损失，深表歉意，并且建议用户如果发现存在问题在本页面进行回复。通常会很快处理。如果长时间无法得到处理，建议通过邮件联系。</p>              </div>            </details>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>privacy</title>
       <link href="/privacy/index.html"/>
       <url>/privacy/index.html</url>
       
         <content type="html"><![CDATA[<p>本站非常重视用户的隐私和个人信息保护。您在使用网站时，可能会收集和使用您的相关信息。通过《隐私政策》向您说明在您访问 <a href="https://asever.top/">asever.top</a> 网站时，如何收集、使用、保存、共享和转让这些信息。</p><h2 id="一-如何收集和使用您的个人信息">一、如何收集和使用您的个人信息</h2><p>网络身份标识信息（浏览器UA、IP地址）、您的地理位置信息（具体到城市）、电子邮件地址。</p><p>在您访问时，仅会处于以下目的，使用您的个人信息：</p><ul><li>百度/谷歌统计工具会收集您的访问信息，用于网站的优化与文章分类、恶意访问识别（被动，存储，系统定期清理）</li></ul><p>您应该知道在您访问的时候以下信息会被统计功能使用：</p><ul><li>IP地址</li><li>所在区域</li><li>设备</li></ul><p>在您评论时，仅会出于以下目的，收集和使用您的个人信息：</p><p>评论使用的是无登陆系统的匿名评论系统，您可以填写真实的、虚假的信息作为您评论的展示信息。鼓励您使用不易被人恶意识别的昵称进行评论，但是建议您填写真实的邮箱以便收到回复。</p><ul><li>评论时会记录您的qq号（如果在邮箱位置填写qq邮箱或qq号），方便获取您的qq头像。如果使用QQ邮箱但不想展示QQ头像，可以填写不含QQ号的QQ邮箱。（主动，存储）</li><li>评论时会记录您的邮箱，当我回复后会通过邮件通知您（主动，存储，不会公开邮箱）</li><li>评论时会记录您的IP地址，作为反垃圾的用户判别依据（被动，存储，不会公开IP）</li><li>评论会记录您的浏览器代理，用作展示系统版本、浏览器版本方便展示您使用的设备，快速定位问题（被动，存储）</li></ul><h2 id="二-如何使用-cookies-和本地-localstorage-存储">二、如何使用 Cookies 和本地 LocalStorage 存储</h2><p>本站为实现无账号评论、深色模式切换，51统计等功能，会在您的浏览器中进行本地存储，您可以随时清除浏览器中保存的所有 Cookies 以及 LocalStorage。</p><p>关于如何使用您的Cookies，请访问Cookies政策。</p><p>关于如何在Chrome中清除、启用和管理 Cookie</p><h2 id="三-如何共享-转让您的个人信息">三、如何共享、转让您的个人信息</h2><p>不会与任何公司、组织和个人共享您的个人信息<br>不会将您的个人信息转让给任何公司、组织和个人</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/progress_bar.css"/>
-      <url>/css/progress_bar.css</url>
-      
-        <content type="html"><![CDATA[.pace {    -webkit-pointer-events: none;    pointer-events: none;    -webkit-user-select: none;    -moz-user-select: none;    user-select: none;    z-index: 2000;    position: fixed;    margin: auto;    top: 10px;    left: 0;    right: 0;    height: 8px;    border-radius: 8px;    width: 4rem;    background: #eaecf2;    border: 1px #e3e8f7;    overflow: hidden;  }    .pace-inactive .pace-progress {    opacity: 0;    transition: 0.3s ease-in;  }    .pace .pace-progress {    -webkit-box-sizing: border-box;    -moz-box-sizing: border-box;    -ms-box-sizing: border-box;    -o-box-sizing: border-box;    box-sizing: border-box;    -webkit-transform: translate3d(0, 0, 0);    -moz-transform: translate3d(0, 0, 0);    -ms-transform: translate3d(0, 0, 0);    -o-transform: translate3d(0, 0, 0);    transform: translate3d(0, 0, 0);    max-width: 200px;    position: absolute;    z-index: 2000;    display: block;    top: 0;    right: 100%;    height: 100%;    width: 100%;    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);    animation: gradient 1.5s ease infinite;    background-size: 200%;  }    .pace.pace-inactive {    opacity: 0;    transition: 0.3s;    top: -8px;  }  @keyframes gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>音乐馆</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
-      
-        <content type="html"><![CDATA[<p><strong>2022/11/27</strong></p><h3 id="万物有灵"><a href="#万物有灵-✨" class="headerlink" title="万物有灵 ✨"></a>万物有灵 ✨</h3>  <div class="aplayer no-destroy" data-id="6854173103" data-server="netease" data-type="playlist" data-order="list" data-preload="auto" data-autoplay="false" data-mutex="true"></div>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/essay_page/essay_page.css"/>
-      <url>/css/essay_page/essay_page.css</url>
-      
-        <content type="html"><![CDATA[#page:has(#essay_page) {  border: 0;  box-shadow: none !important;  padding: 0 !important;  background: transparent !important;}#page:has(#essay_page) .page-title {  display: none;}#web_bg ~ .page:has(#essay_page) {  background: var(--anzhiyu-background);}#bber .bber-container-img {  display: flex;  align-items: center;  justify-content: space-around;  width: 100%;  flex-wrap: wrap;  margin-bottom: 0.3rem;}#bber .bber-container-img .bber-content-noimg {  width: calc(100% / 4 - 5px);}#bber .bber-content-img img {  object-fit: cover;  max-height: 100%;  border-radius: 12px;}#bber .bber-content-img {  height: 100px;  border-radius: 12px;  overflow: hidden;  display: flex;  position: relative;  width: calc(100% / 4 - 5px);}#bber .bber-content .datacont {  order: 0;  font-size: 0.8rem;  font-weight: 700;  color: var(--anzhiyu-fontcolor);  width: 100%;  line-height: 1.38;  border-radius: 12px;  margin-bottom: 0.5rem;  display: flex;  flex-direction: column;  text-align: justify;}#bber p {  margin: 0px;}#bber div.bber-content {  display: flex;  flex-flow: wrap;  border-radius: 12px;  width: 100%;  height: 100%;}#bber .timeline ul li.bber-item {  position: relative;  width: 32%;  border: var(--style-border-always);  border-radius: 12px;  padding: 1rem 1rem 0.5rem;  transition: all 0.3s ease 0s;  display: flex;  flex-flow: column nowrap;  justify-content: space-between;  align-items: flex-start;  background: var(--anzhiyu-card-bg);  box-shadow: var(--anzhiyu-shadow-border);  margin-right: 2%;}#bber .timeline #waterfall.show {  opacity: 1;}#bber .timeline #waterfall {  opacity: 0;  transition: all 0.3s ease 0s;}#bber ul.list {  display: flex;  flex-flow: row wrap;  justify-content: space-between;}#bber {  margin-top: 1rem;  width: 100%;}#bber > section > ul > li.bber-item {  margin-bottom: 1rem;}#bber-tips {  font-size: 14px;  display: flex;  justify-content: center;  margin-top: 1rem;}#bber .timeline ul li.bber-item hr {  display: flex;  position: relative;  margin: 8px 0px;  border: 1px dashed var(--anzhiyu-theme-op);  width: 100%;}#bber .bber-info {  display: flex;  align-items: center;}#bber > section > ul > li > div .bber-info-time,#bber > section > ul > li > div .bber-info-from {  color: var(--anzhiyu-fontcolor);  font-size: 0.7rem;  background-color: var(--anzhiyu-gray-op);  padding: 0px 8px;  border-radius: 20px;  cursor: default;  display: flex;  align-items: center;}#bber .bber-info .far.fa-clock {  margin-right: 4px;}#bber > section > ul > li > div .bber-info-from span,#bber > section > ul > li > div .bber-info-from {  margin-left: 4px;}#bber .bber-bottom {  display: flex;  justify-content: space-between;  width: 100%;  margin-top: 10px;}#bber .bber-bottom .bber-reply {  cursor: url(/img/x2.cur), auto !important;}#bber .timeline ul li.bber-item:hover {  border: var(--style-border-hover);}#bber .bber-content-link {  display: flex;  margin-left: 0.5rem;  font-size: 0.7rem;  align-items: center;  background-color: rgba(245, 108, 108, 0.13);  color: rgb(245, 108, 108);  padding: 0px 8px;  border-radius: 20px;}#bber .bber-content-link i {  margin-right: 3px;}#bber .bber-content-link:hover {  background-color: var(--anzhiyu-main);  color: var(--anzhiyu-white);}#bber .bber-music {  width: 100%;  height: 90px;  margin: 0.5rem 0;  border-radius: 8px;  overflow: hidden;  border: var(--style-border-always);  background: var(--anzhiyu-secondbg);}#bber .aplayer {  margin: 0;}#bber .aplayer.aplayer-withlrc .aplayer-pic {  height: 82px;  width: 82px;  margin: 4px;  border-radius: 4px;}.bber-music .aplayer.aplayer-withlrc .aplayer-info {  padding: 5px 7px 0;}#bber .aplayer .aplayer-info .aplayer-music {  height: 23px;}#bber .aplayer .aplayer-info .aplayer-music .aplayer-title {  font-size: 0.8rem;  font-weight: 700;  margin: 0;  color: var(--anzhiyu-fontcolor);}#bber .aplayer .aplayer-info .aplayer-controller {  align-items: center;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap {  padding: 0;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-time {  position: initial;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {  background: var(--anzhiyu-gray);  height: 8px;  border-radius: 12px;  transition: 0.3s;  overflow: hidden;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {  height: 100%;  border-radius: 12px;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {  height: 100%;  border-radius: 12px;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {  display: none;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-time {  position: initial;}/* 顶部样式 */.author-content.author-content-item.essayPage {  height: 19rem;  background: url(https://bu.dusays.com/2022/11/14/6371ab2c018da.png) left 28% / cover no-repeat;  color: var(--anzhiyu-white);  overflow: hidden;  margin-top: 0px;}#page:has(#essay_page) .author-content-item .card-content .banner-button-group .banner-button:hover {  color: var(--anzhiyu-white);  border-radius: 20px !important;}/* 响应式 */@media screen and (max-width: 1300px) {  #bber .timeline ul li.bber-item {    width: 49%;    margin-right: 1%;  }}@media screen and (max-width: 768px) {  #bber .timeline ul li.bber-item {    width: 100%;    margin-right: 0px;  }}[data-theme="dark"] #bber .bber-music .aplayer,[data-theme="dark"] #bber .aplayer .aplayer-lrc:before,[data-theme="dark"] #bber .aplayer .aplayer-lrc:after {  background: var(--anzhiyu-card-bg);  color: var(--anzhiyu-fontcolor);}#bber .aplayer .aplayer-lrc p {  color: var(--anzhiyu-fontcolor);}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/essay_page/home_essay_bar.css"/>
-      <url>/css/essay_page/home_essay_bar.css</url>
-      
-        <content type="html"><![CDATA[#bbTimeList {  background: var(--anzhiyu-white);  color: var(--anzhiyu-fontcolor);  padding: 0.5rem 1rem;  border-radius: 30px;  box-shadow: var(--anzhiyu-shadow-lightblack);  display: flex;  transition: all 0.3s ease 0s;  margin: 1rem auto 0;  border: var(--style-border);  align-items: center;  height: 50px;  width: 100%;}[data-theme="dark"] #bbTimeList {  background: #000 !important;}#bbtalk {  width: 100%;  overflow: hidden;  text-overflow: ellipsis;  white-space: nowrap;}#bber-talk {  width: 100%;  height: 25px;  line-height: 25px;  display: flex;  flex-direction: column;}.bber-logo {  font-size: 1.5rem;  line-height: 22px;  margin-right: 1rem;  transition: all 0.3s ease 0s;  cursor: url(/img/x2.cur), auto !important;}.bber-gotobb {  line-height: 25px;  margin-left: 1rem;  transition: all 0.3s ease 0s;  cursor: url(/img/x2.cur), auto !important;}#bber-talk .li-style {  width: 100%;  max-width: 100%;  height: 25px;  text-align: center;  overflow: hidden;  text-overflow: ellipsis;  transition: 0.3s;  font-weight: 700;  margin: auto;  cursor: url(/img/x2.cur), auto !important;  white-space: nowrap;}#bbTimeList:hover {  border: var(--style-border-hover);  box-shadow: var(--anzhiyu-shadow-main);}/* 文章页H1-H6图标样式效果 */.bbTimeList .bber-logo {  -webkit-animation: rotate 1.6s linear infinite;  animation: rotate 1.6s linear infinite;}@-webkit-keyframes rotate {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}@keyframes rotate {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}]]></content>
       
     </entry>
     
@@ -388,10 +366,21 @@
     
     <entry>
       <title></title>
-      <link href="/js/runtime/runtime.js"/>
-      <url>/js/runtime/runtime.js</url>
+      <link href="/css/essay_page/home_essay_bar.css"/>
+      <url>/css/essay_page/home_essay_bar.css</url>
       
-        <content type="html"><![CDATA[var now = new Date();function createtime() {  var grt = new Date("2022/09/28 00:00:00");  now.setTime(now.getTime() + 250);  var days = (now - grt) / 1e3 / 60 / 60 / 24,    dnum = Math.floor(days),    hours = (now - grt) / 1e3 / 60 / 60 - 24 * dnum,    hnum = Math.floor(hours);  1 == String(hnum).length && (hnum = "0" + hnum);  var minutes = (now - grt) / 1e3 / 60 - 1440 * dnum - 60 * hnum,    mnum = Math.floor(minutes);  1 == String(mnum).length && (mnum = "0" + mnum);  var seconds = (now - grt) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,    snum = Math.round(seconds);  1 == String(snum).length && (snum = "0" + snum);  let currentTimeHtml = "";  (currentTimeHtml =    hnum < 18 && hnum >= 9      ? `<img class="boardsign" src="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg" title="距离月入25k也就还差一个大佬带我~"><span class="textTip"> <br> 本站居然运行了 ${dnum} 天</span><span id="runtime"> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span> <i class="fas fa-heartbeat" style="color:red"></i>`      : `<img class="boardsign" src="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg" title="下班了就该开开心心的玩耍，嘿嘿~"><span class="textTip"> <br> 本站居然运行了 ${dnum} 天</span><span id="runtime"> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span> <i class="fas fa-heartbeat" style="color:red"></i>`),    document.getElementById("workboard") && (document.getElementById("workboard").innerHTML = currentTimeHtml);}setInterval(() => {  createtime();}, 250);]]></content>
+        <content type="html"><![CDATA[#bbTimeList {  background: var(--anzhiyu-white);  color: var(--anzhiyu-fontcolor);  padding: 0.5rem 1rem;  border-radius: 30px;  box-shadow: var(--anzhiyu-shadow-lightblack);  display: flex;  transition: all 0.3s ease 0s;  margin: 1rem auto 0;  border: var(--style-border);  align-items: center;  height: 50px;  width: 100%;}[data-theme="dark"] #bbTimeList {  background: #000 !important;}#bbtalk {  width: 100%;  overflow: hidden;  text-overflow: ellipsis;  white-space: nowrap;}#bber-talk {  width: 100%;  height: 25px;  line-height: 25px;  display: flex;  flex-direction: column;}.bber-logo {  font-size: 1.5rem;  line-height: 22px;  margin-right: 1rem;  transition: all 0.3s ease 0s;  cursor: url(/img/x2.cur), auto !important;}.bber-gotobb {  line-height: 25px;  margin-left: 1rem;  transition: all 0.3s ease 0s;  cursor: url(/img/x2.cur), auto !important;}#bber-talk .li-style {  width: 100%;  max-width: 100%;  height: 25px;  text-align: center;  overflow: hidden;  text-overflow: ellipsis;  transition: 0.3s;  font-weight: 700;  margin: auto;  cursor: url(/img/x2.cur), auto !important;  white-space: nowrap;}#bbTimeList:hover {  border: var(--style-border-hover);  box-shadow: var(--anzhiyu-shadow-main);}/* 文章页H1-H6图标样式效果 */.bbTimeList .bber-logo {  -webkit-animation: rotate 1.6s linear infinite;  animation: rotate 1.6s linear infinite;}@-webkit-keyframes rotate {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}@keyframes rotate {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/essay_page/essay_page.css"/>
+      <url>/css/essay_page/essay_page.css</url>
+      
+        <content type="html"><![CDATA[#page:has(#essay_page) {  border: 0;  box-shadow: none !important;  padding: 0 !important;  background: transparent !important;}#page:has(#essay_page) .page-title {  display: none;}#web_bg ~ .page:has(#essay_page) {  background: var(--anzhiyu-background);}#bber .bber-container-img {  display: flex;  align-items: center;  justify-content: space-around;  width: 100%;  flex-wrap: wrap;  margin-bottom: 0.3rem;}#bber .bber-container-img .bber-content-noimg {  width: calc(100% / 4 - 5px);}#bber .bber-content-img img {  object-fit: cover;  max-height: 100%;  border-radius: 12px;}#bber .bber-content-img {  height: 100px;  border-radius: 12px;  overflow: hidden;  display: flex;  position: relative;  width: calc(100% / 4 - 5px);}#bber .bber-content .datacont {  order: 0;  font-size: 0.8rem;  font-weight: 700;  color: var(--anzhiyu-fontcolor);  width: 100%;  line-height: 1.38;  border-radius: 12px;  margin-bottom: 0.5rem;  display: flex;  flex-direction: column;  text-align: justify;}#bber p {  margin: 0px;}#bber div.bber-content {  display: flex;  flex-flow: wrap;  border-radius: 12px;  width: 100%;  height: 100%;}#bber .timeline ul li.bber-item {  position: relative;  width: 32%;  border: var(--style-border-always);  border-radius: 12px;  padding: 1rem 1rem 0.5rem;  transition: all 0.3s ease 0s;  display: flex;  flex-flow: column nowrap;  justify-content: space-between;  align-items: flex-start;  background: var(--anzhiyu-card-bg);  box-shadow: var(--anzhiyu-shadow-border);  margin-right: 2%;}#bber .timeline #waterfall.show {  opacity: 1;}#bber .timeline #waterfall {  opacity: 0;  transition: all 0.3s ease 0s;}#bber ul.list {  display: flex;  flex-flow: row wrap;  justify-content: space-between;}#bber {  margin-top: 1rem;  width: 100%;}#bber > section > ul > li.bber-item {  margin-bottom: 1rem;}#bber-tips {  font-size: 14px;  display: flex;  justify-content: center;  margin-top: 1rem;}#bber .timeline ul li.bber-item hr {  display: flex;  position: relative;  margin: 8px 0px;  border: 1px dashed var(--anzhiyu-theme-op);  width: 100%;}#bber .bber-info {  display: flex;  align-items: center;}#bber > section > ul > li > div .bber-info-time,#bber > section > ul > li > div .bber-info-from {  color: var(--anzhiyu-fontcolor);  font-size: 0.7rem;  background-color: var(--anzhiyu-gray-op);  padding: 0px 8px;  border-radius: 20px;  cursor: default;  display: flex;  align-items: center;}#bber .bber-info .far.fa-clock {  margin-right: 4px;}#bber > section > ul > li > div .bber-info-from span,#bber > section > ul > li > div .bber-info-from {  margin-left: 4px;}#bber .bber-bottom {  display: flex;  justify-content: space-between;  width: 100%;  margin-top: 10px;}#bber .bber-bottom .bber-reply {  cursor: url(/img/x2.cur), auto !important;}#bber .timeline ul li.bber-item:hover {  border: var(--style-border-hover);}#bber .bber-content-link {  display: flex;  margin-left: 0.5rem;  font-size: 0.7rem;  align-items: center;  background-color: rgba(245, 108, 108, 0.13);  color: rgb(245, 108, 108);  padding: 0px 8px;  border-radius: 20px;}#bber .bber-content-link i {  margin-right: 3px;}#bber .bber-content-link:hover {  background-color: var(--anzhiyu-main);  color: var(--anzhiyu-white);}#bber .bber-music {  width: 100%;  height: 90px;  margin: 0.5rem 0;  border-radius: 8px;  overflow: hidden;  border: var(--style-border-always);  background: var(--anzhiyu-secondbg);}#bber .aplayer {  margin: 0;}#bber .aplayer.aplayer-withlrc .aplayer-pic {  height: 82px;  width: 82px;  margin: 4px;  border-radius: 4px;}.bber-music .aplayer.aplayer-withlrc .aplayer-info {  padding: 5px 7px 0;}#bber .aplayer .aplayer-info .aplayer-music {  height: 23px;}#bber .aplayer .aplayer-info .aplayer-music .aplayer-title {  font-size: 0.8rem;  font-weight: 700;  margin: 0;  color: var(--anzhiyu-fontcolor);}#bber .aplayer .aplayer-info .aplayer-controller {  align-items: center;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap {  padding: 0;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-time {  position: initial;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {  background: var(--anzhiyu-gray);  height: 8px;  border-radius: 12px;  transition: 0.3s;  overflow: hidden;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {  height: 100%;  border-radius: 12px;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {  height: 100%;  border-radius: 12px;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {  display: none;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-time {  position: initial;}/* 顶部样式 */.author-content.author-content-item.essayPage {  height: 19rem;  background: url(https://bu.dusays.com/2022/11/14/6371ab2c018da.png) left 28% / cover no-repeat;  color: var(--anzhiyu-white);  overflow: hidden;  margin-top: 0px;}#page:has(#essay_page) .author-content-item .card-content .banner-button-group .banner-button:hover {  color: var(--anzhiyu-white);  border-radius: 20px !important;}/* 响应式 */@media screen and (max-width: 1300px) {  #bber .timeline ul li.bber-item {    width: 49%;    margin-right: 1%;  }}@media screen and (max-width: 768px) {  #bber .timeline ul li.bber-item {    width: 100%;    margin-right: 0px;  }}[data-theme="dark"] #bber .bber-music .aplayer,[data-theme="dark"] #bber .aplayer .aplayer-lrc:before,[data-theme="dark"] #bber .aplayer .aplayer-lrc:after {  background: var(--anzhiyu-card-bg);  color: var(--anzhiyu-fontcolor);}#bber .aplayer .aplayer-lrc p {  color: var(--anzhiyu-fontcolor);}]]></content>
       
     </entry>
     
@@ -403,6 +392,17 @@
       <url>/js/coin/coin.js</url>
       
         <content type="html"><![CDATA[var tipButtons = document.querySelectorAll(".tip-button");function coinAudio() {  var coinAudio = document.getElementById("coinAudio");  if (coinAudio) {    coinAudio.play(); //有音频时播放  }}// Loop through all buttons (allows for multiple buttons on page)tipButtons.forEach(button => {  var coin = button.querySelector(".coin");  // The larger the number, the slower the animation  coin.maxMoveLoopCount = 90;  button.addEventListener("click", () => {    if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true; //媒体选择    if (button.clicked) return;    button.classList.add("clicked");    // Wait to start flipping th coin because of the button tilt animation    setTimeout(() => {      // Randomize the flipping speeds just for fun      coin.sideRotationCount = Math.floor(Math.random() * 5) * 90;      coin.maxFlipAngle = (Math.floor(Math.random() * 4) + 3) * Math.PI;      button.clicked = true;      flipCoin();      coinAudio();    }, 50);  });  var flipCoin = () => {    coin.moveLoopCount = 0;    flipCoinLoop();  };  var resetCoin = () => {    coin.style.setProperty("--coin-x-multiplier", 0);    coin.style.setProperty("--coin-scale-multiplier", 0);    coin.style.setProperty("--coin-rotation-multiplier", 0);    coin.style.setProperty("--shine-opacity-multiplier", 0.4);    coin.style.setProperty("--shine-bg-multiplier", "50%");    coin.style.setProperty("opacity", 1);    // Delay to give the reset animation some time before you can click again    setTimeout(() => {      button.clicked = false;    }, 300);  };  var flipCoinLoop = () => {    coin.moveLoopCount++;    var percentageCompleted = coin.moveLoopCount / coin.maxMoveLoopCount;    coin.angle = -coin.maxFlipAngle * Math.pow(percentageCompleted - 1, 2) + coin.maxFlipAngle;    // Calculate the scale and position of the coin moving through the air    coin.style.setProperty("--coin-y-multiplier", -11 * Math.pow(percentageCompleted * 2 - 1, 4) + 11);    coin.style.setProperty("--coin-x-multiplier", percentageCompleted);    coin.style.setProperty("--coin-scale-multiplier", percentageCompleted * 0.6);    coin.style.setProperty("--coin-rotation-multiplier", percentageCompleted * coin.sideRotationCount);    // Calculate the scale and position values for the different coin faces    // The math uses sin/cos wave functions to similate the circular motion of 3D spin    coin.style.setProperty("--front-scale-multiplier", Math.max(Math.cos(coin.angle), 0));    coin.style.setProperty("--front-y-multiplier", Math.sin(coin.angle));    coin.style.setProperty("--middle-scale-multiplier", Math.abs(Math.cos(coin.angle), 0));    coin.style.setProperty("--middle-y-multiplier", Math.cos((coin.angle + Math.PI / 2) % Math.PI));    coin.style.setProperty("--back-scale-multiplier", Math.max(Math.cos(coin.angle - Math.PI), 0));    coin.style.setProperty("--back-y-multiplier", Math.sin(coin.angle - Math.PI));    coin.style.setProperty("--shine-opacity-multiplier", 4 * Math.sin((coin.angle + Math.PI / 2) % Math.PI) - 3.2);    coin.style.setProperty("--shine-bg-multiplier", -40 * (Math.cos((coin.angle + Math.PI / 2) % Math.PI) - 0.5) + "%");    // Repeat animation loop    if (coin.moveLoopCount < coin.maxMoveLoopCount) {      if (coin.moveLoopCount === coin.maxMoveLoopCount - 6) button.classList.add("shrink-landing");      window.requestAnimationFrame(flipCoinLoop);    } else {      button.classList.add("coin-landed");      coin.style.setProperty("opacity", 0);      setTimeout(() => {        button.classList.remove("clicked", "shrink-landing", "coin-landed");        setTimeout(() => {          resetCoin();        }, 300);      }, 1500);    }  };});]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/runtime/runtime.js"/>
+      <url>/js/runtime/runtime.js</url>
+      
+        <content type="html"><![CDATA[var now = new Date();function createtime() {  var grt = new Date("2022/09/28 00:00:00");  now.setTime(now.getTime() + 250);  var days = (now - grt) / 1e3 / 60 / 60 / 24,    dnum = Math.floor(days),    hours = (now - grt) / 1e3 / 60 / 60 - 24 * dnum,    hnum = Math.floor(hours);  1 == String(hnum).length && (hnum = "0" + hnum);  var minutes = (now - grt) / 1e3 / 60 - 1440 * dnum - 60 * hnum,    mnum = Math.floor(minutes);  1 == String(mnum).length && (mnum = "0" + mnum);  var seconds = (now - grt) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,    snum = Math.round(seconds);  1 == String(snum).length && (snum = "0" + snum);  let currentTimeHtml = "";  (currentTimeHtml =    hnum < 18 && hnum >= 9      ? `<img class="boardsign" src="/img/懒陌颜-上班摸鱼中.svg" title="距离月入25k也就还差一个大佬带我~"><span class="textTip"> <br> 本站居然运行了 ${dnum} 天</span><span id="runtime"> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span> <i class="fas fa-heartbeat" style="color:red"></i>`      : `<img class="boardsign" src="/img/懒陌颜-下班啦.svg" title="下班了就该开开心心的玩耍，嘿嘿~"><span class="textTip"> <br> 本站居然运行了 ${dnum} 天</span><span id="runtime"> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span> <i class="fas fa-heartbeat" style="color:red"></i>`),    document.getElementById("workboard") && (document.getElementById("workboard").innerHTML = currentTimeHtml);}setInterval(() => {  createtime();}, 250);]]></content>
       
     </entry>
     
