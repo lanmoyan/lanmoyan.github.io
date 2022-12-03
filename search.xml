@@ -178,6 +178,17 @@
     
     
     <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>每日早报 - 一分钟看世界</title>
       <link href="/DailyMorningPost/index.html"/>
       <url>/DailyMorningPost/index.html</url>
@@ -200,17 +211,6 @@
     
     
     <entry>
-      <title>便携小空调 - 为你的夏日带去清凉!</title>
-      <link href="/air-conditioner/index.html"/>
-      <url>/air-conditioner/index.html</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>终于为博客安装上了便携小空调</p></blockquote><style>.copyright-box a {  border-bottom: none !important;  padding: 0 !important;}</style><p><div id="air-conditioner-vue"></div></p><script defer data-pjax src="/js/AirConditioner.js"></script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>cc</title>
       <link href="/cc/index.html"/>
       <url>/cc/index.html</url>
@@ -222,22 +222,22 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>comment</title>
+      <link href="/comment/index.html"/>
+      <url>/comment/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h3 id="用户发言前请认真阅读本条例-一经发言即视为同意接受本条例如不同意请勿发布不良信息"><a href="#用户发言前，请认真阅读本条例。一经发言，即视为同意接受本条例；如不同意，请勿发布不良信息。" class="headerlink" title="用户发言前，请认真阅读本条例。一经发言，即视为同意接受本条例；如不同意，请勿发布不良信息。"></a>用户发言前，请认真阅读本条例。一经发言，即视为同意接受本条例；如不同意，请勿发布不良信息。</h3><p>一、制定本条例的目的在于为用户提供文明、理性、友善、高质量的信息分享和公共讨论的网络交流空间。评论服务，是指通过运营网络互动传播平台，供用户对本网站传播的各类信息发表评论意见的服务。</p><p>二、用户使用评论服务，不得逾越法律法规、社会主义制度、国家利益、公民合法权益、社会公共秩序、道德风尚和信息真实性“七条底线”；应尊重其他用户合法权益及公民个人隐私，尊重社会公序良俗，遵守国家法律法规。上文提及的国家法律法规，包括但不限于：《全国人民代表大会常务委员会关于维护互联网安全的决定》《全国人民代表大会常务委员会关于加强网络信息保护的决定》《最高人民法院最高人民检察院关于办理利用信息网络实施诽谤等刑事案件适用法律若干问题的解释》《互联网信息服务管理办法》《互联网新闻信息服务管理规定》 以及 《未成年人保护法》等。</p><p>三、用户应当通过真实身份信息使用本网站的评论服务。对用户发表的评论，我们保留相应的管理权利。</p><p>四、用户在评论平台发表言论时，不得含有以下内容：</p><p>  (一) 反对宪法确定的基本原则的；<br>  (二) 危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；<br>  (三) 损害国家荣誉和利益的；<br>  (四) 煽动民族仇恨、民族歧视，破坏民族团结的；<br>  (五) 煽动地域歧视、地域仇恨的；<br>  (六) 煽动非法集会、结社、游行、示威、聚众扰乱社会秩序的；<br>  (七) 破坏国家宗教政策，宣扬邪教和迷信的；<br>  (八) 侮辱和歧视性别、年龄、种族、出身、国别、性取向、生理缺陷的；<br>  (九) 散布谣言，扰乱社会秩序、破坏社会稳定的；<br>  (十) 散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；<br>  (十一) 侮辱或诽谤他人，侵害他人合法权益的<br>  (十二) 对他人进行暴力恐吓、威胁，实施人肉搜索的；<br>  (十三) 未获得未满18周岁未成年人法定监护人的书面同意，传播该未成年人的隐私信息的；<br>  (十四) 散布污言秽语，损坏社会公序良俗的；<br>  (十五) 侵犯他人知识产权的；<br>  (十六) 散布非法商业广告，或类似的商业招揽信息；<br>  (十七) 使用本网站常用语言文字以外的其他语言文字评论的；<br>  (十八) 与所评论的信息毫无关系的；<br>  (十九) 所发表的信息毫无意义的，或刻意使用字符组合以逃避技术审核的；<br>  (二十) 法律、法规和规章禁止传播的其他信息。</p><p>五、对违反上述承诺的用户，我们有权拒绝发布、删除评论、短期直至永久禁止发言等管理措施。同时，对涉嫌违法犯罪的言论将保存在案、并向有关政府部门如实报告。</p><p>六、我们欢迎用户举报各类不法传播活动和违法有害信息，以共同维护文明、有价值的评论环境。</p><p>七、若用户违反承诺、发布侵害第三人合法权益的信息而导致本网站被判决向被侵权人赔偿，我们保留依法向该用户追偿的权利。</p><p>八、用户提交的任何内容，本网站有权在世界范围内，利用媒体、已知或未知的技术，永久、免费、独家、再授权使用，包括复制、修改、改编、出版</p>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>comment</title>
-      <link href="/comment/index.html"/>
-      <url>/comment/index.html</url>
+      <title>便携小空调 - 为你的夏日带去清凉!</title>
+      <link href="/air-conditioner/index.html"/>
+      <url>/air-conditioner/index.html</url>
       
-        <content type="html"><![CDATA[<h3 id="用户发言前请认真阅读本条例-一经发言即视为同意接受本条例如不同意请勿发布不良信息"><a href="#用户发言前，请认真阅读本条例。一经发言，即视为同意接受本条例；如不同意，请勿发布不良信息。" class="headerlink" title="用户发言前，请认真阅读本条例。一经发言，即视为同意接受本条例；如不同意，请勿发布不良信息。"></a>用户发言前，请认真阅读本条例。一经发言，即视为同意接受本条例；如不同意，请勿发布不良信息。</h3><p>一、制定本条例的目的在于为用户提供文明、理性、友善、高质量的信息分享和公共讨论的网络交流空间。评论服务，是指通过运营网络互动传播平台，供用户对本网站传播的各类信息发表评论意见的服务。</p><p>二、用户使用评论服务，不得逾越法律法规、社会主义制度、国家利益、公民合法权益、社会公共秩序、道德风尚和信息真实性“七条底线”；应尊重其他用户合法权益及公民个人隐私，尊重社会公序良俗，遵守国家法律法规。上文提及的国家法律法规，包括但不限于：《全国人民代表大会常务委员会关于维护互联网安全的决定》《全国人民代表大会常务委员会关于加强网络信息保护的决定》《最高人民法院最高人民检察院关于办理利用信息网络实施诽谤等刑事案件适用法律若干问题的解释》《互联网信息服务管理办法》《互联网新闻信息服务管理规定》 以及 《未成年人保护法》等。</p><p>三、用户应当通过真实身份信息使用本网站的评论服务。对用户发表的评论，我们保留相应的管理权利。</p><p>四、用户在评论平台发表言论时，不得含有以下内容：</p><p>  (一) 反对宪法确定的基本原则的；<br>  (二) 危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；<br>  (三) 损害国家荣誉和利益的；<br>  (四) 煽动民族仇恨、民族歧视，破坏民族团结的；<br>  (五) 煽动地域歧视、地域仇恨的；<br>  (六) 煽动非法集会、结社、游行、示威、聚众扰乱社会秩序的；<br>  (七) 破坏国家宗教政策，宣扬邪教和迷信的；<br>  (八) 侮辱和歧视性别、年龄、种族、出身、国别、性取向、生理缺陷的；<br>  (九) 散布谣言，扰乱社会秩序、破坏社会稳定的；<br>  (十) 散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；<br>  (十一) 侮辱或诽谤他人，侵害他人合法权益的<br>  (十二) 对他人进行暴力恐吓、威胁，实施人肉搜索的；<br>  (十三) 未获得未满18周岁未成年人法定监护人的书面同意，传播该未成年人的隐私信息的；<br>  (十四) 散布污言秽语，损坏社会公序良俗的；<br>  (十五) 侵犯他人知识产权的；<br>  (十六) 散布非法商业广告，或类似的商业招揽信息；<br>  (十七) 使用本网站常用语言文字以外的其他语言文字评论的；<br>  (十八) 与所评论的信息毫无关系的；<br>  (十九) 所发表的信息毫无意义的，或刻意使用字符组合以逃避技术审核的；<br>  (二十) 法律、法规和规章禁止传播的其他信息。</p><p>五、对违反上述承诺的用户，我们有权拒绝发布、删除评论、短期直至永久禁止发言等管理措施。同时，对涉嫌违法犯罪的言论将保存在案、并向有关政府部门如实报告。</p><p>六、我们欢迎用户举报各类不法传播活动和违法有害信息，以共同维护文明、有价值的评论环境。</p><p>七、若用户违反承诺、发布侵害第三人合法权益的信息而导致本网站被判决向被侵权人赔偿，我们保留依法向该用户追偿的权利。</p><p>八、用户提交的任何内容，本网站有权在世界范围内，利用媒体、已知或未知的技术，永久、免费、独家、再授权使用，包括复制、修改、改编、出版</p>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>终于为博客安装上了便携小空调</p></blockquote><style>.copyright-box a {  border-bottom: none !important;  padding: 0 !important;}</style><p><div id="air-conditioner-vue"></div></p><script defer data-pjax src="/js/AirConditioner.js"></script>]]></content>
       
     </entry>
     
@@ -277,6 +277,17 @@
     
     
     <entry>
+      <title>闲言碎语</title>
+      <link href="/essay/index.html"/>
+      <url>/essay/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="/js/ali_font.js"/>
       <url>/js/ali_font.js</url>
@@ -299,28 +310,6 @@
     
     
     <entry>
-      <title>闲言碎语</title>
-      <link href="/essay/index.html"/>
-      <url>/essay/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>友情链接</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[<details class="folding-tag"><summary> ✅友链交换须知 ꉂ(ˊᗜˋ) </summary>              <div class="content">              <p>友链模板如下：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">陌颜小屋</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">https://blog.asever.top</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">https://bu.dusays.com/2022/10/29/635d11ccac58c.png</span></span><br><span class="line">  <span class="attr">descr:</span> <span class="string">愿永不忘初心！</span></span><br></pre></td></tr></table></figure><p>申请要求：<br>1.先友后链，申请友链请前先添加本博客，本站信息在上方模板<br>2.头像尽量https，且贵站能够正常访问<br>3.文章数量大于3篇，主要是为了确保您有动力和毅力维护博客<br>4.😀请一定要积极向上，且符合社会主义核心价值观<br>※ 为保证友链质量，申请的友链将经过筛选，通过审核将会收到我的回复邮件。原则上过去已添加友链不会轻易删除，如遇死链，将会暂时放入失联友链中；如遇严重违反上述申请条件的博客，将会被直接移除。</p>              </div>            </details><details class="folding-tag"><summary> 📋友情链接页免责声明 </summary>              <div class="content">              <p>本博客遵守中华人民共和国相关法律。本页内容仅作为方便学习而产生的快速链接的链接方式，对与友情链接中存在的链接、好文推荐链接等均为其他网站。我本人能力有限无法逐个甄别每篇文章的每个字，并无法获知是否在收录后原作者是否对链接增加了违反法律甚至其他破坏用户计算机等行为。因为部分友链网站甚至没有做备案、域名并未做实名认证等，所以友链网站均可能存在风险，请您须知。</p><p>所以在我力所能及的情况下，我会包括但不限于：</p><ul><li>针对收录的博客中的绝大多数内容通过标题来鉴别是否存在有风险的内容</li><li>在收录的友链好文推荐中检查是否存在风险内容</li></ul><p>但是您在访问的时候，仍然无法避免，包括但不限于：</p><ul><li>作者更换了超链接的指向，替换成了其他内容</li><li>作者的服务器被恶意攻击、劫持、被注入恶意内容</li><li>作者的域名到期，被不法分子用作他用</li><li>作者修改了文章内容，增加钓鱼网站、广告等无效信息</li><li>不完善的隐私保护对用户的隐私造成了侵害、泄漏</li></ul><p>最新文章部分为机器抓取，本站作者未经过任何审核和筛选，本着友链信任原则添加的。如果您发现其中包含违反中华人民共和国法律的内容，请即使联系和举报。该友链会被拉黑。</p><p>如果因为从本页跳转给您造成了损失，深表歉意，并且建议用户如果发现存在问题在本页面进行回复。通常会很快处理。如果长时间无法得到处理，建议通过邮件联系。</p>              </div>            </details>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>音乐馆</title>
       <link href="/music/index.html"/>
       <url>/music/index.html</url>
@@ -337,6 +326,17 @@
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>友情链接</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[<details class="folding-tag"><summary> ✅友链交换须知 ꉂ(ˊᗜˋ) </summary>              <div class="content">              <p>友链模板如下：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">陌颜小屋</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">https://blog.asever.top</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">https://bu.dusays.com/2022/10/29/635d11ccac58c.png</span></span><br><span class="line">  <span class="attr">descr:</span> <span class="string">愿永不忘初心！</span></span><br></pre></td></tr></table></figure><p>申请要求：<br>1.先友后链，申请友链请前先添加本博客，本站信息在上方模板<br>2.头像尽量https，且贵站能够正常访问<br>3.文章数量大于3篇，主要是为了确保您有动力和毅力维护博客<br>4.😀请一定要积极向上，且符合社会主义核心价值观<br>※ 为保证友链质量，申请的友链将经过筛选，通过审核将会收到我的回复邮件。原则上过去已添加友链不会轻易删除，如遇死链，将会暂时放入失联友链中；如遇严重违反上述申请条件的博客，将会被直接移除。</p>              </div>            </details><details class="folding-tag"><summary> 📋友情链接页免责声明 </summary>              <div class="content">              <p>本博客遵守中华人民共和国相关法律。本页内容仅作为方便学习而产生的快速链接的链接方式，对与友情链接中存在的链接、好文推荐链接等均为其他网站。我本人能力有限无法逐个甄别每篇文章的每个字，并无法获知是否在收录后原作者是否对链接增加了违反法律甚至其他破坏用户计算机等行为。因为部分友链网站甚至没有做备案、域名并未做实名认证等，所以友链网站均可能存在风险，请您须知。</p><p>所以在我力所能及的情况下，我会包括但不限于：</p><ul><li>针对收录的博客中的绝大多数内容通过标题来鉴别是否存在有风险的内容</li><li>在收录的友链好文推荐中检查是否存在风险内容</li></ul><p>但是您在访问的时候，仍然无法避免，包括但不限于：</p><ul><li>作者更换了超链接的指向，替换成了其他内容</li><li>作者的服务器被恶意攻击、劫持、被注入恶意内容</li><li>作者的域名到期，被不法分子用作他用</li><li>作者修改了文章内容，增加钓鱼网站、广告等无效信息</li><li>不完善的隐私保护对用户的隐私造成了侵害、泄漏</li></ul><p>最新文章部分为机器抓取，本站作者未经过任何审核和筛选，本着友链信任原则添加的。如果您发现其中包含违反中华人民共和国法律的内容，请即使联系和举报。该友链会被拉黑。</p><p>如果因为从本页跳转给您造成了损失，深表歉意，并且建议用户如果发现存在问题在本页面进行回复。通常会很快处理。如果长时间无法得到处理，建议通过邮件联系。</p>              </div>            </details>]]></content>
       
     </entry>
     
@@ -366,10 +366,10 @@
     
     <entry>
       <title></title>
-      <link href="/css/essay_page/essay_page.css"/>
-      <url>/css/essay_page/essay_page.css</url>
+      <link href="/css/essay_page/home_essay_bar.css"/>
+      <url>/css/essay_page/home_essay_bar.css</url>
       
-        <content type="html"><![CDATA[#page:has(#essay_page) {  border: 0;  box-shadow: none !important;  padding: 0 !important;  background: transparent !important;}#page:has(#essay_page) .page-title {  display: none;}#web_bg ~ .page:has(#essay_page) {  background: var(--anzhiyu-background);}#bber .bber-container-img {  display: flex;  align-items: center;  justify-content: space-around;  width: 100%;  flex-wrap: wrap;  margin-bottom: 0.3rem;}#bber .bber-container-img .bber-content-noimg {  width: calc(100% / 4 - 5px);}#bber .bber-content-img img {  object-fit: cover;  max-height: 100%;  border-radius: 12px;}#bber .bber-content-img {  height: 100px;  border-radius: 12px;  overflow: hidden;  display: flex;  position: relative;  width: calc(100% / 4 - 5px);}#bber .bber-content .datacont {  order: 0;  font-size: 0.8rem;  font-weight: 700;  color: var(--anzhiyu-fontcolor);  width: 100%;  line-height: 1.38;  border-radius: 12px;  margin-bottom: 0.5rem;  display: flex;  flex-direction: column;  text-align: justify;}#bber p {  margin: 0px;}#bber div.bber-content {  display: flex;  flex-flow: wrap;  border-radius: 12px;  width: 100%;  height: 100%;}#bber .timeline ul li.bber-item {  position: relative;  width: 32%;  border: var(--style-border-always);  border-radius: 12px;  padding: 1rem 1rem 0.5rem;  transition: all 0.3s ease 0s;  display: flex;  flex-flow: column nowrap;  justify-content: space-between;  align-items: flex-start;  background: var(--anzhiyu-card-bg);  box-shadow: var(--anzhiyu-shadow-border);  margin-right: 2%;}#bber .timeline #waterfall.show {  opacity: 1;}#bber .timeline #waterfall {  opacity: 0;  transition: all 0.3s ease 0s;}#bber ul.list {  display: flex;  flex-flow: row wrap;  justify-content: space-between;}#bber {  margin-top: 1rem;  width: 100%;}#bber > section > ul > li.bber-item {  margin-bottom: 1rem;}#bber-tips {  font-size: 14px;  display: flex;  justify-content: center;  margin-top: 1rem;}#bber .timeline ul li.bber-item hr {  display: flex;  position: relative;  margin: 8px 0px;  border: 1px dashed var(--anzhiyu-theme-op);  width: 100%;}#bber .bber-info {  display: flex;  align-items: center;}#bber > section > ul > li > div .bber-info-time,#bber > section > ul > li > div .bber-info-from {  color: var(--anzhiyu-fontcolor);  font-size: 0.7rem;  background-color: var(--anzhiyu-gray-op);  padding: 0px 8px;  border-radius: 20px;  cursor: default;  display: flex;  align-items: center;}#bber .bber-info .far.fa-clock {  margin-right: 4px;}#bber > section > ul > li > div .bber-info-from span,#bber > section > ul > li > div .bber-info-from {  margin-left: 4px;}#bber .bber-bottom {  display: flex;  justify-content: space-between;  width: 100%;  margin-top: 10px;}#bber .bber-bottom .bber-reply {  cursor: url(/img/x2.cur), auto !important;}#bber .timeline ul li.bber-item:hover {  border: var(--style-border-hover);}#bber .bber-content-link {  display: flex;  margin-left: 0.5rem;  font-size: 0.7rem;  align-items: center;  background-color: rgba(245, 108, 108, 0.13);  color: rgb(245, 108, 108);  padding: 0px 8px;  border-radius: 20px;}#bber .bber-content-link i {  margin-right: 3px;}#bber .bber-content-link:hover {  background-color: var(--anzhiyu-main);  color: var(--anzhiyu-white);}#bber .bber-music {  width: 100%;  height: 90px;  margin: 0.5rem 0;  border-radius: 8px;  overflow: hidden;  border: var(--style-border-always);  background: var(--anzhiyu-secondbg);}#bber .aplayer {  margin: 0;}#bber .aplayer.aplayer-withlrc .aplayer-pic {  height: 82px;  width: 82px;  margin: 4px;  border-radius: 4px;}.bber-music .aplayer.aplayer-withlrc .aplayer-info {  padding: 5px 7px 0;}#bber .aplayer .aplayer-info .aplayer-music {  height: 23px;}#bber .aplayer .aplayer-info .aplayer-music .aplayer-title {  font-size: 0.8rem;  font-weight: 700;  margin: 0;  color: var(--anzhiyu-fontcolor);}#bber .aplayer .aplayer-info .aplayer-controller {  align-items: center;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap {  padding: 0;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-time {  position: initial;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {  background: var(--anzhiyu-gray);  height: 8px;  border-radius: 12px;  transition: 0.3s;  overflow: hidden;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {  height: 100%;  border-radius: 12px;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {  height: 100%;  border-radius: 12px;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {  display: none;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-time {  position: initial;}/* 顶部样式 */.author-content.author-content-item.essayPage {  height: 19rem;  background: url(https://bu.dusays.com/2022/11/14/6371ab2c018da.png) left 28% / cover no-repeat;  color: var(--anzhiyu-white);  overflow: hidden;  margin-top: 0px;}#page:has(#essay_page) .author-content-item .card-content .banner-button-group .banner-button:hover {  color: var(--anzhiyu-white);  border-radius: 20px !important;}/* 响应式 */@media screen and (max-width: 1300px) {  #bber .timeline ul li.bber-item {    width: 49%;    margin-right: 1%;  }}@media screen and (max-width: 768px) {  #bber .timeline ul li.bber-item {    width: 100%;    margin-right: 0px;  }}[data-theme="dark"] #bber .bber-music .aplayer,[data-theme="dark"] #bber .aplayer .aplayer-lrc:before,[data-theme="dark"] #bber .aplayer .aplayer-lrc:after {  background: var(--anzhiyu-card-bg);  color: var(--anzhiyu-fontcolor);}#bber .aplayer .aplayer-lrc p {  color: var(--anzhiyu-fontcolor);}]]></content>
+        <content type="html"><![CDATA[#bbTimeList {  background: var(--anzhiyu-white);  color: var(--anzhiyu-fontcolor);  padding: 0.5rem 1rem;  border-radius: 30px;  box-shadow: var(--anzhiyu-shadow-lightblack);  display: flex;  transition: all 0.3s ease 0s;  margin: 1rem auto 0;  border: var(--style-border);  align-items: center;  height: 50px;  width: 100%;}[data-theme="dark"] #bbTimeList {  background: #000 !important;}#bbtalk {  width: 100%;  overflow: hidden;  text-overflow: ellipsis;  white-space: nowrap;}#bber-talk {  width: 100%;  height: 25px;  line-height: 25px;  display: flex;  flex-direction: column;}.bber-logo {  font-size: 1.5rem;  line-height: 22px;  margin-right: 1rem;  transition: all 0.3s ease 0s;  cursor: url(/img/x2.cur), auto !important;}.bber-gotobb {  line-height: 25px;  margin-left: 1rem;  transition: all 0.3s ease 0s;  cursor: url(/img/x2.cur), auto !important;}#bber-talk .li-style {  width: 100%;  max-width: 100%;  height: 25px;  text-align: center;  overflow: hidden;  text-overflow: ellipsis;  transition: 0.3s;  font-weight: 700;  margin: auto;  cursor: url(/img/x2.cur), auto !important;  white-space: nowrap;}#bbTimeList:hover {  border: var(--style-border-hover);  box-shadow: var(--anzhiyu-shadow-main);}/* 文章页H1-H6图标样式效果 */.bbTimeList .bber-logo {  -webkit-animation: rotate 1.6s linear infinite;  animation: rotate 1.6s linear infinite;}@-webkit-keyframes rotate {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}@keyframes rotate {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}]]></content>
       
     </entry>
     
@@ -377,10 +377,10 @@
     
     <entry>
       <title></title>
-      <link href="/css/essay_page/home_essay_bar.css"/>
-      <url>/css/essay_page/home_essay_bar.css</url>
+      <link href="/css/essay_page/essay_page.css"/>
+      <url>/css/essay_page/essay_page.css</url>
       
-        <content type="html"><![CDATA[#bbTimeList {  background: var(--anzhiyu-white);  color: var(--anzhiyu-fontcolor);  padding: 0.5rem 1rem;  border-radius: 30px;  box-shadow: var(--anzhiyu-shadow-lightblack);  display: flex;  transition: all 0.3s ease 0s;  margin: 1rem auto 0;  border: var(--style-border);  align-items: center;  height: 50px;  width: 100%;}[data-theme="dark"] #bbTimeList {  background: #000 !important;}#bbtalk {  width: 100%;  overflow: hidden;  text-overflow: ellipsis;  white-space: nowrap;}#bber-talk {  width: 100%;  height: 25px;  line-height: 25px;  display: flex;  flex-direction: column;}.bber-logo {  font-size: 1.5rem;  line-height: 22px;  margin-right: 1rem;  transition: all 0.3s ease 0s;  cursor: url(/img/x2.cur), auto !important;}.bber-gotobb {  line-height: 25px;  margin-left: 1rem;  transition: all 0.3s ease 0s;  cursor: url(/img/x2.cur), auto !important;}#bber-talk .li-style {  width: 100%;  max-width: 100%;  height: 25px;  text-align: center;  overflow: hidden;  text-overflow: ellipsis;  transition: 0.3s;  font-weight: 700;  margin: auto;  cursor: url(/img/x2.cur), auto !important;  white-space: nowrap;}#bbTimeList:hover {  border: var(--style-border-hover);  box-shadow: var(--anzhiyu-shadow-main);}/* 文章页H1-H6图标样式效果 */.bbTimeList .bber-logo {  -webkit-animation: rotate 1.6s linear infinite;  animation: rotate 1.6s linear infinite;}@-webkit-keyframes rotate {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}@keyframes rotate {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}]]></content>
+        <content type="html"><![CDATA[#page:has(#essay_page) {  border: 0;  box-shadow: none !important;  padding: 0 !important;  background: transparent !important;}#page:has(#essay_page) .page-title {  display: none;}#web_bg ~ .page:has(#essay_page) {  background: var(--anzhiyu-background);}#bber .bber-container-img {  display: flex;  align-items: center;  justify-content: space-around;  width: 100%;  flex-wrap: wrap;  margin-bottom: 0.3rem;}#bber .bber-container-img .bber-content-noimg {  width: calc(100% / 4 - 5px);}#bber .bber-content-img img {  object-fit: cover;  max-height: 100%;  border-radius: 12px;}#bber .bber-content-img {  height: 100px;  border-radius: 12px;  overflow: hidden;  display: flex;  position: relative;  width: calc(100% / 4 - 5px);}#bber .bber-content .datacont {  order: 0;  font-size: 0.8rem;  font-weight: 700;  color: var(--anzhiyu-fontcolor);  width: 100%;  line-height: 1.38;  border-radius: 12px;  margin-bottom: 0.5rem;  display: flex;  flex-direction: column;  text-align: justify;}#bber p {  margin: 0px;}#bber div.bber-content {  display: flex;  flex-flow: wrap;  border-radius: 12px;  width: 100%;  height: 100%;}#bber .timeline ul li.bber-item {  position: relative;  width: 32%;  border: var(--style-border-always);  border-radius: 12px;  padding: 1rem 1rem 0.5rem;  transition: all 0.3s ease 0s;  display: flex;  flex-flow: column nowrap;  justify-content: space-between;  align-items: flex-start;  background: var(--anzhiyu-card-bg);  box-shadow: var(--anzhiyu-shadow-border);  margin-right: 2%;}#bber .timeline #waterfall.show {  opacity: 1;}#bber .timeline #waterfall {  opacity: 0;  transition: all 0.3s ease 0s;}#bber ul.list {  display: flex;  flex-flow: row wrap;  justify-content: space-between;}#bber {  margin-top: 1rem;  width: 100%;}#bber > section > ul > li.bber-item {  margin-bottom: 1rem;}#bber-tips {  font-size: 14px;  display: flex;  justify-content: center;  margin-top: 1rem;}#bber .timeline ul li.bber-item hr {  display: flex;  position: relative;  margin: 8px 0px;  border: 1px dashed var(--anzhiyu-theme-op);  width: 100%;}#bber .bber-info {  display: flex;  align-items: center;}#bber > section > ul > li > div .bber-info-time,#bber > section > ul > li > div .bber-info-from {  color: var(--anzhiyu-fontcolor);  font-size: 0.7rem;  background-color: var(--anzhiyu-gray-op);  padding: 0px 8px;  border-radius: 20px;  cursor: default;  display: flex;  align-items: center;}#bber .bber-info .far.fa-clock {  margin-right: 4px;}#bber > section > ul > li > div .bber-info-from span,#bber > section > ul > li > div .bber-info-from {  margin-left: 4px;}#bber .bber-bottom {  display: flex;  justify-content: space-between;  width: 100%;  margin-top: 10px;}#bber .bber-bottom .bber-reply {  cursor: url(/img/x2.cur), auto !important;}#bber .timeline ul li.bber-item:hover {  border: var(--style-border-hover);}#bber .bber-content-link {  display: flex;  margin-left: 0.5rem;  font-size: 0.7rem;  align-items: center;  background-color: rgba(245, 108, 108, 0.13);  color: rgb(245, 108, 108);  padding: 0px 8px;  border-radius: 20px;}#bber .bber-content-link i {  margin-right: 3px;}#bber .bber-content-link:hover {  background-color: var(--anzhiyu-main);  color: var(--anzhiyu-white);}#bber .bber-music {  width: 100%;  height: 90px;  margin: 0.5rem 0;  border-radius: 8px;  overflow: hidden;  border: var(--style-border-always);  background: var(--anzhiyu-secondbg);}#bber .aplayer {  margin: 0;}#bber .aplayer.aplayer-withlrc .aplayer-pic {  height: 82px;  width: 82px;  margin: 4px;  border-radius: 4px;}.bber-music .aplayer.aplayer-withlrc .aplayer-info {  padding: 5px 7px 0;}#bber .aplayer .aplayer-info .aplayer-music {  height: 23px;}#bber .aplayer .aplayer-info .aplayer-music .aplayer-title {  font-size: 0.8rem;  font-weight: 700;  margin: 0;  color: var(--anzhiyu-fontcolor);}#bber .aplayer .aplayer-info .aplayer-controller {  align-items: center;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap {  padding: 0;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-time {  position: initial;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {  background: var(--anzhiyu-gray);  height: 8px;  border-radius: 12px;  transition: 0.3s;  overflow: hidden;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {  height: 100%;  border-radius: 12px;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {  height: 100%;  border-radius: 12px;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {  display: none;}#bber .aplayer .aplayer-info .aplayer-controller .aplayer-time {  position: initial;}/* 顶部样式 */.author-content.author-content-item.essayPage {  height: 19rem;  background: url(https://bu.dusays.com/2022/11/14/6371ab2c018da.png) left 28% / cover no-repeat;  color: var(--anzhiyu-white);  overflow: hidden;  margin-top: 0px;}#page:has(#essay_page) .author-content-item .card-content .banner-button-group .banner-button:hover {  color: var(--anzhiyu-white);  border-radius: 20px !important;}/* 响应式 */@media screen and (max-width: 1300px) {  #bber .timeline ul li.bber-item {    width: 49%;    margin-right: 1%;  }}@media screen and (max-width: 768px) {  #bber .timeline ul li.bber-item {    width: 100%;    margin-right: 0px;  }}[data-theme="dark"] #bber .bber-music .aplayer,[data-theme="dark"] #bber .aplayer .aplayer-lrc:before,[data-theme="dark"] #bber .aplayer .aplayer-lrc:after {  background: var(--anzhiyu-card-bg);  color: var(--anzhiyu-fontcolor);}#bber .aplayer .aplayer-lrc p {  color: var(--anzhiyu-fontcolor);}]]></content>
       
     </entry>
     
