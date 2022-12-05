@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>陌颜小屋</title>
-  <icon>https://www.gravatar.com/avatar/7acc7ac0f90c2547e246439fb9d7670b</icon>
+  
   <subtitle>愿永不忘初心！</subtitle>
   <link href="http://blog.asever.top/atom.xml" rel="self"/>
   
@@ -11,7 +11,7 @@
   
   <author>
     <name>懒陌颜</name>
-    <email>1227124782@qq.com</email>
+    
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
