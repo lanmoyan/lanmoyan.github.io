@@ -1,4 +1,6 @@
-// 如果当前页有评论就执行函数
+
+function whenDOMReady() {
+    // 如果当前页有评论就执行函数
 if (document.getElementById('post-comment')) owoBig();
 // 表情放大
 function owoBig() {
@@ -53,3 +55,9 @@ function owoBig() {
     })
     observer.observe(document.getElementById('post-comment'), { subtree: true, childList: true }) // 监听的 元素 和 配置项
 }
+    //此处填写需要执行的代码，如:
+    //leonus.demo()
+  }
+  
+  whenDOMReady() //打开网站之后先执行一次函数
+  document.addEventListener("pjax:complete", whenDOMReady) //pjax加载完成之后执行上面函数
