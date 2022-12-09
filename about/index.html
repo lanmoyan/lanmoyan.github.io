@@ -171,7 +171,87 @@ if (true) {
         return str
       })
 
-      let statisticEl = document.getElementById('statistic')</script></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By 懒陌颜</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="6854173103" data-server="netease" data-type="playlist"   data-order="list" data-fixed="true" data-preload="auto" data-autoplay="false" data-mutex="true" ></div><script data-pjax src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script><script> LA.init({id:"JpcXv0xiu4dGg9lT",ck:"JpcXv0xiu4dGg9lT"})</script><script>new LingQue.Monitor().init({id:"Jr5OJhghVpHsGe0M",sendSuspicious:true});</script><script async data-pjax src="/js/custom.js"></script><script async data-pjax src="/js/waterfall/waterfall.js"></script><script data-pjax src="/js/swiper.min.js"></script><script data-pjax src="/js/NavigationBar.js"></script><script data-pjax src="/js/TWikoo.js"></script><script data-pjax src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/8.0.6/swiper-bundle.min.js"></script><script data-pjax src="/js/Emojis.js"></script><script src="/js/sun_moon.js" async></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+      let statisticEl = document.getElementById('statistic')
+
+      // 自定义不显示哪个或者显示哪个，如下为不显示 最近活跃访客 和 总访问量
+      let statistic = []
+      for (let i = 0; i < num.length; i++) {
+          if (!statisticEl) return
+          if (i == 0 || i == num.length - 1) continue;
+          statisticEl.innerHTML += '<div><span>' + title[i] + '</span><span id='+ title[i] + '>' + num[i] + '</span></div>'
+          queueMicrotask(()=> {
+            statistic.push(new CountUp(title[i], 0, num[i], 0, 2, {
+                useEasing: true,
+                useGrouping: true,
+                separator: ',',
+                decimal: '.',
+                prefix: '',
+                suffix: ''
+            }))
+          })
+      }
+
+      function statisticUP () {
+        let statisticElment = document.querySelector('.about-statistic.author-content-item');
+        if(isInViewPortOfOne(statisticElment)) {
+          for (let i = 0; i < num.length; i++) {
+            if (i == 0 || i == num.length - 1) continue;
+            statistic[i-1].start();
+          }
+          document.removeEventListener('scroll', throttleStatisticUP);
+        }
+      }
+
+      function scrollSelfInfoContentYear() {
+        let selfInfoContentYearElment = document.querySelector('.author-content-item.selfInfo.single');
+        if (selfInfoContentYearElment && isInViewPortOfOne(selfInfoContentYearElment)) {
+          selfInfoContentYear.start()
+          document.removeEventListener('scroll', throttleScrollSelfInfoContentYear);
+        }
+      }
+      const throttleStatisticUP = btf.throttle(statisticUP, 200)
+      document.addEventListener('scroll', throttleStatisticUP, {passive: true})
+
+      const throttleScrollSelfInfoContentYear = btf.throttle(scrollSelfInfoContentYear, 200)
+      document.addEventListener('scroll', throttleScrollSelfInfoContentYear, {passive: true})
+  });
+
+  var pursuitInterval = null;
+    pursuitInterval = setInterval(function () {
+      const show = document.querySelector('span[data-show]')
+      const next = show.nextElementSibling || document.querySelector('.first-tips')
+      const up = document.querySelector('span[data-up]')
+
+      if (up) {
+        up.removeAttribute('data-up')
+      }
+
+      show.removeAttribute('data-show')
+      show.setAttribute('data-up', '')
+
+      next.setAttribute('data-show', '')
+    }, 2000)
+
+    document.addEventListener('pjax:send', function(){
+      clearInterval(pursuitInterval);
+    });
+
+    var helloAboutEl = document.querySelector('.hello-about')
+    helloAboutEl.addEventListener("mousemove", evt => {
+      const mouseX = evt.offsetX;
+      const mouseY = evt.offsetY;
+      gsap.set(".cursor", {
+        x: mouseX,
+        y: mouseY,
+      })
+
+      gsap.to(".shape", {
+        x: mouseX,
+        y: mouseY,
+        stagger: -0.1
+      })
+    })
+})()</script></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By 懒陌颜</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="6854173103" data-server="netease" data-type="playlist"   data-order="list" data-fixed="true" data-preload="auto" data-autoplay="false" data-mutex="true" ></div><script data-pjax src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script><script> LA.init({id:"JpcXv0xiu4dGg9lT",ck:"JpcXv0xiu4dGg9lT"})</script><script>new LingQue.Monitor().init({id:"Jr5OJhghVpHsGe0M",sendSuspicious:true});</script><script async data-pjax src="/js/custom.js"></script><script async data-pjax src="/js/waterfall/waterfall.js"></script><script data-pjax src="/js/swiper.min.js"></script><script data-pjax src="/js/NavigationBar.js"></script><script data-pjax src="/js/TWikoo.js"></script><script data-pjax src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/8.0.6/swiper-bundle.min.js"></script><script data-pjax src="/js/Emojis.js"></script><script src="/js/sun_moon.js" async></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 
 var pjax = new Pjax({
   elements: 'a:not([target="_blank"])',
