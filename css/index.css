@@ -6727,7 +6727,7 @@ blockquote.pullquote.right {
   transition: 2s ease-in-out;
 }
 .author-content-item.game-yuanshen {
-  background: url(https://img02.anzhiy.cn/adminuploads/1/2022/09/05/6315e14a2f639.webp) no-repeat top;
+  background: url(https://bu.dusays.com/2022/12/10/6394aa31ecd5a.png) no-repeat top;
   background-size: cover;
   min-height: 300px;
   overflow: hidden;
@@ -6750,18 +6750,6 @@ blockquote.pullquote.right {
   width: 143px;
   height: 18px;
   margin-right: 0.5rem;
-}
-.icon-pos-mid {
-  background: url(https://img02.anzhiy.cn/adminuploads/1/2022/09/25/632fb9cecfc8c.png);
-}
-.author-content-item.game-yuanshen::after {
-  box-shadow: 0 -69px 203px 11px #575d8b inset;
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
 }
 
 .author-content-item.historical-drama {
@@ -7001,41 +6989,6 @@ blockquote.pullquote.right {
 /* html.dark body {
   background-color: #161d22;
 } */
-
-.loading-bar {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 500px;
-  height: 62.5px;
-  transform: translate(-25%, -50%) scale(0.5);
-  transition: all 0.5s;
-  user-select: none;
-  overflow: hidden;
-}
-
-.loading-bar img {
-  position: absolute;
-  top: 500px;
-  left: 0;
-  filter: drop-shadow(0 -500px 0 var(--loadingbar-background-color));
-}
-
-.loading-bar::after {
-  content: "";
-  position: absolute;
-  top: 500px;
-  left: 0;
-  filter: drop-shadow(0 -500px 0 var(--loadingbar-prospect-color));
-  width: 500px;
-  height: 62.5px;
-  background: url("https://yuanshen.site/imgs/loading-bar.png") no-repeat left 100%;
-  background-size: 500px 62.5px;
-  background-position-x: 0;
-}
-.author-content-item.game-yuanshen:hover .loading-bar::after {
-  animation: loading-bar 3.5s cubic-bezier(0.28, 0.11, 0.32, 1) infinite forwards;
-}
 
 @media screen and (max-width: 719px) {
   .loading-bar .loading-bar {
