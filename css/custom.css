@@ -1079,3 +1079,10 @@ span.card-archive-list-count {
   }
 }
 /* 评论区表情包放大 End*/
+
+#home_top {
+  margin: 1rem auto 0;
+  padding: 0px 15px;
+  max-width: 1450px;
+  width: 100%;
+}
