@@ -6,7 +6,7 @@
   <link href="http://blog.asever.top/atom.xml" rel="self"/>
   
   <link href="http://blog.asever.top/"/>
-  <updated>2022-11-29T14:20:14.368Z</updated>
+  <updated>2022-12-14T03:33:27.330Z</updated>
   <id>http://blog.asever.top/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://blog.asever.top/posts/c095.html"/>
     <id>http://blog.asever.top/posts/c095.html</id>
     <published>2022-11-14T01:35:09.000Z</published>
-    <updated>2022-11-29T14:20:14.368Z</updated>
+    <updated>2022-12-14T03:33:27.330Z</updated>
     
-    <content type="html"><![CDATA[<div class="tip info"><p>收录日期：2022年11月14日</p></div><h2 id="解决win11右键菜单问题">解决Win11右键菜单问题</h2><p>Win11的右键菜单绝对是反人类的设计，但这个问题解决起来就是半分钟、一句命令的事情。</p><p><img src="https://bu.dusays.com/2022/11/14/6371af1155d55.png" alt="6371af1155d55"></p><p>首先 <kbd>Win</kbd> + <kbd>X</kbd> <del>打开 Windows powershell（管理员）</del>  <wavy>PS：现在貌似叫Windows 终端（管理员）</wavy></p><p>1）切换回经典右键菜单</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKCU\Software\Classes\CLSID\&#123;<span class="number">86</span>ca1aa0-<span class="number">34</span>aa-<span class="number">4</span>e8b-a509-<span class="number">50</span>c905bae2a2&#125;\InprocServer32&quot; /f /ve</span><br></pre></td></tr></table></figure><p><img src="https://bu.dusays.com/2022/11/14/6371b07f81624.png" alt="6371b07f81624"></p><p>运行完成后，需要刷新一下注册表，可以用以下bat：</p><p><img src="https://bu.dusays.com/2022/11/14/6371b153da978.png" alt="6371b153da978"></p><div class="btns rounded grid5">            <a class="button" href="/bat/RefreshRegedit.bat" title="刷新注册表bat"><i class="fas fa-download"></i>刷新注册表bat</a>          </div><p>2）恢复到新版右键菜单（没人会这么干吧）</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg delete &quot;HKCU\Software\Classes\CLSID\&#123;<span class="number">86</span>ca1aa0-<span class="number">34</span>aa-<span class="number">4</span>e8b-a509-<span class="number">50</span>c905bae2a2&#125;&quot; /f</span><br></pre></td></tr></table></figure><p><img src="https://bu.dusays.com/2022/11/14/6371b3c523c8b.png" alt="6371b3c523c8b"></p><h2 id="解决操作系统多个问题">解决操作系统多个问题</h2><p>首先 <kbd>Win</kbd> + <kbd>R</kbd> 打开运行窗口，输入 <kbd>msconfig</kbd></p><p><img src="https://bu.dusays.com/2022/11/14/6371a6979ee50.png" alt="6371a6979ee50"></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msconfig</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<div class="tip info"><p>收录日期：2022年11月14日</p></div><h2 id="解决win11右键菜单问题">解决Win11右键菜单问题</h2><p>Win11的右键菜单绝对是反人类的设计，但这个问题解决起来就是半分钟、一句命令的事情。</p><p><img src="https://bu.dusays.com/2022/11/14/6371af1155d55.png" alt="6371af1155d55"></p><p>首先 <kbd>Win</kbd> + <kbd>X</kbd> <del>打开 Windows powershell（管理员）</del>  <wavy>PS：现在貌似叫Windows 终端（管理员）</wavy></p><p>1）切换回经典右键菜单</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg add &quot;HKCU\Software\Classes\CLSID\&#123;<span class="number">86</span>ca1aa0-<span class="number">34</span>aa-<span class="number">4</span>e8b-a509-<span class="number">50</span>c905bae2a2&#125;\InprocServer32&quot; /f /ve</span><br></pre></td></tr></table></figure><p><img src="https://bu.dusays.com/2022/11/14/6371b07f81624.png" alt="6371b07f81624"></p><p>运行完成后，需要刷新一下注册表，可以用以下bat：</p><p><img src="https://bu.dusays.com/2022/11/14/6371b153da978.png" alt="6371b153da978"></p><div class="btns rounded grid5">            <a class="button" href="/bat/RefreshRegedit.bat" title="刷新注册表bat"><i class="fas fa-download"></i>刷新注册表bat</a>          </div><p>2）恢复到新版右键菜单（没人会这么干吧）</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg delete &quot;HKCU\Software\Classes\CLSID\&#123;<span class="number">86</span>ca1aa0-<span class="number">34</span>aa-<span class="number">4</span>e8b-a509-<span class="number">50</span>c905bae2a2&#125;&quot; /f</span><br></pre></td></tr></table></figure><p><img src="https://bu.dusays.com/2022/11/14/6371b3c523c8b.png" alt="6371b3c523c8b"></p><h2 id="解决操作系统多个问题">解决操作系统多个问题</h2><p>首先 <kbd>Win</kbd> + <kbd>R</kbd> 打开运行窗口，输入 <kbd>msconfig</kbd></p><p><img src="https://bu.dusays.com/2022/11/14/6371a6979ee50.png" alt="6371a6979ee50"></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msconfig</span><br></pre></td></tr></table></figure><div class="tip info"><p>收录日期：2022年12月14日</p></div><h2 id="windows远程桌面出现credssp加密数据修正问题">Windows远程桌面出现CredSSP加密数据修正问题</h2><p>1、win+R打开运行窗口，输入gpedit.msc命令，点击“确定”<br>2、依次展开“计算机配置”-&gt;“管理模板”-&gt;“系统”-&gt;“凭据分配”设置名称： 加密数据库修正<br>3、双击“加密数据库修正”，将状态改为“启用”，保护级别改为“易受攻击”，应用—&gt;确定</p><h2 id="远程桌面问题-错误代码0x808">远程桌面问题 错误代码：0x808</h2><p>由于没有远程桌面授权服务器可以提供许可证，远程会话连接已断开。请跟服务器管理员联系。</p><p>隐藏详细信息<br>错误代码： 0x808<br>扩展错误代码： 0x101<br>时间戳 (UTC)： 11/24/22 06:08:04 AM</p><p>1、win+R打开运行窗口，输入 mstsc /admin /v:目标ip 命令，点击“确定”<br>2、输入账号密码即可</p><h2 id="账户无法登录">账户无法登录</h2><p>您无法登陆，因为您使用的登陆方法在此计算机上不被允许。请咨询网络管理员了解详细信息。</p><p>1、win+R打开运行窗口，输入gpedit.msc命令，点击“确定”<br>2、依次点击：计算机配置—策略—Windows设置—安全设置—本地策略—用户权限分配，<br>查看“允许在本地登录”设置，双击“允许在本地登录”。在出现的允许在本地登录属性对话框，可以看到没有“Domain Users”组，因此普通域用户不能登录，点击“添加用户或组”。在出现的添加用户或组对话框，输入“xxxx\Domain Users”，点击“确定”，输入域账号及密码。<br>3、再win+R  输入 gpupdate /force 强制域控制器刷新组策略，域控制器默认5分钟刷新一次。</p>]]></content>
     
     
       
@@ -45,20 +45,20 @@
   </entry>
   
   <entry>
-    <title>在虚拟机内搭建AD域控服务器</title>
+    <title>搭建AD域控如此简单</title>
     <link href="http://blog.asever.top/posts/6a86.html"/>
     <id>http://blog.asever.top/posts/6a86.html</id>
     <published>2022-11-11T13:11:02.000Z</published>
-    <updated>2022-12-10T16:32:30.352Z</updated>
+    <updated>2022-12-14T03:33:38.373Z</updated>
     
-    <content type="html"><![CDATA[<p>上次说道，要写篇关于在虚拟机内搭建AD域控服务器的教程，于是我咕咕咕了大半个月了</p><p>我还咬咬牙坚持咕了吧，哈哈哈</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言">前言</h2><h3 id="ad-active-direcotry"><a href="#AD-active-Direcotry" class="headerlink" title="AD active Direcotry"></a>AD active Direcotry</h3><p>域将计算机、用户的账号密码集中放在一个数据库内，使得用户只使用一个账号和密码就能够访问网络中的其它资源。</p><p>将多台网络中的计算机逻辑上组织到一起，对这些计算机进行集中式管理，这些多台计算机组成的逻辑环境叫作域环境。与传统的工作组环境相比，工作组环境属于分散式管理，只适合少数计算机的管理。随着公司应用需求增多、客户机数量增多，必然会增加网络管理的工作量和管理的复杂性，从而导致IT投入成本的增加，此时必须采用集中式管理的域环境。</p><h2 id="准备">准备</h2><p>1.下载 VMware Workstation Pro 软件<br>2.下载 windows_server_2016_vl_x64.iso 系统包<br>3.下载 windows_10_x64.iso 系统包<br>4.下载 windows_7_x64.iso 系统包</p><a class="tag-Link" target="_blank" href="https://customerconnect.vmware.com/en/downloads/info/slug/desktop_end_user_computing/vmware_workstation_pro/16_0">    <div class="tag-link-tips">引用站外地址</div>    <div class="tag-link-bottom">        <div class="tag-link-left" style="background-image: url(https://api.iowen.cn/favicon/customerconnect.vmware.com/en/downloads/info/slug/desktop_end_user_computing/vmware_workstation_pro/16_0.png);"></div>        <div class="tag-link-right">            <div class="tag-link-title">VMware</div>            <div class="tag-link-sitename">Download VMware Workstation Pro</div>        </div>        <i class="fa-solid fa-angle-right"></i>    </div>    </a><a class="tag-Link" target="_blank" href="https://next.itellyou.cn/">    <div class="tag-link-tips">引用站外地址</div>    <div class="tag-link-bottom">        <div class="tag-link-left" style="background-image: url(https://api.iowen.cn/favicon/next.itellyou.cn/.png);"></div>        <div class="tag-link-right">            <div class="tag-link-title">MSDN</div>            <div class="tag-link-sitename">ITELLYOU</div>        </div>        <i class="fa-solid fa-angle-right"></i>    </div>    </a><h2 id="安装-vmware-workstation-pro-软件">安装 VMware Workstation Pro 软件</h2><p>软件安装一直下一步，默认勾选即可。</p><h2 id="创建一个虚拟机">创建一个虚拟机</h2><h2 id="安装-windows_server_2016-系统">安装 windows_server_2016 系统</h2><h2 id="添加功能插件">添加功能插件</h2><h2 id="配置ad域控">配置AD域控</h2><h2 id="再次创建两个虚拟机">再次创建两个虚拟机</h2><h2 id="虚拟机分别安装系统">虚拟机分别安装系统</h2><h2 id="添加主域">添加主域</h2><h2 id="搭建完成">搭建完成</h2>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;上次说道，要写篇关于在虚拟机内搭建AD域控服务器的教程，于是我咕咕咕了大半个月了&lt;/p&gt;
-&lt;p&gt;我还咬咬牙坚持咕了吧，哈哈哈&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+
+&lt;h3 id=&quot;ad-active-direcotry&quot;&gt;&lt;a href=&quot;#AD-active-Direcotry&quot; class=&quot;headerlink&quot; title=&quot;AD active Direcotry&quot;&gt;&lt;/a&gt;AD activ</summary>
       
     
     
