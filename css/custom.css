@@ -1445,3 +1445,10 @@ span.card-archive-list-count {
   }
 }
 /* 页脚样式 End*/
+
+/* 翻页按钮居中 Start*/
+#pagination {
+	width: 100%;
+	margin: auto;
+  }
+/* 翻页按钮居中 End*/
