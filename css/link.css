@@ -19,7 +19,6 @@
     padding: 20px;
     border: var(--card-border);
     background: var(--card-bg);
-    background-image: url(/img/bg.svg);
     border-radius: 30px/20px;
     -webkit-box-shadow: var(--box-shadow);
     -moz-box-shadow: var(--box-shadow);
