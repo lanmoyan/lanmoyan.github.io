@@ -6,7 +6,7 @@
   <link href="http://blog.asever.top/atom.xml" rel="self"/>
   
   <link href="http://blog.asever.top/"/>
-  <updated>2022-12-27T16:09:40.051Z</updated>
+  <updated>2022-12-27T16:19:25.756Z</updated>
   <id>http://blog.asever.top/</id>
   
   <author>
@@ -21,18 +21,15 @@
     <link href="http://blog.asever.top/posts/682b.html"/>
     <id>http://blog.asever.top/posts/682b.html</id>
     <published>2022-12-27T10:46:37.000Z</published>
-    <updated>2022-12-27T16:09:40.051Z</updated>
+    <updated>2022-12-27T16:19:25.756Z</updated>
     
-    <content type="html"><![CDATA[<p>在这年头，时间的概念都被淡化了，什么 APP 都要上个年度报告，少了年度总结，就仿佛白过了一年。</p><h2 id="疫情">疫情</h2><p>Hi，今年的疫情政策让我感到很吃惊，前段时间还在陆续封控，11月转眼间，全国放开。</p><p>“清零派”是清理阴的吧！🤣</p><p>昆山3月爆发的疫情，让我静默一月有余，起床铃声是大喇叭喊着：“下楼做核酸了！下楼做核酸了！”</p><p>现在全国各地都爆发着，传染着。虽说比19年武汉疫情患者症状好过不少，现在有症状的发个2-3天烧，喉咙吞刀片，休息几天就好了。</p><p>就是咳嗽会常伴，我转阴后一周多还有咳嗽咳痰。</p><h2 id="生活">生活</h2><p><img src="https://bu.dusays.com/2022/12/27/63ab0fb5d3454.jpg" alt="63ab0fb5d3454"></p><p><img src="https://bu.dusays.com/2022/12/27/63ab10d87d38c.jpg" alt="63ab10d87d38c"></p><p>今年拆了两回机器，清灰换硅脂，虽说没有苹果的极致布局，但也算看得过去。联想第一梯队还算不错，想当年传着“秒罄” “黄牛加价” “泡水机” ，那可都是沸沸扬扬。</p><p>10月份在京东买了两根三星16G内存条，32G。看图就知道了😂</p><p><img src="https://bu.dusays.com/2022/12/27/63ab11e6bca0d.jpg" alt="63ab11e6bca0d"></p><p>下班后的夕阳，彩云</p><p><img src="https://bu.dusays.com/2022/11/17/63763b065a972.png" alt="63763b065a972"></p><p><img src="https://bu.dusays.com/2022/12/27/63ab13423c83c.jpg" alt="63ab13423c83c"></p><h2 id="技术">技术</h2><p>还记得那时候一直嚷嚷着封装一个运维专用的系统，就不需要用纯净的系统包来装系统。纯净系统太纯净了，驱动和常用软件都得安装一次，要是一个月多来几台做系统的，耗时太久了。</p><p>这个是封装出来的镜像包，占用15G，快16G了，原纯净包好像只有6G<br><img src="https://bu.dusays.com/2022/12/27/63ab140601bfc.png" alt="63ab13423c83c"></p><p>正在实体机测试<br><img src="https://bu.dusays.com/2022/12/27/63ab140643ad1.jpg" alt="63ab13423c83c"></p><p>成功安装自己做出来的镜像包<br><img src="https://bu.dusays.com/2022/12/27/63ab140637d76.jpg" alt="63ab13423c83c"></p><p>这个还得慢慢优化，封装这个系统包前前后后花了几小时（都是凑起来的时间）</p><h2 id="博客">博客</h2><p>说到博客，一个好项目，花了几月时间慢慢捣鼓出来的。前期买服务器买域名，域名备案，搭建完成，再到魔改。文件夹新建了无数次，老是魔改出bug，然后又推倒重来，以至于文章没有几篇，CV抄魔改教程花了一两月。目前魔改趋于稳定，有点想写文章了。</p><p><img src="https://bu.dusays.com/2022/12/28/63ab187497246.png" alt="63ab187497246"></p><h2 id="2023年的目标">2023年的目标</h2><p>还没想好目标，晚安 玛卡巴卡！！！</p>]]></content>
+    <content type="html"><![CDATA[<p>在这年头，时间的概念都被淡化了，什么 APP 都要上个年度报告，少了年度总结，就仿佛白过了一年。</p><p><img src="https://bu.dusays.com/2022/12/28/63ab1ae26a453.jpg" alt="63ab1ae26a453"></p><p><img src="https://bu.dusays.com/2022/12/28/63ab1ae29f3fa.jpg" alt="63ab1ae29f3fa"></p><h2 id="疫情">疫情</h2><p>Hi，今年的疫情政策让我感到很吃惊，前段时间还在陆续封控，11月转眼间，全国放开。</p><p>“清零派”是清理阴的吧！🤣</p><p>昆山3月爆发的疫情，让我静默一月有余，起床铃声是大喇叭喊着：“下楼做核酸了！下楼做核酸了！”</p><p>现在全国各地都爆发着，传染着。虽说比19年武汉疫情患者症状好过不少，现在有症状的发个2-3天烧，喉咙吞刀片，休息几天就好了。</p><p>就是咳嗽会常伴，我转阴后一周多还有咳嗽咳痰。</p><h2 id="生活">生活</h2><p><img src="https://bu.dusays.com/2022/12/27/63ab0fb5d3454.jpg" alt="63ab0fb5d3454"></p><p><img src="https://bu.dusays.com/2022/12/27/63ab10d87d38c.jpg" alt="63ab10d87d38c"></p><p>今年拆了两回机器，清灰换硅脂，虽说没有苹果的极致布局，但也算看得过去。联想第一梯队还算不错，想当年传着“秒罄” “黄牛加价” “泡水机” ，那可都是沸沸扬扬。</p><p>10月份在京东买了两根三星16G内存条，32G。看图就知道了😂</p><p><img src="https://bu.dusays.com/2022/12/27/63ab11e6bca0d.jpg" alt="63ab11e6bca0d"></p><p>下班后的夕阳，彩云</p><p><img src="https://bu.dusays.com/2022/11/17/63763b065a972.png" alt="63763b065a972"></p><p><img src="https://bu.dusays.com/2022/12/27/63ab13423c83c.jpg" alt="63ab13423c83c"></p><h2 id="技术">技术</h2><p>还记得那时候一直嚷嚷着封装一个运维专用的系统，就不需要用纯净的系统包来装系统。纯净系统太纯净了，驱动和常用软件都得安装一次，要是一个月多来几台做系统的，耗时太久了。</p><p>这个是封装出来的镜像包，占用15G，快16G了，原纯净包好像只有6G<br><img src="https://bu.dusays.com/2022/12/27/63ab140601bfc.png" alt="63ab13423c83c"></p><p>正在实体机测试<br><img src="https://bu.dusays.com/2022/12/27/63ab140643ad1.jpg" alt="63ab13423c83c"></p><p>成功安装自己做出来的镜像包<br><img src="https://bu.dusays.com/2022/12/27/63ab140637d76.jpg" alt="63ab13423c83c"></p><p>这个还得慢慢优化，封装这个系统包前前后后花了几小时（都是凑起来的时间）</p><h2 id="博客">博客</h2><p>说到博客，一个好项目，花了几月时间慢慢捣鼓出来的。前期买服务器买域名，域名备案，搭建完成，再到魔改。文件夹新建了无数次，老是魔改出bug，然后又推倒重来，以至于文章没有几篇，CV抄魔改教程花了一两月。目前魔改趋于稳定，有点想写文章了。</p><p><img src="https://bu.dusays.com/2022/12/28/63ab187497246.png" alt="63ab187497246"></p><h2 id="2023年的目标">2023年的目标</h2><p>还没想好目标，晚安 玛卡巴卡！！！</p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;在这年头，时间的概念都被淡化了，什么 APP 都要上个年度报告，少了年度总结，就仿佛白过了一年。&lt;/p&gt;
-&lt;h2 id=&quot;疫情&quot;&gt;疫情&lt;/h2&gt;
-
-&lt;p&gt;Hi，今年的疫情政策让我感到很吃惊，前段时间还在陆续封控，11月转眼间，全国放开。&lt;/p&gt;
-&lt;p&gt;“清零派”是清理阴的吧</summary>
+&lt;p&gt;&lt;img src=&quot;https://bu.dusays.com/2022/12/28/63ab1ae26a453.jpg&quot; alt=&quot;63ab1ae26a453&quot;</summary>
       
     
     
