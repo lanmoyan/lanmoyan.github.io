@@ -6,7 +6,7 @@
   <link href="http://blog.asever.top/atom.xml" rel="self"/>
   
   <link href="http://blog.asever.top/"/>
-  <updated>2022-12-24T03:23:58.398Z</updated>
+  <updated>2022-12-27T13:43:16.879Z</updated>
   <id>http://blog.asever.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022年总结</title>
+    <link href="http://blog.asever.top/posts/682b.html"/>
+    <id>http://blog.asever.top/posts/682b.html</id>
+    <published>2022-12-27T10:46:37.000Z</published>
+    <updated>2022-12-27T13:43:16.879Z</updated>
+    
+    <content type="html"><![CDATA[<p>在这年头，时间的概念都被淡化了，什么 APP 都要上个年度报告，少了年度总结，就仿佛白过了一年。</p><h2 id="疫情">疫情</h2><p>Hi，今年的疫情政策让我感到很吃惊，前段时间还在陆续封控，11月转眼间，全国放开。</p><p>“清零派”是清理阴的吧！🤣</p><p>昆山3月爆发的疫情，让我静默一月有余，起床铃声是大喇叭喊着：“下楼做核酸了！下楼做核酸了！”</p><p>现在全国各地都爆发着，传染着。虽说比19年武汉疫情患者症状好过不少，现在有症状的发个2-3天烧，喉咙吞刀片，休息几天就好了。</p><p>就是咳嗽会常伴，我转阴后一周多还有咳嗽咳痰。</p><h2 id="生活">生活</h2><p>今年拆了两回机器，清灰换硅脂，虽说没有苹果的极致布局，但也算看得过去。联想第一梯队还算不错，想当年传着“秒罄” “黄牛加价” “泡水机” ，那可都是沸沸扬扬。</p><p>10月份在京东买了两根三星16G内存条，32G。看图就知道了😂</p><p>下班后的夕阳，彩云</p><h2 id="技术">技术</h2><p>还记得那时候一直嚷嚷着封装一个运维专用的系统，就不需要用纯净的系统包来装系统。纯净系统太纯净了，驱动和常用软件都得安装一次，要是一个月多来几台做系统的，耗时太久了。</p><h2 id="博客">博客</h2><h2 id="2023年的目标">2023年的目标</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在这年头，时间的概念都被淡化了，什么 APP 都要上个年度报告，少了年度总结，就仿佛白过了一年。&lt;/p&gt;
+&lt;h2 id=&quot;疫情&quot;&gt;疫情&lt;/h2&gt;
+
+&lt;p&gt;Hi，今年的疫情政策让我感到很吃惊，前段时间还在陆续封控，11月转眼间，全国放开。&lt;/p&gt;
+&lt;p&gt;“清零派”是清理阴的吧</summary>
+      
+    
+    
+    
+    
+    <category term="总结" scheme="http://blog.asever.top/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>运维常用指南</title>
