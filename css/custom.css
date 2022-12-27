@@ -1221,7 +1221,7 @@ span.card-archive-list-count {
   width: 100%;
 }
 
-/* 消息弹窗 */
+/* 消息弹窗 Strat*/
 .snackbar-container {
   background: var(--heo-main) !important;
   color: var(--heo-white) !important;
@@ -1274,3 +1274,4 @@ span.card-archive-list-count {
     width: 100%;
   }
 }
+/* 消息弹窗 End*/

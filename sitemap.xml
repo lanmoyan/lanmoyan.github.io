@@ -205,6 +205,20 @@
   </url>
   
   <url>
+    <loc>http://blog.asever.top/tags/Hexo/</loc>
+    <lastmod>2022-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.asever.top/tags/Github-Page/</loc>
+    <lastmod>2022-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.asever.top/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
     <lastmod>2022-12-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -225,20 +239,6 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>http://blog.asever.top/tags/Hexo/</loc>
-    <lastmod>2022-12-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.asever.top/tags/Github-Page/</loc>
-    <lastmod>2022-12-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
@@ -249,14 +249,14 @@
   </url>
   
   <url>
-    <loc>http://blog.asever.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://blog.asever.top/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.asever.top/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</loc>
+    <loc>http://blog.asever.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
