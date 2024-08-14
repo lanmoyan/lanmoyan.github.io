@@ -168,7 +168,7 @@
       <link href="/posts/4bcc.html"/>
       <url>/posts/4bcc.html</url>
       
-        <content type="html"><![CDATA[<h2>参考教程：</h2><div calss='anzhiyu-tag-link'><a class="tag-Link" target="_blank" href="https://anzhiy.cn/posts/ddae.html">    <div class="tag-link-tips">引用站外地址</div>    <div class="tag-link-bottom">        <div class="tag-link-left" style="">          <i class="anzhiyufont anzhiyu-icon-link" style=""></i>        </div>        <div class="tag-link-right">            <div class="tag-link-title">使用 Github Pages 和 Hexo 搭建自己的独立博客</div>            <div class="tag-link-sitename">安知鱼</div>        </div>        <i class="anzhiyufont anzhiyu-icon-angle-right"></i>    </div>    </a></div><h2>前言</h2><p>搭建一个这样的 Blog 首先你得知道什么是 Github 和 Github Pages，你可以理解为咱们没有服务器，咱们将页面托管到了 Github 上</p><ol><li><p><a href="https://pages.github.com/">GithubPages</a> 可以被认为是用户编写的、托管在 github 上的静态网页。使用 Github Pages 可以为你提供一个免费的服务器，免去了自己搭建服务器和写数据库的麻烦。此外还可以绑定自己的域名。</p></li><li><p><a href="https://hexo.io/zh-cn/">Hexo</a> 是一个快速、简洁且高效的博客框架。</p></li><li><p><a href="https://hexo.io/zh-cn/">Hexo</a> 在使用 Markdown（或其他渲染引擎）解析文章，在几秒内即可利用靓丽的主题生成静态网页。</p></li></ol><h2>安装相关软件</h2><p>1.安装<a href="https://nodejs.org/en/download/">node.js</a> 软件</p><p>2.安装<a href="https://git-scm.com/downloads">Git</a> 软件</p><p>3.安装<a href="https://code.visualstudio.com/">vscode</a> 软件</p><p>4.<kbd>Win</kbd> + <kbd>R</kbd> 打开运行框，输入 cmd 后回车，输入以下命令，如出现版本号即视为安装成功</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure><p><img src="https://bu.dusays.com/2022/10/29/635d2c6108798.png" alt="635d2c6108798"></p><p>此外若安装成功，在桌面右键鼠标，可以看到菜单里多了 Git GUI Here 和 Git Bash Here 两个选项，第一个是图形界面的 Git 操作，另一个是命令行，我们一般使用第二个。</p><h2>Hexo 安装</h2><p>选择一个磁盘，新建一个文件夹，自己重命名文件夹（如：我的文件夹为：F\HexoBlog），博客相关文件将储存在此文件夹下，在该文件夹下右键鼠标，点击 Git Bash Here，输入以下 npm 命令即可安装,第一次可能需要久一点输入命令后等一等。</p><p><img src="https://bu.dusays.com/2022/10/29/635d2c611c604.png" alt="635d2c611c604"></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p><img src="https://bu.dusays.com/2022/10/29/635d2c612d29c.png" alt="635d2c612d29c"></p><p>Hexo 安装完成后，将会在指定文件夹中新建所需要的文件，文件夹内部分文件描述如下：</p><p><img src="https://bu.dusays.com/2022/10/29/635d2c61475f1.png" alt="635d2c61475f1"></p><h2>本地查看效果</h2><p>执行以下命令</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure><p><img src="https://bu.dusays.com/2022/10/29/635d37358e407.png" alt="635d37358e407"></p><p>执行完即可登录 <a href="http://localhost:4000/">http://localhost:4000/</a> 查看效果。</p><p><img src="https://bu.dusays.com/2022/10/29/635d3735b0b7a.png" alt="635d3735b0b7a"></p><h2>将博客部署到 Github Pages 上</h2><p>到目前为止，我们的本地博客就成功搭建了，但是现在我们只能通过本地连接查看博客，我们要做的是让其他人也能够访问我们的博客，这就需要我们将博客部署到 Github Pages 上。</p><details class="folding-tag" cyan open><summary> 部署前步骤 </summary>              <div class='content'>              <p>一、注册 Github 账户：点击此处访问 Github 官网，点击 Sign Up 注册账户</p><p>二、创建项目代码库：点击 New repository 开始创建，步骤及注意事项见图：</p><p>三、配置 SSH 密钥：只有配置好 SSH 密钥后，我们才可以通过 git 操作实现本地代码库与 Github 代码库同步，在你第一次新建的文件夹里面（如：我的文件夹为：F\HexoBlog） Git Bash Here 输入以下命令</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your email@example.com&quot;</span><br><span class="line">//引号里面填写你的邮箱地址，比如我的是<span class="number">1227124782</span>@qq.com</span><br></pre></td></tr></table></figure><p>之后会出现：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> which to save the key (/c/Users/you/.ssh/id_rsa):</span><br><span class="line">//到这里可以直接回车将密钥按默认文件进行存储</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br><span class="line">//这里是要你输入密码，其实不需要输什么密码，直接回车就行！</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">//这里是要你再次输入密码，其实不需要输什么密码，直接回车就行！</span><br><span class="line">Your identification has been saved <span class="keyword">in</span> /c/Users/you/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> /c/Users/you/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">这里是各种字母数字组成的字符串，结尾是你的邮箱</span><br><span class="line">The key&#x27;s randomart image is:</span><br><span class="line">这里也是各种字母数字符号组成的字符串</span><br></pre></td></tr></table></figure><p>运行以下命令，将公钥的内容复制到系统粘贴板上</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure><p>四、在 GitHub 账户中添加你的公钥</p><p>1.登陆 GitHub，进入 Settings：</p><p>2.点击 SSH and GPG Keys：</p><p>3.选择 New SSH key：</p><p>4.粘贴密钥：</p><p>五、测试</p><p>直接在桌面右键 点击 Git Bash Here，输入以下命令输入以下命令：注意：<a href="mailto:&#x67;&#x69;&#x74;&#64;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#46;&#99;&#111;&#x6d;">&#x67;&#x69;&#x74;&#64;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#46;&#99;&#111;&#x6d;</a> 不要做任何更改！</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>六、配置 Git 个人信息</p><p>Git 会根据用户的名字和邮箱来记录提交，GitHub 也是用这些信息来做权限的处理，输入以下命令进行个人信息的设置，把名称和邮箱替换成你自己的，名字可以不是 GitHub 的昵称，但为了方便记忆，建议与 GitHub 一致</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;此处填你的用户名&quot;</span><br><span class="line">git config --global user.email &quot;此处填你的邮箱&quot;</span><br></pre></td></tr></table></figure><p>到此为止 SSH Key 配置成功，本机已成功连接到 Github</p>              </div>            </details><details class="folding-tag" cyan open><summary> 将本地的Hexo文件更新到Github的库中 </summary>              <div class='content'>              <p>一、登录 Github 打开自己的项目 yourname.github.io</p><p>二、鼠标移到 Code 按钮，点击按钮复制，或者直接把 SSH 全部复制</p><p>三、一键复制地址</p><p>四、打开你创建的 Hexo 文件夹（如：F:\HexoBlog\Hexo），右键用记事本（或者 Notepad++、Vs Code 等）打开该文件夹下的 _config.yml 文件</p><p>五、滑到最下面,按下图修改 _config.yml 文件并保存</p><p>六、在 Hexo 文件夹下分别执行以下命令</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">//或者直接运行</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure><p>执行完之后会让你输入你的 Github 的账号和密码，如果此时报以下错误，说明你的 deployer 没有安装成功</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure><p>需要执行以下命令再安装一次：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>再执行</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">//或者直接运行</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure><p>你的博客就会部署到 Github 上了</p><p>七、访问博客</p><p>你的博客地址：https:&#x2F;&#x2F;你的用户名.github.io， 比如我的是：<a href="https://lanmoyan.github.io/">https://lanmoyan.github.io/</a> ，现在每个人都可以通过此链接访问你的博客了</p>              </div>            </details>]]></content>
+        <content type="html"><![CDATA[<h2>参考教程：</h2><div calss='anzhiyu-tag-link'><a class="tag-Link" target="_blank" href="https://anzhiy.cn/posts/ddae.html">    <div class="tag-link-tips">引用站外地址</div>    <div class="tag-link-bottom">        <div class="tag-link-left" style="">          <i class="anzhiyufont anzhiyu-icon-link" style=""></i>        </div>        <div class="tag-link-right">            <div class="tag-link-title">使用 Github Pages 和 Hexo 搭建自己的独立博客</div>            <div class="tag-link-sitename">安知鱼</div>        </div>        <i class="anzhiyufont anzhiyu-icon-angle-right"></i>    </div>    </a></div><h2>前言</h2><p>搭建一个这样的 Blog 首先你得知道什么是 Github 和 Github Pages，你可以理解为咱们没有服务器，咱们将页面托管到了 Github 上</p><ol><li><p><a href="https://pages.github.com/">GithubPages</a> 可以被认为是用户编写的、托管在 github 上的静态网页。使用 Github Pages 可以为你提供一个免费的服务器，免去了自己搭建服务器和写数据库的麻烦。此外还可以绑定自己的域名。</p></li><li><p><a href="https://hexo.io/zh-cn/">Hexo</a> 是一个快速、简洁且高效的博客框架。</p></li><li><p><a href="https://hexo.io/zh-cn/">Hexo</a> 在使用 Markdown（或其他渲染引擎）解析文章，在几秒内即可利用靓丽的主题生成静态网页。</p></li></ol><h2>安装相关软件</h2><p>1.安装<a href="https://nodejs.org/en/download/">node.js</a> 软件</p><p>2.安装<a href="https://git-scm.com/downloads">Git</a> 软件</p><p>3.安装<a href="https://code.visualstudio.com/">vscode</a> 软件</p><p>4.<kbd>Win</kbd> + <kbd>R</kbd> 打开运行框，输入 cmd 后回车，输入以下命令，如出现版本号即视为安装成功</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure><p><img src="https://bu.dusays.com/2022/10/29/635d2c6108798.png" alt="635d2c6108798"></p><p>此外若安装成功，在桌面右键鼠标，可以看到菜单里多了 Git GUI Here 和 Git Bash Here 两个选项，第一个是图形界面的 Git 操作，另一个是命令行，我们一般使用第二个。</p><h2>Hexo 安装</h2><p>选择一个磁盘，新建一个文件夹，自己重命名文件夹（如：我的文件夹为：F\HexoBlog），博客相关文件将储存在此文件夹下，在该文件夹下右键鼠标，点击 Git Bash Here，输入以下 npm 命令即可安装,第一次可能需要久一点输入命令后等一等。</p><p><img src="https://bu.dusays.com/2022/10/29/635d2c611c604.png" alt="635d2c611c604"></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p><img src="https://bu.dusays.com/2022/10/29/635d2c612d29c.png" alt="635d2c612d29c"></p><p>Hexo 安装完成后，将会在指定文件夹中新建所需要的文件，文件夹内部分文件描述如下：</p><p><img src="https://bu.dusays.com/2022/10/29/635d2c61475f1.png" alt="635d2c61475f1"></p><h2>本地查看效果</h2><p>执行以下命令</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure><p><img src="https://bu.dusays.com/2022/10/29/635d37358e407.png" alt="635d37358e407"></p><p>执行完即可登录 <a href="http://localhost:4000/">http://localhost:4000/</a> 查看效果。</p><p><img src="https://bu.dusays.com/2022/10/29/635d3735b0b7a.png" alt="635d3735b0b7a"></p><h2>将博客部署到 Github Pages 上</h2><p>到目前为止，我们的本地博客就成功搭建了，但是现在我们只能通过本地连接查看博客，我们要做的是让其他人也能够访问我们的博客，这就需要我们将博客部署到 Github Pages 上。</p><details class="folding-tag" cyan open><summary> 部署前步骤 </summary>              <div class='content'>              <p>一、注册 Github 账户：点击此处访问 Github 官网，点击 Sign Up 注册账户</p><p>二、创建项目代码库：点击 New repository 开始创建，步骤及注意事项见图：</p><p>三、配置 SSH 密钥：只有配置好 SSH 密钥后，我们才可以通过 git 操作实现本地代码库与 Github 代码库同步，在你第一次新建的文件夹里面（如：我的文件夹为：F\HexoBlog） Git Bash Here 输入以下命令</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your email@example.com&quot;</span><br><span class="line">//引号里面填写你的邮箱地址，比如我的是<span class="number">1227124782</span>@qq.com</span><br></pre></td></tr></table></figure><p>之后会出现：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> which to save the key (/c/Users/you/.ssh/id_rsa):</span><br><span class="line">//到这里可以直接回车将密钥按默认文件进行存储</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br><span class="line">//这里是要你输入密码，其实不需要输什么密码，直接回车就行！</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">//这里是要你再次输入密码，其实不需要输什么密码，直接回车就行！</span><br><span class="line">Your identification has been saved <span class="keyword">in</span> /c/Users/you/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> /c/Users/you/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">这里是各种字母数字组成的字符串，结尾是你的邮箱</span><br><span class="line">The key&#x27;s randomart image is:</span><br><span class="line">这里也是各种字母数字符号组成的字符串</span><br></pre></td></tr></table></figure><p>运行以下命令，将公钥的内容复制到系统粘贴板上</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure><p>四、在 GitHub 账户中添加你的公钥</p><p>1.登陆 GitHub，进入 Settings：</p><p>2.点击 SSH and GPG Keys：</p><p>3.选择 New SSH key：</p><p>4.粘贴密钥：</p><p>五、测试</p><p>直接在桌面右键 点击 Git Bash Here，输入以下命令输入以下命令：注意：<a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#111;&#x6d;">&#103;&#x69;&#116;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#111;&#x6d;</a> 不要做任何更改！</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>六、配置 Git 个人信息</p><p>Git 会根据用户的名字和邮箱来记录提交，GitHub 也是用这些信息来做权限的处理，输入以下命令进行个人信息的设置，把名称和邮箱替换成你自己的，名字可以不是 GitHub 的昵称，但为了方便记忆，建议与 GitHub 一致</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;此处填你的用户名&quot;</span><br><span class="line">git config --global user.email &quot;此处填你的邮箱&quot;</span><br></pre></td></tr></table></figure><p>到此为止 SSH Key 配置成功，本机已成功连接到 Github</p>              </div>            </details><details class="folding-tag" cyan open><summary> 将本地的Hexo文件更新到Github的库中 </summary>              <div class='content'>              <p>一、登录 Github 打开自己的项目 yourname.github.io</p><p>二、鼠标移到 Code 按钮，点击按钮复制，或者直接把 SSH 全部复制</p><p>三、一键复制地址</p><p>四、打开你创建的 Hexo 文件夹（如：F:\HexoBlog\Hexo），右键用记事本（或者 Notepad++、Vs Code 等）打开该文件夹下的 _config.yml 文件</p><p>五、滑到最下面,按下图修改 _config.yml 文件并保存</p><p>六、在 Hexo 文件夹下分别执行以下命令</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">//或者直接运行</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure><p>执行完之后会让你输入你的 Github 的账号和密码，如果此时报以下错误，说明你的 deployer 没有安装成功</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure><p>需要执行以下命令再安装一次：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>再执行</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">//或者直接运行</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure><p>你的博客就会部署到 Github 上了</p><p>七、访问博客</p><p>你的博客地址：https:&#x2F;&#x2F;你的用户名.github.io， 比如我的是：<a href="https://lanmoyan.github.io/">https://lanmoyan.github.io/</a> ，现在每个人都可以通过此链接访问你的博客了</p>              </div>            </details>]]></content>
       
       
       <categories>
@@ -194,6 +194,28 @@
     
     
     <entry>
+      <title>日常生活</title>
+      <link href="/Life/index.html"/>
+      <url>/Life/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>世界各地风景</title>
       <link href="/World/index.html"/>
       <url>/World/index.html</url>
@@ -216,42 +238,9 @@
     
     
     <entry>
-      <title>留言板</title>
-      <link href="/comments/index.html"/>
-      <url>/comments/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>版权协议</title>
-      <link href="/copyright/index.html"/>
-      <url>/copyright/index.html</url>
-      
-        <content type="html"><![CDATA[<p>为了保持文章质量，并保持互联网的开放共享精神，保持页面流量的稳定，综合考虑下本站的所有原创文章均采用 cc 协议中比较严格的<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">署名-非商业性使用-禁止演绎 4.0 国际标准</a>。这篇文章主要想能够更加清楚明白的介绍本站的协议标准和要求。方便你合理的使用本站的文章。</p><p>本站无广告嵌入和商业行为。违反协议的行为不仅会损害原作者的创作热情，而且会影响整个版权环境。强烈呼吁你能够在转载时遵守协议。遵守协议的行为几乎不会对你的目标产生负面影响，鼓励创作环境是每个创作者的期望。</p><h2>哪些文章适于本协议？</h2><p>所有原创内容均在文章标题顶部，以及文章结尾的版权说明部分展示。</p><p>原创内容的非商用转载必须为完整转载且标注出处的 <strong>带有完整 url 链接</strong> 或 <strong>访问原文</strong> 之类字样的超链接。</p><p>作为参考资料的情况可以无需完整转载，摘录所需要的部分内容即可，但需标注出处。</p><h2>你可以做什么？</h2><p>只要你遵守本页的许可，你可以自由地共享文章的内容 — 在任何媒介以任何形式复制、发行本作品。并且无需通知作者。</p><h2>你需要遵守什么样的许可？</h2><h3>署名</h3><p>你必须标注内容的来源，你需要在文章开头部分（或者明显位置）标注原文章链接（建议使用超链接提升阅读体验）。</p><h3>禁止商用</h3><p>本站内容免费向互联网所有用户提供，分享本站文章时禁止商业性使用、禁止在转载页面中插入广告（例如谷歌广告、百度广告）、禁止阅读的拦截行为（例如关注公众号、下载 App 后观看文章）。</p><h3>禁止演绎</h3><ul><li><p>分享全部内容（无修改）<br>你需要在文章开头部分（或者明显位置）标注原文章链接（建议使用超链接）</p></li><li><p>分享部分截取内容或者衍生创作<br>目前本站全部原创文章的衍生品禁止公开分享和分发。如有更好的修改建议，可以在对应文章下留言。如有衍生创作需求，可以在评论中联系。</p></li><li><p>作为参考资料截取部分内容<br>作为参考资料的情况可以无需完整转载，摘录所需要的部分内容即可，但需标注出处。</p></li></ul><h2>什么内容会被版权保护</h2><p>包括但不限于：</p><ul><li><p>文章封面图片</p></li><li><p>文章标题和正文</p></li><li><p>站点图片素材（不含主题自带素材）</p></li></ul><h2>例外情况</h2><p>本着友好互相进步的原则，被本站友链收录的博客允许博客文章内容的衍生品的分享和分发，但仍需标注出处。</p><p>本着互联网开放精神，你可以在博客文章下方留言要求授权博文的衍生品的分享和分发，标注你的网站地址。</p><p>关于主题样式的版权信息，可以详见<a href="/update/">主题说明</a></p><h2>网站源代码协议</h2><p>网站源代码（仅包含 css、js）的代码部分采用 GPL 协议。</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>日常生活</title>
-      <link href="/Life/index.html"/>
-      <url>/Life/index.html</url>
+      <title>追番页</title>
+      <link href="/bangumis/index.html"/>
+      <url>/bangumis/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -271,20 +260,9 @@
     
     
     <entry>
-      <title>即刻短文</title>
-      <link href="/essay/index.html"/>
-      <url>/essay/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>追番页</title>
-      <link href="/bangumis/index.html"/>
-      <url>/bangumis/index.html</url>
+      <title>留言板</title>
+      <link href="/comments/index.html"/>
+      <url>/comments/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -297,7 +275,40 @@
       <link href="/cookies/index.html"/>
       <url>/cookies/index.html</url>
       
-        <content type="html"><![CDATA[<h2>更新日期</h2><p>本政策的最近更新日期为：2024-08-12</p><p>为了确保网站和我开发的软件的可靠性、安全性和个性化，我使用 Cookies。当你接受 Cookies 时，这有助于通过识别你的身份、记住你的偏好或提供个性化用户体验来帮助我改善网站。</p><p>本政策应与我的隐私政策一起阅读，该隐私政策解释了我如何使用个人信息。</p><p>如果你对我使用你的个人信息或 Cookies 的方式有任何疑问，请通过 <strong><a href="mailto:&#49;&#x32;&#x32;&#55;&#x31;&#x32;&#52;&#55;&#x38;&#x32;&#x40;&#x71;&#x71;&#x2e;&#x63;&#x6f;&#x6d;">&#49;&#x32;&#x32;&#55;&#x31;&#x32;&#52;&#55;&#x38;&#x32;&#x40;&#x71;&#x71;&#x2e;&#x63;&#x6f;&#x6d;</a></strong> 与我联系。</p><p>如果你想管理你的 Cookies，请按照下面“如何管理 Cookies”部分中的说明进行操作。</p><h2>什么是 Cookies？</h2><p>Cookies 是一种小型文本文件，当你访问网站时，网站可能会将这些文件放在你的计算机或设备上。Cookies 会帮助网站或其他网站在你下次访问时识别你的设备。网站信标、像素或其他类似文件也可以做同样的事情。我在此政策中使用术语“Cookies”来指代以这种方式收集信息的所有文件。</p><p>Cookies 提供许多功能。例如，他们可以帮助我记住你喜欢深色模式还是浅色模式，分析我网站的效果。</p><p>大多数网站使用 Cookies 来收集和保留有关其访问者的个人信息。大多数 Cookies 收集一般信息，例如访问者如何到达和使用我的网站，他们使用的设备，他们的互联网协议地址（IP 地址），他们正在查看的页面及其大致位置（例如，我将能够认识到你正在从长沙访问我的网站）。</p><h2>Cookies 的目的</h2><p>我将 Cookies 分为以下类别:</p><table><thead><tr><th>用途</th><th>说明</th></tr></thead><tbody><tr><td>授权</td><td>你访问我的网站时，我可通过 Cookie 提供正确信息，为你打造个性化的体验。例如：Cookie 会告知你通过搜索引擎搜索的具体内容来改善文章的标题优化关键词、或者创建更符合你搜索需求的文章内容。</td></tr><tr><td>安全措施</td><td>我通过 Cookie 启用及支持安全功能，监控和防止可疑活动、欺诈性流量和违反版权协议的行为。</td></tr><tr><td>偏好、功能和服务</td><td>我使用功能性 Cookies 来让我记住你的偏好，或保存你向我提供的有关你的喜好或其他信息。</td></tr><tr><td>个性化广告</td><td>本站涉及 GoogleADS 个性化广告服务</td></tr><tr><td>网站性能、分析和研究</td><td>我使用这些 cookie 来监控网站性能。这使我能够通过快速识别和解决出现的任何问题来提供高质量的体验。</td></tr></tbody></table><h2>我的网站上的第三方 Cookies</h2><p>我还在我的网站上使用属于上述类别的第三方 Cookies，用于以下目的：</p><ul><li><p>帮助我监控网站上的流量；</p></li><li><p>识别欺诈或非人为性流量；</p></li><li><p>协助市场调研；</p></li><li><p>改善网站功能；</p></li><li><p>监督我的版权协议和隐私政策的遵守情况。</p></li></ul><table><thead><tr><th>第三方服务商</th><th>用途</th></tr></thead><tbody><tr><td>baidu.com</td><td>用于统计站内访问情况，进行针对性优化</td></tr><tr><td>ibruce.info</td><td>busuznzi 统计，用于区分访问 pv 数量和 uv 数量，在文章处展示人气</td></tr></tbody></table><h2>如何管理 Cookies？</h2><p>在将 Cookie 放置在你的计算机或设备上之前，系统会显示一个弹出窗口，要求你同意设置这些 Cookie。通过同意放置 Cookies，你可以让我为你提供最佳的体验和服务。如果你愿意，你可以通过浏览器设置关闭本站的 Cookie 来拒绝同意放置 Cookies；但是，我网站的部分功能可能无法完全或按预期运行。你有机会允许和&#x2F;或拒绝使用 Cookie。你可以通过访问浏览器设置随时返回到你的 Cookie 偏好设置以查看和&#x2F;或删除它们。</p><p>除了我提供的控件之外，你还可以选择在 Internet 浏览器中启用或禁用 Cookie。大多数互联网浏览器还允许你选择是要禁用所有 Cookie 还是仅禁用第三方 Cookie。默认情况下，大多数互联网浏览器都接受 Cookie，但这可以更改。有关详细信息，请参阅 Internet 浏览器中的帮助菜单或设备随附的文档。</p><p>以下链接提供了有关如何在所有主流浏览器中控制 Cookie 的说明：</p><ul><li><p><a href="https://support.google.com/chrome/answer/95647?hl=en">Google Chrome</a> </p></li><li><p><a href="https://support.microsoft.com/en-us/topic/description-of-cookies-ad01aa7e-66c9-8ab2-7898-6652c100999d">IE</a></p></li><li><p><a href="https://support.apple.com/zh-cn/guide/safari/sfri11471/mac">Safari（mac 桌面版）</a></p></li><li><p><a href="https://support.apple.com/en-us/HT201265">Safari（移动版）</a></p></li><li><p><a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer">火狐浏览器</a></p></li><li><p><a href="http://support.google.com/ics/nexus/bin/answer.py?hl=en&answer=2425067">Android 浏览器</a></p></li></ul><p>如你使用其他浏览器，请参阅浏览器制造商提供的文档。<br>有关 Cookies 以及如何管理 Cookies 的更多信息，请访问：</p><p><a href="https://zh.wikipedia.org/wiki/Cookie">wikipedia.org</a> 、 <a href="https://allaboutcookies.org/">allaboutCookies.org</a> 或 <a href="https://www.aboutcookies.org/">aboutCookies.org</a></p><h2>更多信息</h2><p>有关我数据处理的更多信息，请参阅我的<a href="/privacy/">隐私政策</a>。如果你对此 Cookie 政策有任何疑问，请通过 <strong><a href="mailto:&#x31;&#x32;&#50;&#x37;&#x31;&#x32;&#52;&#x37;&#56;&#x32;&#x40;&#x71;&#x71;&#x2e;&#x63;&#111;&#109;">&#x31;&#x32;&#50;&#x37;&#x31;&#x32;&#52;&#x37;&#56;&#x32;&#x40;&#x71;&#x71;&#x2e;&#x63;&#111;&#109;</a></strong>与我联系。</p><h2>对此 Cookie 政策的更改</h2><p>我可能对此 Cookie 政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在我的主页或应用上明确指出该政策已更新。</p>]]></content>
+        <content type="html"><![CDATA[<h2>更新日期</h2><p>本政策的最近更新日期为：2024-08-12</p><p>为了确保网站和我开发的软件的可靠性、安全性和个性化，我使用 Cookies。当你接受 Cookies 时，这有助于通过识别你的身份、记住你的偏好或提供个性化用户体验来帮助我改善网站。</p><p>本政策应与我的隐私政策一起阅读，该隐私政策解释了我如何使用个人信息。</p><p>如果你对我使用你的个人信息或 Cookies 的方式有任何疑问，请通过 <strong><a href="mailto:&#49;&#x32;&#50;&#55;&#x31;&#x32;&#x34;&#55;&#x38;&#50;&#x40;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;">&#49;&#x32;&#50;&#55;&#x31;&#x32;&#x34;&#55;&#x38;&#50;&#x40;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;</a></strong> 与我联系。</p><p>如果你想管理你的 Cookies，请按照下面“如何管理 Cookies”部分中的说明进行操作。</p><h2>什么是 Cookies？</h2><p>Cookies 是一种小型文本文件，当你访问网站时，网站可能会将这些文件放在你的计算机或设备上。Cookies 会帮助网站或其他网站在你下次访问时识别你的设备。网站信标、像素或其他类似文件也可以做同样的事情。我在此政策中使用术语“Cookies”来指代以这种方式收集信息的所有文件。</p><p>Cookies 提供许多功能。例如，他们可以帮助我记住你喜欢深色模式还是浅色模式，分析我网站的效果。</p><p>大多数网站使用 Cookies 来收集和保留有关其访问者的个人信息。大多数 Cookies 收集一般信息，例如访问者如何到达和使用我的网站，他们使用的设备，他们的互联网协议地址（IP 地址），他们正在查看的页面及其大致位置（例如，我将能够认识到你正在从长沙访问我的网站）。</p><h2>Cookies 的目的</h2><p>我将 Cookies 分为以下类别:</p><table><thead><tr><th>用途</th><th>说明</th></tr></thead><tbody><tr><td>授权</td><td>你访问我的网站时，我可通过 Cookie 提供正确信息，为你打造个性化的体验。例如：Cookie 会告知你通过搜索引擎搜索的具体内容来改善文章的标题优化关键词、或者创建更符合你搜索需求的文章内容。</td></tr><tr><td>安全措施</td><td>我通过 Cookie 启用及支持安全功能，监控和防止可疑活动、欺诈性流量和违反版权协议的行为。</td></tr><tr><td>偏好、功能和服务</td><td>我使用功能性 Cookies 来让我记住你的偏好，或保存你向我提供的有关你的喜好或其他信息。</td></tr><tr><td>个性化广告</td><td>本站涉及 GoogleADS 个性化广告服务</td></tr><tr><td>网站性能、分析和研究</td><td>我使用这些 cookie 来监控网站性能。这使我能够通过快速识别和解决出现的任何问题来提供高质量的体验。</td></tr></tbody></table><h2>我的网站上的第三方 Cookies</h2><p>我还在我的网站上使用属于上述类别的第三方 Cookies，用于以下目的：</p><ul><li><p>帮助我监控网站上的流量；</p></li><li><p>识别欺诈或非人为性流量；</p></li><li><p>协助市场调研；</p></li><li><p>改善网站功能；</p></li><li><p>监督我的版权协议和隐私政策的遵守情况。</p></li></ul><table><thead><tr><th>第三方服务商</th><th>用途</th></tr></thead><tbody><tr><td>baidu.com</td><td>用于统计站内访问情况，进行针对性优化</td></tr><tr><td>ibruce.info</td><td>busuznzi 统计，用于区分访问 pv 数量和 uv 数量，在文章处展示人气</td></tr></tbody></table><h2>如何管理 Cookies？</h2><p>在将 Cookie 放置在你的计算机或设备上之前，系统会显示一个弹出窗口，要求你同意设置这些 Cookie。通过同意放置 Cookies，你可以让我为你提供最佳的体验和服务。如果你愿意，你可以通过浏览器设置关闭本站的 Cookie 来拒绝同意放置 Cookies；但是，我网站的部分功能可能无法完全或按预期运行。你有机会允许和&#x2F;或拒绝使用 Cookie。你可以通过访问浏览器设置随时返回到你的 Cookie 偏好设置以查看和&#x2F;或删除它们。</p><p>除了我提供的控件之外，你还可以选择在 Internet 浏览器中启用或禁用 Cookie。大多数互联网浏览器还允许你选择是要禁用所有 Cookie 还是仅禁用第三方 Cookie。默认情况下，大多数互联网浏览器都接受 Cookie，但这可以更改。有关详细信息，请参阅 Internet 浏览器中的帮助菜单或设备随附的文档。</p><p>以下链接提供了有关如何在所有主流浏览器中控制 Cookie 的说明：</p><ul><li><p><a href="https://support.google.com/chrome/answer/95647?hl=en">Google Chrome</a> </p></li><li><p><a href="https://support.microsoft.com/en-us/topic/description-of-cookies-ad01aa7e-66c9-8ab2-7898-6652c100999d">IE</a></p></li><li><p><a href="https://support.apple.com/zh-cn/guide/safari/sfri11471/mac">Safari（mac 桌面版）</a></p></li><li><p><a href="https://support.apple.com/en-us/HT201265">Safari（移动版）</a></p></li><li><p><a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer">火狐浏览器</a></p></li><li><p><a href="http://support.google.com/ics/nexus/bin/answer.py?hl=en&answer=2425067">Android 浏览器</a></p></li></ul><p>如你使用其他浏览器，请参阅浏览器制造商提供的文档。<br>有关 Cookies 以及如何管理 Cookies 的更多信息，请访问：</p><p><a href="https://zh.wikipedia.org/wiki/Cookie">wikipedia.org</a> 、 <a href="https://allaboutcookies.org/">allaboutCookies.org</a> 或 <a href="https://www.aboutcookies.org/">aboutCookies.org</a></p><h2>更多信息</h2><p>有关我数据处理的更多信息，请参阅我的<a href="/privacy/">隐私政策</a>。如果你对此 Cookie 政策有任何疑问，请通过 <strong><a href="mailto:&#x31;&#x32;&#50;&#x37;&#x31;&#50;&#52;&#55;&#x38;&#x32;&#x40;&#x71;&#113;&#46;&#x63;&#111;&#109;">&#x31;&#x32;&#50;&#x37;&#x31;&#50;&#52;&#55;&#x38;&#x32;&#x40;&#x71;&#113;&#46;&#x63;&#111;&#109;</a></strong>与我联系。</p><h2>对此 Cookie 政策的更改</h2><p>我可能对此 Cookie 政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在我的主页或应用上明确指出该政策已更新。</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>版权协议</title>
+      <link href="/copyright/index.html"/>
+      <url>/copyright/index.html</url>
+      
+        <content type="html"><![CDATA[<p>为了保持文章质量，并保持互联网的开放共享精神，保持页面流量的稳定，综合考虑下本站的所有原创文章均采用 cc 协议中比较严格的<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">署名-非商业性使用-禁止演绎 4.0 国际标准</a>。这篇文章主要想能够更加清楚明白的介绍本站的协议标准和要求。方便你合理的使用本站的文章。</p><p>本站无广告嵌入和商业行为。违反协议的行为不仅会损害原作者的创作热情，而且会影响整个版权环境。强烈呼吁你能够在转载时遵守协议。遵守协议的行为几乎不会对你的目标产生负面影响，鼓励创作环境是每个创作者的期望。</p><h2>哪些文章适于本协议？</h2><p>所有原创内容均在文章标题顶部，以及文章结尾的版权说明部分展示。</p><p>原创内容的非商用转载必须为完整转载且标注出处的 <strong>带有完整 url 链接</strong> 或 <strong>访问原文</strong> 之类字样的超链接。</p><p>作为参考资料的情况可以无需完整转载，摘录所需要的部分内容即可，但需标注出处。</p><h2>你可以做什么？</h2><p>只要你遵守本页的许可，你可以自由地共享文章的内容 — 在任何媒介以任何形式复制、发行本作品。并且无需通知作者。</p><h2>你需要遵守什么样的许可？</h2><h3>署名</h3><p>你必须标注内容的来源，你需要在文章开头部分（或者明显位置）标注原文章链接（建议使用超链接提升阅读体验）。</p><h3>禁止商用</h3><p>本站内容免费向互联网所有用户提供，分享本站文章时禁止商业性使用、禁止在转载页面中插入广告（例如谷歌广告、百度广告）、禁止阅读的拦截行为（例如关注公众号、下载 App 后观看文章）。</p><h3>禁止演绎</h3><ul><li><p>分享全部内容（无修改）<br>你需要在文章开头部分（或者明显位置）标注原文章链接（建议使用超链接）</p></li><li><p>分享部分截取内容或者衍生创作<br>目前本站全部原创文章的衍生品禁止公开分享和分发。如有更好的修改建议，可以在对应文章下留言。如有衍生创作需求，可以在评论中联系。</p></li><li><p>作为参考资料截取部分内容<br>作为参考资料的情况可以无需完整转载，摘录所需要的部分内容即可，但需标注出处。</p></li></ul><h2>什么内容会被版权保护</h2><p>包括但不限于：</p><ul><li><p>文章封面图片</p></li><li><p>文章标题和正文</p></li><li><p>站点图片素材（不含主题自带素材）</p></li></ul><h2>例外情况</h2><p>本着友好互相进步的原则，被本站友链收录的博客允许博客文章内容的衍生品的分享和分发，但仍需标注出处。</p><p>本着互联网开放精神，你可以在博客文章下方留言要求授权博文的衍生品的分享和分发，标注你的网站地址。</p><p>关于主题样式的版权信息，可以详见<a href="/update/">主题说明</a></p><h2>网站源代码协议</h2><p>网站源代码（仅包含 css、js）的代码部分采用 GPL 协议。</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我的装备</title>
+      <link href="/equipment/index.html"/>
+      <url>/equipment/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>即刻短文</title>
+      <link href="/essay/index.html"/>
+      <url>/essay/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -326,9 +337,9 @@
     
     
     <entry>
-      <title>我的装备</title>
-      <link href="/equipment/index.html"/>
-      <url>/equipment/index.html</url>
+      <title>朋友圈</title>
+      <link href="/fcircle/index.html"/>
+      <url>/fcircle/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -348,22 +359,11 @@
     
     
     <entry>
-      <title>朋友圈</title>
-      <link href="/fcircle/index.html"/>
-      <url>/fcircle/index.html</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>站点更新日志</title>
-      <link href="/update/index.html"/>
-      <url>/update/index.html</url>
-      
-        <content type="html"><![CDATA[<div class="timeline undefined"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>更新日志</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-06-15</p></div></div><div class='timeline-item-content'><h2>博客内容填充</h2><ul><li>【页脚】徽标资源优化</li><li>【评论】添加热评并配置获取博主、小伙伴显示功能</li></ul></div></div></div><div class="timeline undefined"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>更新日志</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-06-15</p></div></div><div class='timeline-item-content'><h2>博客内容填充</h2><ul><li>【友链朋友圈】云服务器部署友链朋友圈服务</li><li>【友链】近期友链更新</li><li>【优化】图片素材整理</li><li>【评论】Vercel更新Twikoo评论版本1.6.16</li><li>【协议】隐私协议引入获取客户端IP等信息的功能</li></ul></div></div></div><div class="timeline undefined"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>更新日志</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-06-11</p></div></div><div class='timeline-item-content'><h2>博客内容填充</h2><ul><li>【协议】完善隐私协议、Cookies、版权协议页面描述</li><li>【更新日志】添加站点更新日志</li><li>【友链】完善友链页面描述,更新友情链接</li></ul></div></div></div><div class="timeline undefined"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>2023-06-10</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'></div></div><div class='timeline-item-content'><h2>开始使用安知鱼主题DEV</h2><ul><li>【搭建】用Hexo与安知鱼主题搭建博客</li><li>【站点信息】基础站点信息修改</li><li>【页面】创建友人帐、朋友圈、留言板、音乐馆、追番页、相册集、装备展、闲言碎语等页面</li></ul></div></div></div>]]></content>
       
     </entry>
     
@@ -381,11 +381,11 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>站点更新日志</title>
+      <link href="/update/index.html"/>
+      <url>/update/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<div class="timeline undefined"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>更新日志</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-06-15</p></div></div><div class='timeline-item-content'><h2>博客内容填充</h2><ul><li>【页脚】徽标资源优化</li><li>【评论】添加热评并配置获取博主、小伙伴显示功能</li></ul></div></div></div><div class="timeline undefined"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>更新日志</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-06-15</p></div></div><div class='timeline-item-content'><h2>博客内容填充</h2><ul><li>【友链朋友圈】云服务器部署友链朋友圈服务</li><li>【友链】近期友链更新</li><li>【优化】图片素材整理</li><li>【评论】Vercel更新Twikoo评论版本1.6.16</li><li>【协议】隐私协议引入获取客户端IP等信息的功能</li></ul></div></div></div><div class="timeline undefined"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>更新日志</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2023-06-11</p></div></div><div class='timeline-item-content'><h2>博客内容填充</h2><ul><li>【协议】完善隐私协议、Cookies、版权协议页面描述</li><li>【更新日志】添加站点更新日志</li><li>【友链】完善友链页面描述,更新友情链接</li></ul></div></div></div><div class="timeline undefined"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>2023-06-10</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'></div></div><div class='timeline-item-content'><h2>开始使用安知鱼主题DEV</h2><ul><li>【搭建】用Hexo与安知鱼主题搭建博客</li><li>【站点信息】基础站点信息修改</li><li>【页面】创建友人帐、朋友圈、留言板、音乐馆、追番页、相册集、装备展、闲言碎语等页面</li></ul></div></div></div>]]></content>
       
     </entry>
     
