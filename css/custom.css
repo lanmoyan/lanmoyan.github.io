@@ -1,91 +1,160 @@
-/* 添加到主题的CSS文件中 */
-.message-tooltip {
+/* ===== 悬停文本框基础样式 ===== */
+.tooltip-container {
   position: relative;
-  border-bottom: none !important; /* 覆盖主题默认样式 */
+  display: inline-block;
+  margin: 0 2px;
 }
 
-.message-tooltip:hover::before {
-  content: attr(title);
+.tooltip-link {
+  position: relative;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 1px dashed currentColor;
+  transition: all 0.2s ease;
+}
+
+.tooltip-link:hover {
+  color: var(--theme-color);
+  border-bottom-color: var(--theme-color);
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 240px;
   position: absolute;
-  bottom: calc(100% + 8px);
+  z-index: 999;
+  bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
-  background: #333;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 0.9em;
-  font-family: system-ui;
-  white-space: pre-wrap;
-  min-width: 120px;
-  max-width: 300px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* ===== 五种预设样式 ===== */
+/* 简约现代风 */
+.tooltip-modern {
+  background-color: #fff;
+  color: #333;
   text-align: center;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-  z-index: 9999;
+  border-radius: 8px;
+  padding: 12px 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border: 1px solid #eee;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
-.message-tooltip:hover::after {
-  content: '';
+.tooltip-modern::after {
+  content: "";
   position: absolute;
-  bottom: calc(100% - 4px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  border: 6px solid transparent;
-  border-top-color: #333;
-}
-
-.message-tooltip {
-  --blur-bg: rgba(255,255,255,0.9);
-  
-  border-bottom: 1px dotted #8e8e93;
-}
-
-.message-tooltip:hover::before {
-  background: var(--blur-bg);
-  backdrop-filter: blur(12px);
-  color: #1c1c1e;
-  border: 0.5px solid rgba(0,0,0,0.12);
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  padding: 12px 16px;
-  font-size: 15px;
-  font-family: -apple-system, sans-serif;
-  line-height: 1.4;
-}
-
-.message-tooltip:hover::after {
-  border-top-color: var(--blur-bg);
   border-width: 8px;
-  filter: drop-shadow(0 -1px 2px rgba(0,0,0,0.05));
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
 }
 
-.message-tooltip {
-  --zh-font: "PingFang SC", "Source Han Sans SC", sans-serif;
-  --char-per-line: 12; /* 每行字符数 */
-}
-
-.message-tooltip:hover::before {
-  /* 核心排版参数 */
-  font-family: var(--zh-font);
+/* 暗色模式适配 */
+.tooltip-dark {
+  background-color: #2d3748;
+  color: #f7fafc;
+  text-align: left;
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
   font-size: 14px;
-  width: calc(var(--char-per-line) * 1em);
-  
-  /* 智能标点压缩系统 */
-  text-spacing: trim-start allow-end ideograph-alpha ideograph-numeric;
-  line-break: strict;
-  word-break: break-all;
-  
-  /* 动态字距算法 */
-  text-justify: inter-ideograph;
-  letter-spacing: calc( 
-    (100% - (var(--char-per-line) * 1em)) / (var(--char-per-line) - 1)
-  );
-  
-  /* 专业避头尾规则 */
-  hanging-punctuation: allow-end force-end;
-  line-edge: collapse;
-  
-  /* 视觉优化 */
-  padding: 8px 0.5em;
   line-height: 1.6;
+}
+
+.tooltip-dark::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: #2d3748 transparent transparent transparent;
+}
+
+/* 圆润可爱风 */
+.tooltip-cute {
+  background-color: #f0f9ff;
+  color: #0369a1;
+  text-align: center;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: 2px solid #bae6fd;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tooltip-cute::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: #f0f9ff transparent transparent transparent;
+}
+
+/* 科技感边框 */
+.tooltip-tech {
+  background-color: rgba(15, 23, 42, 0.95);
+  color: #e2e8f0;
+  text-align: left;
+  border-radius: 4px;
+  padding: 12px;
+  box-shadow: 0 0 0 1px rgba(94, 234, 212, 0.5), 
+              0 0 15px rgba(94, 234, 212, 0.3);
+  font-size: 14px;
+  line-height: 1.6;
+  backdrop-filter: blur(4px);
+}
+
+.tooltip-tech::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: rgba(15, 23, 42, 0.95) transparent transparent transparent;
+}
+
+/* 渐变色彩风格 */
+.tooltip-gradient {
+  background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+  color: #1f2937;
+  text-align: center;
+  border-radius: 8px;
+  padding: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border: 1px solid rgba(209, 213, 219, 0.5);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tooltip-gradient::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: #f3f4f6 transparent transparent transparent;
 }
