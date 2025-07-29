@@ -1,4 +1,4 @@
-/* ===== 悬停文本框基础样式 ===== */
+/* ===== 基础框架 ===== */
 .tooltip-container {
   position: relative;
   display: inline-block;
@@ -30,6 +30,7 @@
   opacity: 0;
   transition: all 0.3s ease;
   pointer-events: none;
+  text-align: center;
 }
 
 .tooltip-container:hover .tooltip-text {
@@ -38,12 +39,22 @@
   transform: translateX(-50%) translateY(-5px);
 }
 
-/* ===== 五种预设样式 ===== */
-/* 简约现代风 */
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+}
+
+/* ===== 15种风格 ===== */
+
+/* 1. 简约现代风 */
 .tooltip-modern {
   background-color: #fff;
   color: #333;
-  text-align: center;
   border-radius: 8px;
   padding: 12px 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -53,17 +64,10 @@
 }
 
 .tooltip-modern::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 8px;
-  border-style: solid;
   border-color: #fff transparent transparent transparent;
 }
 
-/* 暗色模式适配 */
+/* 2. 暗色模式适配 */
 .tooltip-dark {
   background-color: #2d3748;
   color: #f7fafc;
@@ -76,21 +80,13 @@
 }
 
 .tooltip-dark::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 8px;
-  border-style: solid;
   border-color: #2d3748 transparent transparent transparent;
 }
 
-/* 圆润可爱风 */
+/* 3. 圆润可爱风 */
 .tooltip-cute {
   background-color: #f0f9ff;
   color: #0369a1;
-  text-align: center;
   border-radius: 16px;
   padding: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -100,17 +96,10 @@
 }
 
 .tooltip-cute::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 10px;
-  border-style: solid;
   border-color: #f0f9ff transparent transparent transparent;
 }
 
-/* 科技感边框 */
+/* 4. 科技感边框 */
 .tooltip-tech {
   background-color: rgba(15, 23, 42, 0.95);
   color: #e2e8f0;
@@ -125,36 +114,187 @@
 }
 
 .tooltip-tech::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 8px;
-  border-style: solid;
   border-color: rgba(15, 23, 42, 0.95) transparent transparent transparent;
 }
 
-/* 渐变色彩风格 */
-.tooltip-gradient {
-  background: linear-gradient(135deg, #f9fafb, #f3f4f6);
-  color: #1f2937;
-  text-align: center;
-  border-radius: 8px;
-  padding: 14px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  border: 1px solid rgba(209, 213, 219, 0.5);
-  font-size: 14px;
-  line-height: 1.5;
+/* 5. 磨砂玻璃效果（优化版） */
+.tooltip-frosted {
+  background: rgba(15, 23, 42, 0.88);
+  color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28),
+              inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  line-height: 1.6;
+  font-weight: 500;
 }
 
-.tooltip-gradient::after {
+.tooltip-frosted::after {
+  border-color: rgba(15, 23, 42, 0.88) transparent transparent transparent;
+}
+
+/* 6. 手绘涂鸦风格 */
+.tooltip-sketch {
+  background: #fff9e6;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 0;
+  padding: 12px;
+  width: 200px;
+  box-shadow: 4px 4px 0 #333;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.tooltip-sketch::before {
   content: "";
   position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 8px;
-  border-style: solid;
-  border-color: #f3f4f6 transparent transparent transparent;
+  top: -6px;
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 4px;
+  background: #fff9e6;
+  transform: rotate(-5deg);
+}
+
+.tooltip-sketch::after {
+  border-color: #fff9e6 transparent transparent transparent;
+  filter: drop-shadow(4px 4px 0 #333);
+}
+
+/* 7. 霓虹发光效果 */
+.tooltip-neon {
+  background: #0f0f1a;
+  color: #00f7ff;
+  border: 1px solid #00f7ff;
+  border-radius: 4px;
+  padding: 12px;
+  box-shadow: 0 0 10px rgba(0, 247, 255, 0.5),
+              0 0 20px rgba(0, 247, 255, 0.3);
+  text-shadow: 0 0 5px rgba(0, 247, 255, 0.5);
+  animation: neon-pulse 2s infinite alternate;
+}
+
+@keyframes neon-pulse {
+  from {
+    box-shadow: 0 0 10px rgba(0, 247, 255, 0.5),
+                0 0 20px rgba(0, 247, 255, 0.3);
+  }
+  to {
+    box-shadow: 0 0 15px rgba(0, 247, 255, 0.8),
+                0 0 30px rgba(0, 247, 255, 0.5);
+  }
+}
+
+.tooltip-neon::after {
+  border-color: #0f0f1a transparent transparent transparent;
+  filter: drop-shadow(0 0 5px rgba(0, 247, 255, 0.5));
+}
+
+/* 8. 复古报纸剪贴 */
+.tooltip-vintage {
+  background: #f5e8d0;
+  color: #5a3e2a;
+  border: 1px solid #d4b483;
+  border-radius: 0;
+  padding: 12px;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+  font-family: 'Times New Roman', serif;
+  background-image: linear-gradient(to bottom, 
+                    rgba(0,0,0,0.05) 0%, 
+                    rgba(0,0,0,0) 10%, 
+                    rgba(0,0,0,0) 90%, 
+                    rgba(0,0,0,0.05) 100%);
+}
+
+.tooltip-vintage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(90deg, 
+              rgba(255,0,0,0.1) 0%, 
+              rgba(0,255,0,0.1) 33%, 
+              rgba(0,0,255,0.1) 66%, 
+              rgba(255,255,0,0.1) 100%);
+  opacity: 0.3;
+}
+
+.tooltip-vintage::after {
+  border-color: #f5e8d0 transparent transparent transparent;
+}
+
+/* 9. MacOS风格通知气泡 */
+.tooltip-macos {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a1a1a;
+  border-radius: 14px;
+  padding: 12px 16px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15),
+              inset 0 0 0 0.5px rgba(255, 255, 255, 0.8);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+}
+
+.tooltip-macos::after {
+  border-width: 7px;
+  border-color: rgba(255, 255, 255, 0.95) transparent transparent transparent;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+}
+
+/* 10. 故障艺术效果 */
+.tooltip-glitch {
+  background: #000;
+  color: #0f0;
+  border: 1px solid #0f0;
+  padding: 12px;
+  font-family: 'Courier New', monospace;
+  animation: glitch-bg 6s infinite linear;
+}
+
+@keyframes glitch-bg {
+  0% { box-shadow: 0 0 0 0 #0f0; }
+  2% { box-shadow: -2px 0 0 0 #f0f, 2px 0 0 0 #0ff; }
+  4% { box-shadow: 0 0 0 0 #0f0; }
+  96% { box-shadow: 0 0 0 0 #0f0; }
+  98% { box-shadow: -3px 0 0 0 #f0f, 3px 0 0 0 #0ff; }
+  100% { box-shadow: 0 0 0 0 #0f0; }
+}
+
+.tooltip-glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -2px 0 #f0f;
+  top: 12px;
+  width: calc(100% - 24px);
+  background: #000;
+  clip: rect(0, 900px, 0, 0);
+  animation: glitch-effect 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-effect {
+  0% { clip: rect(30px, 9999px, 10px, 0); }
+  10% { clip: rect(20px, 9999px, 25px, 0); }
+  20% { clip: rect(5px, 9999px, 35px, 0); }
+  30% { clip: rect(25px, 9999px, 30px, 0); }
+  40% { clip: rect(15px, 9999px, 15px, 0); }
+  50% { clip: rect(0px, 9999px, 20px, 0); }
+  60% { clip: rect(30px, 9999px, 30px, 0); }
+  70% { clip: rect(10px, 9999px, 30px, 0); }
+  80% { clip: rect(25px, 9999px, 5px, 0); }
+  90% { clip: rect(15px, 9999px, 20px, 0); }
+  100% { clip: rect(0px, 9999px, 25px, 0); }
+}
+
+.tooltip-glitch::after {
+  border-color: #000 transparent transparent transparent;
+  filter: drop-shadow(0 0 2px #0f0);
 }
