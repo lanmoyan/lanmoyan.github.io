@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://blog.imoyan.top/posts/d50a/</loc>
+    
+    <lastmod>2025-07-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.imoyan.top/link/index.html</loc>
     
     <lastmod>2025-05-18</lastmod>
@@ -168,6 +177,20 @@
   
   <url>
     <loc>https://blog.imoyan.top/tags/Twikoo/</loc>
+    <lastmod>2025-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.imoyan.top/tags/Tag-Plugins/</loc>
+    <lastmod>2025-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.imoyan.top/tags/Hexo/</loc>
     <lastmod>2025-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
