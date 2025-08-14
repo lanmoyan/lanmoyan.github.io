@@ -324,7 +324,7 @@ if (sco_keyboards) {
     openKeyboard();
     let keyboard = document.getElementById('consoleKeyboard');
     keyboard?.classList.add('on');
-}</script><!-- righhtside--><div class="needEndHide" id="rightside"><div class="rs_hide"><button class="translate" type="button" title="简繁转换">简</button><button class="mode" type="button" title="显示模式切换" onclick="sco.switchDarkMode()"><i class="fas fa-circle-half-stroke"></i></button><button class="aside pc" type="button" title="侧边栏" onclick="sco.switchHideAside()"><i class="fas fa-arrows-alt-h"></i></button><button class="keyboard pc" type="button" title="键盘快捷键" onclick="sco.switchKeyboard()"><i class="fas fa-keyboard"></i></button></div><div class="rs_show"><button class="config" type="button" title="扩展" onclick="document.querySelector(&quot;.rs_hide&quot;).classList.toggle(&quot;show&quot;)"><i class="fas fa-gear fa-spin"></i></button><button class="comment" type="button" title="评论" onclick="sco.scrollTo('post-comment')"><i class="fas fa-comment"></i></button><button class="barrage pc" type="button" title="弹" onclick="sco.switchCommentBarrage()"><span>弹</span></button><button class="top" type="button" title="返回顶部" onclick="sco.toTop()"><i class="fas fa-arrow-up"></i><span id="percent">0</span></button></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="back-home-button-icon solitude fas fa-bars-progress"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网站</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/lanmoyan/" title="Github"><img class="nolazyload back-menu-item-icon" src="https://bu.dusays.com/2024/10/12/6709e93b3e05d.jpg" alt="Github"><span class="back-menu-item-text">Github</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://status.imoyan.top/" title="站点监测"><img class="nolazyload back-menu-item-icon" src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg" alt="站点监测"><span class="back-menu-item-text">站点监测</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://um.imoyan.cc/share/67b2gValE0Zy11qf/blog.imoyan.top" title="站点统计"><img class="nolazyload back-menu-item-icon" src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg" alt="站点统计"><span class="back-menu-item-text">站点统计</span></a></div></div></div></div><a id="site-name" href="/" title="返回博客主页"><span class="title">Hao</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">即刻短文</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li><li><a class="site-page child" href="/fcircle/"><i class="solitude  fas fa-wifi"></i><span>朋友圈</span></a></li><li><a class="site-page child" href="javascript:travelling()"><i class="solitude  fas fa-gift"></i><span>宝藏博主</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="solitude  fa-solid fa-film"></i><span>追番页</span></a></li><li><a class="site-page child" href="/gallery/"><i class="solitude  fa-solid fa-image"></i><span>相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>关于本站</span></a></li><li><a class="site-page child" href="/essay/"><i class="solitude  fas fa-toolbox"></i><span>闲言碎语</span></a></li><li><a class="site-page child" href="/kit/"><i class="solitude  fas fa-laptop"></i><span>我的装备</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title=""><i class="solitude fas fa-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude fas fa-dice-d6"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude fas fa-magnifying-glass"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><label><i class="left"></i><i class="center"></i><i class="right"></i></label></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav></header><main class="layout hide-aside" id="content-inner"><div id="page"><div class="author-content author-content-item single sharePage" style="background: url(undefined) no-repeat center; background-size: cover;"><div class="card-content"><div class="author-content-item-tips">分享生活的小确幸</div><span class="author-content-item-title">即刻短文</span><div class="content-bottom"></div></div></div><div id="bber"><section class="timeline page-1"><ul class="list waterfall"><li class="item"><div id="bber-content"><p class="datacont">链接短文</p></div><hr><div class="bber-bottom"><div class="bber-info"><div class="bber-info-time"><i class="solitude fas fa-calendar-day"></i><time class="datetime" datetime="2025-01-01T00:00:00+08:00"></time></div><a class="bber-content-link" href="/%E9%93%BE%E6%8E%A5" target="_blank"><i class="solitude fas fa-link"></i>链接</a></div><a class="bber-reply" onclick="sco.toTalk('链接短文')"><i class="solitude fas fa-comment"></i></a></div></li><li class="item"><div id="bber-content"><p class="datacont">地点短文</p></div><hr><div class="bber-bottom"><div class="bber-info"><div class="bber-info-time"><i class="solitude fas fa-calendar-day"></i><time class="datetime" datetime="2025-01-01T00:00:00+08:00"></time></div><div class="bber-info-location"><i class="solitude fas fa-location-dot"></i>发布地点</div></div><a class="bber-reply" onclick="sco.toTalk('地点短文')"><i class="solitude fas fa-comment"></i></a></div></li></ul><div id="bber-tips">- 只展示最近 30 条短文 -</div></section></div><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude fas fa-comment"></i><span> 评论</span></div></div><div class="comment-wrap"><div id="twikoo-wrap"></div></div></div></div></main><footer id="footer"><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/lanmoyan/" title="Github"><i class="solitude  fab fa-github"></i></a><a class="deal_link" href="mailto:o@imoyanblog@qq.com" title="Mail"><i class="solitude  far fa-envelope"></i></a><div class="nolazyload footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src= "" data-lazy-src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg" alt="返回顶部"></div><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/382175696/" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://v.douyin.com/_lmROB2NKp0/" title="Douyin"><i class="solitude  fab fa-tiktok"></i></a></div><div id="st-footer"><div class="footer-group"><h3 class="footer-title">服务</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://um.imoyan.cc/share/67b2gValE0Zy11qf/blog.imoyan.top" title="umami统计">umami统计</a><a class="footer-item" target="_blank" rel="noopener" href="https://www.foreverblog.cn/" title="十年之约">十年之约</a><a class="footer-item" target="_blank" rel="noopener" href="https://github.com/travellings-link/travellings" title="开往">开往</a></div></div><div class="footer-group"><h3 class="footer-title">生活</h3><div class="footer-links"><a class="footer-item" href="/kit/" title="我的装备">我的装备</a><a class="footer-item" target="_blank" rel="noopener" href="https://xc.imoyan.top/" title="时光记忆">时光记忆</a><a class="footer-item" href="/Update/" title="本站更新日志">本站更新日志</a></div></div><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/essay/" title="即刻短文">即刻短文</a><a class="footer-item" href="/message/" title="留言板">留言板</a></div></div><div class="footer-group"><h3 class="footer-title">协议</h3><div class="footer-links"><a class="footer-item" href="/Privacy/" title="隐私协议">隐私协议</a><a class="footer-item" href="/Cookies/" title="Cookies">Cookies</a><a class="footer-item" href="/Copyright/" title="版权协议">版权协议</a></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2025 By&nbsp;<a class="footer-bar-link" href="/"><img class="author-avatar" src= "" data-lazy-src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg">懒陌颜</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://beian.miit.gov.cn/" title="赣ICP备-2023017053号-1"><span class="beian-name">赣ICP备-2023017053号-1</span></a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude">主题：Solitude</a><span class="uptime-kuma-container"><span class="status-dot"></span><a class="uptime-link footer-bar-link" href="https://status.imoyan.top/" target="_blank" rel="noopener noreferrer" id="uptime-status-text">状态监控</a></span></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="/message/" alt="留言">留言</a><a class="footer-bar-link" href="/atom.xml" alt="订阅">订阅</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude/blob/main/LICENSE" alt="License"><i class="solitude fas fa-copyright"></i><i class="solitude fab fa-creative-commons-by"></i><i class="solitude fab fa-creative-commons-nc"></i><i class="solitude fab fa-creative-commons-nd"></i></a></div></div></div><div class="comment-barrage needEndHide"></div><style>/* 修复间距问题 */
+}</script><!-- righhtside--><div class="needEndHide" id="rightside"><div class="rs_hide"><button class="translate" type="button" title="简繁转换">简</button><button class="mode" type="button" title="显示模式切换" onclick="sco.switchDarkMode()"><i class="fas fa-circle-half-stroke"></i></button><button class="aside pc" type="button" title="侧边栏" onclick="sco.switchHideAside()"><i class="fas fa-arrows-alt-h"></i></button><button class="keyboard pc" type="button" title="键盘快捷键" onclick="sco.switchKeyboard()"><i class="fas fa-keyboard"></i></button></div><div class="rs_show"><button class="config" type="button" title="扩展" onclick="document.querySelector(&quot;.rs_hide&quot;).classList.toggle(&quot;show&quot;)"><i class="fas fa-gear fa-spin"></i></button><button class="comment" type="button" title="评论" onclick="sco.scrollTo('post-comment')"><i class="fas fa-comment"></i></button><button class="barrage pc" type="button" title="弹" onclick="sco.switchCommentBarrage()"><span>弹</span></button><button class="top" type="button" title="返回顶部" onclick="sco.toTop()"><i class="fas fa-arrow-up"></i><span id="percent">0</span></button></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="back-home-button-icon solitude fas fa-bars-progress"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网站</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/lanmoyan/" title="Github"><img class="nolazyload back-menu-item-icon" src="https://bu.dusays.com/2024/10/12/6709e93b3e05d.jpg" alt="Github"><span class="back-menu-item-text">Github</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://status.imoyan.top/" title="站点监测"><img class="nolazyload back-menu-item-icon" src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg" alt="站点监测"><span class="back-menu-item-text">站点监测</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://um.imoyan.cc/share/67b2gValE0Zy11qf/blog.imoyan.top" title="站点统计"><img class="nolazyload back-menu-item-icon" src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg" alt="站点统计"><span class="back-menu-item-text">站点统计</span></a></div></div></div></div><a id="site-name" href="/" title="返回博客主页"><span class="title">Hao</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">即刻短文</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li><li><a class="site-page child" href="/fcircle/"><i class="solitude  fas fa-wifi"></i><span>朋友圈</span></a></li><li><a class="site-page child" href="javascript:travelling()"><i class="solitude  fas fa-gift"></i><span>宝藏博主</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="solitude  fa-solid fa-film"></i><span>追番页</span></a></li><li><a class="site-page child" href="/gallery/"><i class="solitude  fa-solid fa-image"></i><span>相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>关于本站</span></a></li><li><a class="site-page child" href="/essay/"><i class="solitude  fas fa-toolbox"></i><span>闲言碎语</span></a></li><li><a class="site-page child" href="/kit/"><i class="solitude  fas fa-laptop"></i><span>我的装备</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title=""><i class="solitude fas fa-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude fas fa-dice-d6"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude fas fa-magnifying-glass"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><label><i class="left"></i><i class="center"></i><i class="right"></i></label></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav></header><main class="layout hide-aside" id="content-inner"><div id="page"><div class="author-content author-content-item single sharePage" style="background: url(undefined) no-repeat center; background-size: cover;"><div class="card-content"><div class="author-content-item-tips">分享生活的小确幸</div><span class="author-content-item-title">即刻短文</span><div class="content-bottom"></div></div></div><div id="bber"><section class="timeline page-1"><ul class="list waterfall"><li class="item"><div id="bber-content"><p class="datacont">链接短文</p></div><hr><div class="bber-bottom"><div class="bber-info"><div class="bber-info-time"><i class="solitude fas fa-calendar-day"></i><time class="datetime" datetime="2025-01-01T00:00:00+08:00"></time></div><a class="bber-content-link" href="/%E9%93%BE%E6%8E%A5" target="_blank"><i class="solitude fas fa-link"></i>链接</a></div><a class="bber-reply" onclick="sco.toTalk('链接短文')"><i class="solitude fas fa-comment"></i></a></div></li><li class="item"><div id="bber-content"><p class="datacont">地点短文</p></div><hr><div class="bber-bottom"><div class="bber-info"><div class="bber-info-time"><i class="solitude fas fa-calendar-day"></i><time class="datetime" datetime="2025-01-01T00:00:00+08:00"></time></div><div class="bber-info-location"><i class="solitude fas fa-location-dot"></i>发布地点</div></div><a class="bber-reply" onclick="sco.toTalk('地点短文')"><i class="solitude fas fa-comment"></i></a></div></li></ul><div id="bber-tips">- 只展示最近 30 条短文 -</div></section></div><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude fas fa-comment"></i><span> 评论</span></div></div><div class="comment-wrap"><div id="twikoo-wrap"></div></div></div></div></main><footer id="footer"><!-- 获取工具提示文本，确保安全访问--><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/lanmoyan/" title="Github"><i class="solitude  fab fa-github"></i></a><a class="deal_link" href="mailto:o@imoyanblog@qq.com" title="Mail"><i class="solitude  far fa-envelope"></i></a><div class="nolazyload footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src= "" data-lazy-src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg" alt="返回顶部"></div><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/382175696/" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://v.douyin.com/_lmROB2NKp0/" title="Douyin"><i class="solitude  fab fa-tiktok"></i></a></div><div id="st-footer"><div class="footer-group"><h3 class="footer-title">服务</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://um.imoyan.cc/share/67b2gValE0Zy11qf/blog.imoyan.top" title="umami统计">umami统计</a><a class="footer-item" target="_blank" rel="noopener" href="https://www.foreverblog.cn/" title="十年之约">十年之约</a><a class="footer-item" target="_blank" rel="noopener" href="https://github.com/travellings-link/travellings" title="开往">开往</a></div></div><div class="footer-group"><h3 class="footer-title">生活</h3><div class="footer-links"><a class="footer-item" href="/kit/" title="我的装备">我的装备</a><a class="footer-item" target="_blank" rel="noopener" href="https://xc.imoyan.top/" title="时光记忆">时光记忆</a><a class="footer-item" href="/Update/" title="本站更新日志">本站更新日志</a></div></div><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/essay/" title="即刻短文">即刻短文</a><a class="footer-item" href="/message/" title="留言板">留言板</a></div></div><div class="footer-group"><h3 class="footer-title">协议</h3><div class="footer-links"><a class="footer-item" href="/Privacy/" title="隐私协议">隐私协议</a><a class="footer-item" href="/Cookies/" title="Cookies">Cookies</a><a class="footer-item" href="/Copyright/" title="版权协议">版权协议</a></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2025 By&nbsp;<a class="footer-bar-link" href="/"><img class="author-avatar" src= "" data-lazy-src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg">懒陌颜</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://beian.miit.gov.cn/" title="赣ICP备-2023017053号-1" data-tooltip="赣ICP备-2023017053号-1"><span class="beian-name">赣ICP备-2023017053号-1</span></a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/" data-tooltip="静态网站生成框架">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" data-tooltip="简洁高效的Hexo主题">主题：Solitude</a><span class="uptime-kuma-container"><span class="status-dot-container"><span class="status-dot"></span></span><a class="uptime-link footer-bar-link" href="https://status.imoyan.top/" target="_blank" rel="noopener noreferrer" id="uptime-status-text">状态监控</a></span></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="/message/" alt="留言">留言</a><a class="footer-bar-link" href="/atom.xml" alt="订阅">订阅</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude/blob/main/LICENSE" alt="License"><i class="solitude fas fa-copyright"></i><i class="solitude fab fa-creative-commons-by"></i><i class="solitude fab fa-creative-commons-nc"></i><i class="solitude fab fa-creative-commons-nd"></i></a></div></div></div><div class="comment-barrage needEndHide"></div><style>/* 修复间距问题 */
 .beian-group {
   display: flex;
   flex-wrap: wrap;
@@ -339,23 +339,97 @@ if (sco_keyboards) {
   font-size: 0.85rem;
 }
 
+.status-dot-container {
+  display: inline-block;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+}
+
 .status-dot {
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  margin-right: 6px;
-  background-color: #ff9800; /* 默认橙色（检测中） */
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 2;
 }
 
+/* 默认状态（检测中） */
+.status-dot {
+  background-color: #ff9800; /* 橙色 */
+}
+
+/* 水波纹效果 - 在线状态 */
 .status-dot.online {
   background-color: #4caf50; /* 在线绿色 */
-  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
 
+.status-dot.online:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(76, 175, 80, 0.4);
+  animation: ripple-online 1.6s ease-out infinite;
+  z-index: 1;
+}
+
+/* 水波纹效果 - 离线状态 */
 .status-dot.offline {
   background-color: #f44336; /* 离线红色 */
-  box-shadow: 0 0 5px rgba(244, 67, 54, 0.5);
+}
+
+.status-dot.offline:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(244, 67, 54, 0.4);
+  animation: ripple-offline 1.6s ease-out infinite;
+  z-index: 1;
+}
+
+/* 水波纹动画 - 缩小范围 */
+@keyframes ripple-online {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(2.2); /* 缩小范围 */
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2.5); /* 缩小范围 */
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-offline {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(2.2); /* 缩小范围 */
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2.5); /* 缩小范围 */
+    opacity: 0;
+  }
 }
 
 .uptime-link {
@@ -375,6 +449,62 @@ if (sco_keyboards) {
     margin-top: 5px;
   }
 }
+</style><style>/* 工具提示样式 */
+.footer-bar-link {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.footer-bar-link[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 100;
+  pointer-events: none;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+.footer-bar-link[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  margin-bottom: 12px;
+}
+
+.footer-bar-link[data-tooltip]::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 101;
+  margin-bottom: -2px;
+}
+
+.footer-bar-link[data-tooltip]:hover::before {
+  opacity: 1;
+  visibility: visible;
+  margin-bottom: 2px;
+}
 </style><script>document.addEventListener('DOMContentLoaded', function() {
   const uptimeApi = 'https://status.imoyan.top/api/status-page/heartbeat/lmy'.trim();
   const statusElement = document.getElementById('uptime-status-text');
@@ -386,11 +516,6 @@ if (sco_keyboards) {
       statusElement.textContent = '状态监控';
     }
     return;
-  }
-  
-  // 显示加载状态
-  if (statusDot) {
-    statusDot.classList.add('loading');
   }
   
   // 获取状态数据
@@ -434,10 +559,11 @@ if (sco_keyboards) {
       
       // 更新状态点
       if (statusDot) {
-        statusDot.classList.remove('loading');
         if (hasOfflineService) {
+          statusDot.classList.remove('online');
           statusDot.classList.add('offline');
         } else if (allServicesOnline) {
+          statusDot.classList.remove('offline');
           statusDot.classList.add('online');
         }
       }
@@ -448,7 +574,7 @@ if (sco_keyboards) {
         statusElement.textContent = '服务状态未知';
       }
       if (statusDot) {
-        statusDot.classList.remove('loading');
+        statusDot.classList.remove('online');
         statusDot.classList.add('offline');
       }
     });

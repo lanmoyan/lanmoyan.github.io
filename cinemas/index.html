@@ -365,7 +365,7 @@ const b=this.id.replace("tab","item"),c=document.getElementById(b);c.classList.r
  *                 实现了页码显示、页面内容切换、图片懒加载等功能，每页显示10条数据，
  *                 支持自定义预加载数据量配置。
  */(function(){var a=Math.ceil;function b(b,c){return`${b+1} / ${a(0==c.length/10?1:a(c.length/10))}`}function c(){const a=this.parentNode.siblings();g(a,0),this.parentNode.getElementsByClassName("bangumi-pagenum")[0].innerText=b(0,a)}function d(){const a=this.parentNode.siblings();let c=this.parentNode.getElementsByClassName("bangumi-pagenum")[0].innerText;c=c.substr(0,c.indexOf("/")-1),c=parseInt(c,10)-1,0<c&&c--,g(a,c),this.parentNode.getElementsByClassName("bangumi-pagenum")[0].innerText=b(c,a)}function e(){const c=this.parentNode.siblings();let d=this.parentNode.getElementsByClassName("bangumi-pagenum")[0].innerText;d=d.substr(0,d.indexOf("/")-1),d=parseInt(d,10)-1,d<a(c.length/10)-1&&d++,g(c,d),this.parentNode.getElementsByClassName("bangumi-pagenum")[0].innerText=b(d,c)}function f(){const c=this.parentNode.siblings();g(c,a(c.length/10)-1),this.parentNode.getElementsByClassName("bangumi-pagenum")[0].innerText=b(-1==a(c.length/10)-1?0:a(c.length/10)-1,c)}function g(a,b){for(let c=0;c<a.length;c++)if(Math.floor(c/10)===b){a[c].classList.remove("bangumi-hide");const[b]=a[c].getElementsByTagName("img");hexoBilibiliBangumiOptions.bangumiLazyload&&(b.src=b.getAttribute("data-src"))}else a[c].classList.add("bangumi-hide")}const h=document.getElementsByClassName("bangumi-firstpage"),j=document.getElementsByClassName("bangumi-previouspage"),k=document.getElementsByClassName("bangumi-nextpage"),l=document.getElementsByClassName("bangumi-lastpage"),m=document.getElementsByClassName("bangumi-pagenum");for(let b=0;b<h.length;b++){h[b].onclick=c,j[b].onclick=d,k[b].onclick=e,l[b].onclick=f;// set page num
-const g="undefined"==typeof hexoBilibiliBangumiOptions.pagenumsPre?m[b].parentNode.siblings().length:hexoBilibiliBangumiOptions.pagenumsPre[b]??m[b].parentNode.siblings().length;h[b].click(),m[b].innerText=`1 / ${0===a(g/10)?1:a(g/10)}`}})();</script></div></div></main><footer id="footer"><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/lanmoyan/" title="Github"><i class="solitude  fab fa-github"></i></a><a class="deal_link" href="mailto:o@imoyanblog@qq.com" title="Mail"><i class="solitude  far fa-envelope"></i></a><div class="nolazyload footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src= "" data-lazy-src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg" alt="返回顶部"></div><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/382175696/" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://v.douyin.com/_lmROB2NKp0/" title="Douyin"><i class="solitude  fab fa-tiktok"></i></a></div><div id="st-footer"><div class="footer-group"><h3 class="footer-title">服务</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://um.imoyan.cc/share/67b2gValE0Zy11qf/blog.imoyan.top" title="umami统计">umami统计</a><a class="footer-item" target="_blank" rel="noopener" href="https://www.foreverblog.cn/" title="十年之约">十年之约</a><a class="footer-item" target="_blank" rel="noopener" href="https://github.com/travellings-link/travellings" title="开往">开往</a></div></div><div class="footer-group"><h3 class="footer-title">生活</h3><div class="footer-links"><a class="footer-item" href="/kit/" title="我的装备">我的装备</a><a class="footer-item" target="_blank" rel="noopener" href="https://xc.imoyan.top/" title="时光记忆">时光记忆</a><a class="footer-item" href="/Update/" title="本站更新日志">本站更新日志</a></div></div><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/essay/" title="即刻短文">即刻短文</a><a class="footer-item" href="/message/" title="留言板">留言板</a></div></div><div class="footer-group"><h3 class="footer-title">协议</h3><div class="footer-links"><a class="footer-item" href="/Privacy/" title="隐私协议">隐私协议</a><a class="footer-item" href="/Cookies/" title="Cookies">Cookies</a><a class="footer-item" href="/Copyright/" title="版权协议">版权协议</a></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2025 By&nbsp;<a class="footer-bar-link" href="/"><img class="author-avatar" src= "" data-lazy-src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg">懒陌颜</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://beian.miit.gov.cn/" title="赣ICP备-2023017053号-1"><span class="beian-name">赣ICP备-2023017053号-1</span></a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude">主题：Solitude</a><span class="uptime-kuma-container"><span class="status-dot"></span><a class="uptime-link footer-bar-link" href="https://status.imoyan.top/" target="_blank" rel="noopener noreferrer" id="uptime-status-text">状态监控</a></span></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="/message/" alt="留言">留言</a><a class="footer-bar-link" href="/atom.xml" alt="订阅">订阅</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude/blob/main/LICENSE" alt="License"><i class="solitude fas fa-copyright"></i><i class="solitude fab fa-creative-commons-by"></i><i class="solitude fab fa-creative-commons-nc"></i><i class="solitude fab fa-creative-commons-nd"></i></a></div></div></div><div class="comment-barrage needEndHide"></div><style>/* 修复间距问题 */
+const g="undefined"==typeof hexoBilibiliBangumiOptions.pagenumsPre?m[b].parentNode.siblings().length:hexoBilibiliBangumiOptions.pagenumsPre[b]??m[b].parentNode.siblings().length;h[b].click(),m[b].innerText=`1 / ${0===a(g/10)?1:a(g/10)}`}})();</script></div></div></main><footer id="footer"><!-- 获取工具提示文本，确保安全访问--><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/lanmoyan/" title="Github"><i class="solitude  fab fa-github"></i></a><a class="deal_link" href="mailto:o@imoyanblog@qq.com" title="Mail"><i class="solitude  far fa-envelope"></i></a><div class="nolazyload footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src= "" data-lazy-src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg" alt="返回顶部"></div><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/382175696/" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://v.douyin.com/_lmROB2NKp0/" title="Douyin"><i class="solitude  fab fa-tiktok"></i></a></div><div id="st-footer"><div class="footer-group"><h3 class="footer-title">服务</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://um.imoyan.cc/share/67b2gValE0Zy11qf/blog.imoyan.top" title="umami统计">umami统计</a><a class="footer-item" target="_blank" rel="noopener" href="https://www.foreverblog.cn/" title="十年之约">十年之约</a><a class="footer-item" target="_blank" rel="noopener" href="https://github.com/travellings-link/travellings" title="开往">开往</a></div></div><div class="footer-group"><h3 class="footer-title">生活</h3><div class="footer-links"><a class="footer-item" href="/kit/" title="我的装备">我的装备</a><a class="footer-item" target="_blank" rel="noopener" href="https://xc.imoyan.top/" title="时光记忆">时光记忆</a><a class="footer-item" href="/Update/" title="本站更新日志">本站更新日志</a></div></div><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/essay/" title="即刻短文">即刻短文</a><a class="footer-item" href="/message/" title="留言板">留言板</a></div></div><div class="footer-group"><h3 class="footer-title">协议</h3><div class="footer-links"><a class="footer-item" href="/Privacy/" title="隐私协议">隐私协议</a><a class="footer-item" href="/Cookies/" title="Cookies">Cookies</a><a class="footer-item" href="/Copyright/" title="版权协议">版权协议</a></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2025 By&nbsp;<a class="footer-bar-link" href="/"><img class="author-avatar" src= "" data-lazy-src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg">懒陌颜</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://beian.miit.gov.cn/" title="赣ICP备-2023017053号-1" data-tooltip="赣ICP备-2023017053号-1"><span class="beian-name">赣ICP备-2023017053号-1</span></a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/" data-tooltip="静态网站生成框架">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" data-tooltip="简洁高效的Hexo主题">主题：Solitude</a><span class="uptime-kuma-container"><span class="status-dot-container"><span class="status-dot"></span></span><a class="uptime-link footer-bar-link" href="https://status.imoyan.top/" target="_blank" rel="noopener noreferrer" id="uptime-status-text">状态监控</a></span></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="/message/" alt="留言">留言</a><a class="footer-bar-link" href="/atom.xml" alt="订阅">订阅</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude/blob/main/LICENSE" alt="License"><i class="solitude fas fa-copyright"></i><i class="solitude fab fa-creative-commons-by"></i><i class="solitude fab fa-creative-commons-nc"></i><i class="solitude fab fa-creative-commons-nd"></i></a></div></div></div><div class="comment-barrage needEndHide"></div><style>/* 修复间距问题 */
 .beian-group {
   display: flex;
   flex-wrap: wrap;
@@ -380,23 +380,97 @@ const g="undefined"==typeof hexoBilibiliBangumiOptions.pagenumsPre?m[b].parentNo
   font-size: 0.85rem;
 }
 
+.status-dot-container {
+  display: inline-block;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+}
+
 .status-dot {
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  margin-right: 6px;
-  background-color: #ff9800; /* 默认橙色（检测中） */
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 2;
 }
 
+/* 默认状态（检测中） */
+.status-dot {
+  background-color: #ff9800; /* 橙色 */
+}
+
+/* 水波纹效果 - 在线状态 */
 .status-dot.online {
   background-color: #4caf50; /* 在线绿色 */
-  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
 
+.status-dot.online:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(76, 175, 80, 0.4);
+  animation: ripple-online 1.6s ease-out infinite;
+  z-index: 1;
+}
+
+/* 水波纹效果 - 离线状态 */
 .status-dot.offline {
   background-color: #f44336; /* 离线红色 */
-  box-shadow: 0 0 5px rgba(244, 67, 54, 0.5);
+}
+
+.status-dot.offline:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(244, 67, 54, 0.4);
+  animation: ripple-offline 1.6s ease-out infinite;
+  z-index: 1;
+}
+
+/* 水波纹动画 - 缩小范围 */
+@keyframes ripple-online {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(2.2); /* 缩小范围 */
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2.5); /* 缩小范围 */
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-offline {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(2.2); /* 缩小范围 */
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2.5); /* 缩小范围 */
+    opacity: 0;
+  }
 }
 
 .uptime-link {
@@ -416,6 +490,62 @@ const g="undefined"==typeof hexoBilibiliBangumiOptions.pagenumsPre?m[b].parentNo
     margin-top: 5px;
   }
 }
+</style><style>/* 工具提示样式 */
+.footer-bar-link {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.footer-bar-link[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 100;
+  pointer-events: none;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+.footer-bar-link[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  margin-bottom: 12px;
+}
+
+.footer-bar-link[data-tooltip]::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 101;
+  margin-bottom: -2px;
+}
+
+.footer-bar-link[data-tooltip]:hover::before {
+  opacity: 1;
+  visibility: visible;
+  margin-bottom: 2px;
+}
 </style><script>document.addEventListener('DOMContentLoaded', function() {
   const uptimeApi = 'https://status.imoyan.top/api/status-page/heartbeat/lmy'.trim();
   const statusElement = document.getElementById('uptime-status-text');
@@ -427,11 +557,6 @@ const g="undefined"==typeof hexoBilibiliBangumiOptions.pagenumsPre?m[b].parentNo
       statusElement.textContent = '状态监控';
     }
     return;
-  }
-  
-  // 显示加载状态
-  if (statusDot) {
-    statusDot.classList.add('loading');
   }
   
   // 获取状态数据
@@ -475,10 +600,11 @@ const g="undefined"==typeof hexoBilibiliBangumiOptions.pagenumsPre?m[b].parentNo
       
       // 更新状态点
       if (statusDot) {
-        statusDot.classList.remove('loading');
         if (hasOfflineService) {
+          statusDot.classList.remove('online');
           statusDot.classList.add('offline');
         } else if (allServicesOnline) {
+          statusDot.classList.remove('offline');
           statusDot.classList.add('online');
         }
       }
@@ -489,7 +615,7 @@ const g="undefined"==typeof hexoBilibiliBangumiOptions.pagenumsPre?m[b].parentNo
         statusElement.textContent = '服务状态未知';
       }
       if (statusDot) {
-        statusDot.classList.remove('loading');
+        statusDot.classList.remove('online');
         statusDot.classList.add('offline');
       }
     });
