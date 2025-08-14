@@ -112,7 +112,7 @@ initTheme()</script><!-- global head--><script>const GLOBAL_CONFIG = {
     },
     copyright: {"limit":50,"author":"作者: 懒陌颜","link":"链接: ","source":"来源: 陌颜Hao","info":"著作权归作者所有。 商业转载请联系作者获得授权，非商业转载请注明出处。"},
     highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
-    randomlink: true,
+    randomlink: false,
     lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","search":{"empty":"找不到你查询的内容：${query}","hit":"找到 ${hits} 条结果，用时 ${time} 毫秒","placeholder":"输入关键词快速查找","count":"共 <b>${count}</b> 条结果。","loading":"搜索中..."},"barrage":{"title":"热评"}},
     aside: {
         state: {
@@ -332,38 +332,7 @@ if (sco_keyboards) {
 utils.addGlobalFn('pjaxSend', () => {
   Pace.restart()
 }, 'pace_restart')
-</script><script src="https://cdn.jsdmirror.com/npm/pace-js@1.2.4/pace.min.js"></script><script src="/js/right_menu.js?v=3.0.19"></script><div class="js-pjax"></div></div><script>const links = [{"name":"Hexo","link":"https://hexo.io/zh-cn/"},{"name":"Butterfly","link":"https://butterfly.js.org/"},{"name":"张洪Heo","link":"https://blog.zhheo.com/"},{"name":"Solitude","link":"https://solitude.js.org/"},{"name":"小冰博客","link":"https://zfe.space/"},{"name":"Akilarの糖果屋","link":"https://akilar.top/"},{"name":"张洪Heo","link":"https://blog.zhheo.com/"},{"name":"贰猹的小窝","link":"https://noionion.top/"},{"name":"轻笑Chuckle","link":"https://www.qcqx.cn/"},{"name":"青桔气球","link":"https://blog.qjqq.cn/"},{"name":"唐志远","link":"https://fe32.top/"},{"name":"冰火之砺","link":"https://blog.marice.top/"},{"name":"狼林鱼池","link":"https://blog.jiyu134.top/"},{"name":"铭心石刻","link":"https://blog.kouseki.cn/"},{"name":"Ganzhe","link":"https://ganzhe.site/"},{"name":"海底涝里没有鱼","link":"https://smileszh.cn/"},{"name":"Chenli","link":"https://chenliss.cn/"},{"name":"风起社区","link":"https://www.fqxk.com.cn/"},{"name":"未知之旅","link":"https://blog.xenosp.cn/"},{"name":"小李同学 Coding","link":"https://blog.xxfer.cn/"},{"name":"XiaoXing","link":"https://www.hello-y.fun/"},{"name":"June's Blog","link":"https://blog.june-pj.cn/"},{"name":"haohang","link":"https://www.shimmerl.top/"},{"name":"清羽飞扬","link":"https://blog.liushen.fun/"},{"name":"别碰我的镜头盖","link":"https://blog.bornforthis.cn/"},{"name":"绾秋小站","link":"https://www.gx.gx.cn/"}]
-const randomText = '点击前往按钮进入随机一个友链，不保证跳转网站的安全性和可用性。本次随机到的是本站友链：⌈ ${name} ⌋'
-function travelling() {
-    const link = links[utils.randomNum(links.length)];
-    Snackbar.show({
-        text: randomText.replace(/\$\{name}/,link.name),
-        duration: 8000,
-        pos: 'top-center',
-        actionText: '前往',
-        onActionClick: function(element) {
-            element.style.opacity = 0;
-            window.open(link.link, '_blank');
-        }
-    });
-}
-</script><script>function randomLinksList() {
-    const linkcard = document.getElementById('friend-links-in-footer');
-    if (linkcard == null) return;
-
-    let data = '';
-    let linksCopy = [...links];
-    let count = Math.min(3, linksCopy.length);
-
-    for (let i = 0; i < count; i++) {
-        let index = utils.randomNum(linksCopy.length);
-        const {link, name} = linksCopy[index];
-        data += `<a class="footer-item" href="${link}" target="_blank" rel="noopener noreferrer nofollow">${name}</a>`;
-        linksCopy.splice(index, 1);
-    }
-
-    linkcard.innerHTML = data + '<a class="footer-item" href="/links/">更多</a>';
-}</script><!-- pjax--><script>const pjax = new Pjax({
+</script><script src="https://cdn.jsdmirror.com/npm/pace-js@1.2.4/pace.min.js"></script><script src="/js/right_menu.js?v=3.0.19"></script><div class="js-pjax"></div></div><!-- pjax--><script>const pjax = new Pjax({
     elements: 'a:not([target="_blank"])',
     selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
     cacheBust: false,
