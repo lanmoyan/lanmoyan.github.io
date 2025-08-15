@@ -635,16 +635,19 @@ if (sco_keyboards) {
   // 配置参数
   const config = {
     apiUrl: 'https://status.imoyan.top/api/status-page/heartbeat/lmy',
-    refreshInterval: 30000,
+    refreshInterval: 45000, // 延长刷新间隔减少请求
+    minDelayAfterLoad: 3000, // 页面加载后最小延迟
+    maxDelayAfterLoad: 7000, // 页面加载后最大延迟
     statusElementId: 'uptime-status-text',
     dotElementId: 'uptime-status-dot',
     pulseElementId: 'status-pulse',
-    storageKey: 'uptimeStatusData'
+    storageKey: 'uptimeStatusData',
+    chunkSize: 10, // 数据分块处理大小
+    maxProcessingTime: 50 // 每块最大处理时间(ms)
   };
   
   // 如果API路径为空则禁用功能
   if (!config.apiUrl || config.apiUrl.trim() === '') {
-    console.error('Uptime Kuma API URL未配置');
     return;
   }
   
@@ -659,9 +662,9 @@ if (sco_keyboards) {
   // 状态映射
   const STATUS_TEXT = {
     [STATUS.LOADING]: '状态监控中...',
-    [STATUS.ONLINE]: '全部服务正常',
-    [STATUS.OFFLINE]: '部分服务异常',
-    [STATUS.ERROR]: '状态监控异常'
+    [STATUS.ONLINE]: '服务正常',
+    [STATUS.OFFLINE]: '服务异常',
+    [STATUS.ERROR]: '状态监控'
   };
   
   // 状态类名映射
@@ -670,6 +673,19 @@ if (sco_keyboards) {
     [STATUS.ONLINE]: 'online',
     [STATUS.OFFLINE]: 'offline',
     [STATUS.ERROR]: 'unknown'
+  };
+  
+  // 性能监控器
+  const perfMonitor = {
+    startTime: 0,
+    start: function() {
+      this.startTime = performance.now();
+    },
+    log: function(message) {
+      if (window.location.hostname === 'localhost') {
+        console.log(`[性能] ${message}: ${(performance.now() - this.startTime).toFixed(2)}ms`);
+      }
+    }
   };
   
   // 获取DOM元素
@@ -681,27 +697,36 @@ if (sco_keyboards) {
     };
   }
   
-  // 更新状态显示
+  // 更新状态显示 (最小化DOM操作)
   function updateStatusDisplay(status) {
     const { statusElement, dotElement, pulseElement } = getElements();
     
     if (!statusElement || !dotElement || !pulseElement) return;
     
-    // 更新文本
-    statusElement.textContent = STATUS_TEXT[status];
-    
-    // 更新状态点
-    dotElement.className = 'status-dot ' + STATUS_CLASS[status];
-    
-    // 更新脉冲动画
-    pulseElement.className = 'status-pulse ' + STATUS_CLASS[status];
+    // 使用requestAnimationFrame确保在渲染前更新
+    requestAnimationFrame(() => {
+      // 只有状态变化时才更新DOM
+      if (statusElement.textContent !== STATUS_TEXT[status]) {
+        statusElement.textContent = STATUS_TEXT[status];
+      }
+      
+      const newDotClass = 'status-dot ' + STATUS_CLASS[status];
+      if (dotElement.className !== newDotClass) {
+        dotElement.className = newDotClass;
+      }
+      
+      const newPulseClass = 'status-pulse ' + STATUS_CLASS[status];
+      if (pulseElement.className !== newPulseClass) {
+        pulseElement.className = newPulseClass;
+      }
+    });
     
     // 保存到缓存
     saveStatusToCache(status);
   }
   
-  // 保存状态到缓存
-  function saveStatusToCache(status) {
+  // 保存状态到缓存 (使用防抖)
+  const saveStatusToCache = debounce(function(status) {
     try {
       const data = {
         status: status,
@@ -709,9 +734,9 @@ if (sco_keyboards) {
       };
       localStorage.setItem(config.storageKey, JSON.stringify(data));
     } catch (e) {
-      console.error('保存状态到缓存失败:', e);
+      // 静默失败
     }
-  }
+  }, 1000);
   
   // 从缓存加载状态
   function loadCachedStatus() {
@@ -721,9 +746,9 @@ if (sco_keyboards) {
       
       const { status, timestamp } = JSON.parse(savedData);
       
-      // 检查缓存是否过期（5分钟）
+      // 检查缓存是否过期（15分钟）
       const now = Date.now();
-      if (now - timestamp > 300000) return null;
+      if (now - timestamp > 900000) return null;
       
       return status;
     } catch (e) {
@@ -731,112 +756,85 @@ if (sco_keyboards) {
     }
   }
   
-  // 获取状态
-  async function fetchStatus() {
-    try {
-      // 显示加载状态
-      updateStatusDisplay(STATUS.LOADING);
-      
-      // 添加随机参数防止缓存
-      const apiUrl = config.apiUrl + (config.apiUrl.includes('?') ? '&' : '?') + 
-                     't=' + Date.now();
-      
-      console.log('请求Uptime Kuma API:', apiUrl);
-      
-      // 使用XMLHttpRequest替代fetch (更好的兼容性)
-      const data = await new Promise((resolve, reject) => {
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', apiUrl);
-        xhr.timeout = 8000; // 8秒超时
-        
-        xhr.onload = function() {
-          if (xhr.status >= 200 && xhr.status < 300) {
-            try {
-              resolve(JSON.parse(xhr.responseText));
-            } catch (e) {
-              reject(new Error('解析JSON失败'));
-            }
-          } else {
-            reject(new Error(`请求失败: ${xhr.status}`));
-          }
-        };
-        
-        xhr.onerror = function() {
-          reject(new Error('网络请求失败'));
-        };
-        
-        xhr.ontimeout = function() {
-          reject(new Error('请求超时'));
-        };
-        
-        xhr.send();
-      });
-      
-      console.log('API响应数据:', data);
-      
-      // 解析状态 - 根据您提供的实际数据结构
-      let anyOffline = false;
-      
-      // 方法1: 检查心跳数据
-      if (data.heartbeatList) {
-        for (const monitorId in data.heartbeatList) {
-          const heartbeats = data.heartbeatList[monitorId];
-          if (Array.isArray(heartbeats) && heartbeats.length > 0) {
-            const latestStatus = heartbeats[heartbeats.length - 1].status;
-            // 根据您提供的数据结构：0=离线, 1=在线
-            if (latestStatus === 0) {
-              anyOffline = true;
-              break;
-            }
-          }
+  // 智能延迟函数 - 根据网络连接速度调整
+  function getSmartDelay() {
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    let baseDelay = config.minDelayAfterLoad;
+    
+    if (connection) {
+      // 根据网络类型调整延迟
+      if (connection.effectiveType) {
+        switch(connection.effectiveType) {
+          case 'slow-2g':
+          case '2g':
+            baseDelay = config.maxDelayAfterLoad;
+            break;
+          case '3g':
+            baseDelay = (config.minDelayAfterLoad + config.maxDelayAfterLoad) / 2;
+            break;
         }
       }
-      // 方法2: 检查uptimeList
-      else if (data.uptimeList) {
-        for (const key in data.uptimeList) {
-          if (data.uptimeList[key] < 0.99) { // 低于99%视为有问题
+      
+      // 如果保存数据模式，进一步延迟
+      if (connection.saveData) {
+        baseDelay *= 1.5;
+      }
+    }
+    
+    // 添加随机延迟避免请求峰值
+    const randomDelay = Math.random() * 2000;
+    return baseDelay + randomDelay;
+  }
+  
+  // 分块处理大数据 - 防止主线程阻塞
+  function processDataInChunks(data, callback) {
+    perfMonitor.log('开始数据处理');
+    
+    let anyOffline = false;
+    const heartbeatList = data.heartbeatList;
+    const keys = Object.keys(heartbeatList);
+    let index = 0;
+    
+    function processChunk() {
+      const startTime = performance.now();
+      let chunkProcessed = 0;
+      
+      while (index < keys.length && chunkProcessed < config.chunkSize && 
+             (performance.now() - startTime) < config.maxProcessingTime) {
+        const monitorId = keys[index];
+        const heartbeats = heartbeatList[monitorId];
+        
+        if (Array.isArray(heartbeats) && heartbeats.length > 0) {
+          const latestStatus = heartbeats[heartbeats.length - 1].status;
+          if (latestStatus === 0) {
             anyOffline = true;
+            // 发现一个离线服务即可中断
+            index = keys.length;
             break;
           }
         }
+        
+        index++;
+        chunkProcessed++;
       }
-      // 无法识别响应结构
-      else {
-        throw new Error('无法识别的API响应结构');
-      }
       
-      // 更新状态
-      const newStatus = anyOffline ? STATUS.OFFLINE : STATUS.ONLINE;
-      updateStatusDisplay(newStatus);
-      
-    } catch (error) {
-      console.error('状态监测失败:', error.message);
-      
-      // 尝试从缓存加载状态
-      const cachedStatus = loadCachedStatus();
-      if (cachedStatus) {
-        updateStatusDisplay(cachedStatus);
+      if (index < keys.length) {
+        // 使用setTimeout(0)让出主线程
+        setTimeout(processChunk, 0);
       } else {
-        updateStatusDisplay(STATUS.ERROR);
+        callback(anyOffline);
+        perfMonitor.log('数据处理完成');
       }
     }
     
-    // 安排下一次刷新
-    setTimeout(fetchStatus, config.refreshInterval);
+    processChunk();
   }
   
-  // 初始化状态监控
-  function initStatusMonitor() {
-    // 获取元素
-    const { statusElement, dotElement, pulseElement } = getElements();
+  // 获取状态 - 使用Web Worker优先 (如果可用)
+  function fetchStatus() {
+    perfMonitor.start();
     
-    // 如果找不到元素则退出
-    if (!statusElement || !dotElement || !pulseElement) {
-      console.error('状态监控元素未找到');
-      return;
-    }
-    
-    // 从localStorage加载缓存状态
+    // 先显示缓存状态
     const cachedStatus = loadCachedStatus();
     if (cachedStatus) {
       updateStatusDisplay(cachedStatus);
@@ -844,17 +842,211 @@ if (sco_keyboards) {
       updateStatusDisplay(STATUS.LOADING);
     }
     
-    // 开始轮询
-    fetchStatus();
+    // 创建API请求URL
+    const apiUrl = config.apiUrl + (config.apiUrl.includes('?') ? '&' : '?') + 
+                   't=' + Date.now();
+    
+    // 尝试使用Web Worker
+    if (window.Worker) {
+      try {
+        const worker = new Worker('/js/uptime-worker.js');
+        
+        worker.onmessage = function(e) {
+          perfMonitor.log('Worker处理完成');
+          const { anyOffline } = e.data;
+          const newStatus = anyOffline ? STATUS.OFFLINE : STATUS.ONLINE;
+          updateStatusDisplay(newStatus);
+          worker.terminate();
+          
+          // 安排下一次刷新
+          scheduleNextRefresh();
+        };
+        
+        worker.onerror = function(error) {
+          console.error('Worker错误:', error);
+          worker.terminate();
+          // 回退到主线程处理
+          fetchWithMainThread(apiUrl);
+        };
+        
+        // 发送数据到Worker
+        worker.postMessage({ apiUrl });
+        perfMonitor.log('创建Worker请求');
+        return;
+        
+      } catch (e) {
+        console.warn('Web Worker初始化失败', e);
+      }
+    }
+    
+    // 如果不支持Worker，使用主线程处理
+    fetchWithMainThread(apiUrl);
   }
   
-  // 确保DOM加载完成后初始化
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initStatusMonitor);
-  } else {
-    initStatusMonitor();
+  // 主线程处理方案
+  function fetchWithMainThread(apiUrl) {
+    // 使用低优先级fetch API
+    fetch(apiUrl, {
+      cache: 'no-store',
+      priority: 'low',
+      signal: AbortSignal.timeout(3000) // 3秒超时
+    })
+    .then(response => {
+      if (!response.ok) throw new Error(`请求失败: ${response.status}`);
+      perfMonitor.log('API响应接收');
+      return response.json();
+    })
+    .then(data => {
+      // 分块处理数据，避免阻塞主线程
+      processDataInChunks(data, (anyOffline) => {
+        const newStatus = anyOffline ? STATUS.OFFLINE : STATUS.ONLINE;
+        updateStatusDisplay(newStatus);
+        perfMonitor.log('状态更新完成');
+      });
+    })
+    .catch(error => {
+      console.error('状态监测失败:', error.message);
+      
+      // 使用缓存状态
+      const cachedStatus = loadCachedStatus() || STATUS.ERROR;
+      updateStatusDisplay(cachedStatus);
+      
+      // 延长下次刷新时间
+      config.refreshInterval = 120000; // 2分钟
+    })
+    .finally(() => {
+      // 安排下一次刷新
+      scheduleNextRefresh();
+    });
+  }
+  
+  // 智能安排下次刷新
+  function scheduleNextRefresh() {
+    // 根据页面可见性调整刷新时间
+    const delay = document.visibilityState === 'visible' ? 
+                  config.refreshInterval : 
+                  config.refreshInterval * 2;
+    
+    setTimeout(fetchStatus, delay);
+  }
+  
+  // 初始化状态监控
+  function initStatusMonitor() {
+    perfMonitor.start();
+    
+    // 获取元素
+    const { statusElement } = getElements();
+    if (!statusElement) return;
+    
+    // 初始状态为空
+    statusElement.textContent = '';
+    
+    // 智能延迟
+    const delay = getSmartDelay();
+    
+    setTimeout(() => {
+      // 显示加载状态
+      updateStatusDisplay(STATUS.LOADING);
+      
+      // 开始状态监控
+      fetchStatus();
+      
+      perfMonitor.log('监控初始化完成');
+    }, delay);
+    
+    // 页面可见性监听
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        // 页面可见时刷新状态
+        fetchStatus();
+      }
+    });
+  }
+  
+  // 确保页面完全加载后初始化
+  function startAfterLoad() {
+    // 如果页面已加载，直接初始化
+    if (document.readyState === 'complete') {
+      initStatusMonitor();
+    } 
+    // 否则等待页面加载完成
+    else {
+      window.addEventListener('load', () => {
+        // 再等待一个事件循环确保所有资源加载
+        setTimeout(initStatusMonitor, 0);
+      });
+    }
+  }
+  
+  // 启动执行
+  startAfterLoad();
+  
+  // 工具函数：防抖
+  function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), wait);
+    };
   }
 })();
+</script><script>// 只在生产环境注入Worker代码
+if (window.location.hostname !== 'localhost' && document.head) {
+  const workerScript = `
+    self.addEventListener('message', async (e) => {
+      const { apiUrl } = e.data;
+      
+      try {
+        // 使用fetch获取数据
+        const response = await fetch(apiUrl, {
+          cache: 'no-store',
+          credentials: 'omit'
+        });
+        
+        if (!response.ok) throw new Error('API响应错误');
+        
+        const data = await response.json();
+        let anyOffline = false;
+        
+        // 快速检查最新状态
+        if (data.heartbeatList) {
+          for (const monitorId in data.heartbeatList) {
+            const heartbeats = data.heartbeatList[monitorId];
+            if (Array.isArray(heartbeats) && heartbeats.length > 0) {
+              // 只检查最新状态
+              const latestStatus = heartbeats[heartbeats.length - 1].status;
+              if (latestStatus === 0) {
+                anyOffline = true;
+                break;
+              }
+            }
+          }
+        }
+        
+        self.postMessage({ anyOffline });
+        
+      } catch (error) {
+        // 发生错误时返回null
+        self.postMessage({ anyOffline: null });
+      }
+    });
+  `;
+  
+  const blob = new Blob([workerScript], { type: 'application/javascript' });
+  const workerUrl = URL.createObjectURL(blob);
+  
+  // 覆盖Worker创建函数
+  const originalWorker = window.Worker;
+  window.Worker = class extends originalWorker {
+    constructor(url) {
+      if (url.endsWith('/js/uptime-worker.js')) {
+        super(workerUrl);
+      } else {
+        super(url);
+      }
+    }
+  };
+}
 </script><style>/* 工具提示样式 */
 .footer-bar-link {
   position: relative;
