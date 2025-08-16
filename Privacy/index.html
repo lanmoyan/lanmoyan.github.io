@@ -396,10 +396,6 @@ if (sco_keyboards) {
         <td><div id="userAgentCity"></div></td>
     </tr>
     <tr>
-        <td>区</td>
-        <td><div id="userAgentDistrict"></div></td>
-    </tr>
-    <tr>
         <td>运营商</td>
         <td><div id="userAgentISP"></div></td>
     </tr>
@@ -416,32 +412,32 @@ if (sco_keyboards) {
 <!-- 在模板文件中添加 JavaScript 代码 -->
 <script>
     // 获取ip
-    function getIpInfo(){
-        var fetchUrl = "https://api.nsmao.net/api/ipip/geo/v1/query?key=PLwGYtku1rrjt8GwSUAmdoVOm2"  //key申请：https://api.nsmao.net
-        .then(res => res.json())
-        .then(json =>{
-            var country = json.data.country || "未能获取到信息";
-            var ip = json.data.ip || "未能获取到信息";
-            var province = json.data.province || "未能获取到信息";
-            var city = json.data.city || "未能获取到信息";
-            var districts = json.data.districts || "未能获取到信息"
-            var isp = json.data.isp || "未能获取到信息";
-    
-            document.getElementById("userAgentIp").innerHTML = ip;
-            document.getElementById("userAgentCountry").innerHTML = country;
-            document.getElementById("userAgentProv").innerHTML = province;
-            document.getElementById("userAgentCity").innerHTML = city;
-            document.getElementById("userAgentISP").innerHTML = isp;
-    
-            // 使用ua-parser-js解析User-Agent
-            var parser = new UAParser();
-            var result = parser.getResult();
-            document.getElementById("userAgentOS").innerHTML = result.os.name + " " + result.os.version;
-            document.getElementById("userAgentBrowser").innerHTML = result.browser.name + " " + result.browser.version;
-        })
-    }
-    
-    getIpInfo()
+function getIpInfo(){
+    var fetchUrl = "https://api.nsmao.net/api/ipip/query?key=qfnWtB430CYBWHOvqWldMQGGnm"  //https://api.nsmao.net 申请
+    fetch(fetchUrl)
+      .then(res => res.json())
+      .then(json =>{
+        var country = json.data.country || "未能获取到信息";
+        var ip = json.data.ip || "未能获取到信息";
+        var province = json.data.province || "未能获取到信息";
+        var city = json.data.city || "未能获取到信息";
+        var isp = json.data.isp || "未能获取到信息";
+  
+        document.getElementById("userAgentIp").innerHTML = ip;
+        document.getElementById("userAgentCountry").innerHTML = country;
+        document.getElementById("userAgentProv").innerHTML = province;
+        document.getElementById("userAgentCity").innerHTML = city;
+        document.getElementById("userAgentISP").innerHTML = isp;
+  
+        // 使用ua-parser-js解析User-Agent
+        var parser = new UAParser();
+        var result = parser.getResult();
+        document.getElementById("userAgentOS").innerHTML = result.os.name + " " + result.os.version;
+        document.getElementById("userAgentBrowser").innerHTML = result.browser.name + " " + result.browser.version;
+      })
+  }
+  
+  getIpInfo()
 </script>
 
 <h5 id="此页面如果未能获取到信息并不代表无法读取上述信息以实际情况为准-此页面获取地址信息展示使用的是-青桔-提供的api"><a href="#此页面如果未能获取到信息并不代表无法读取上述信息，以实际情况为准。此页面获取地址信息展示使用的是-青桔-提供的API。" class="headerlink" title="此页面如果未能获取到信息并不代表无法读取上述信息，以实际情况为准。此页面获取地址信息展示使用的是 青桔 提供的API。"></a>此页面如果未能获取到信息并不代表无法读取上述信息，以实际情况为准。此页面获取地址信息展示使用的是 <a target="_blank" rel="noopener" href="https://blog.qjqq.cn/">青桔</a> 提供的API。</h5><h2 id="二-在评论时如何收集和使用你的个人信息"><a href="#二、在评论时如何收集和使用你的个人信息" class="headerlink" title="二、在评论时如何收集和使用你的个人信息"></a>二、在评论时如何收集和使用你的个人信息</h2><p>评论使用的是无登陆系统的匿名评论系统，你可以自愿填写真实的、或者虚假的信息作为你评论的展示信息。</p>

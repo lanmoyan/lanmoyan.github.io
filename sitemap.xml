@@ -2,6 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.imoyan.top/links/index.html</loc>
+    
+    <lastmod>2025-08-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.imoyan.top/Update/index.html</loc>
+    
+    <lastmod>2025-08-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.imoyan.top/Privacy/index.html</loc>
+    
+    <lastmod>2025-08-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.imoyan.top/recentcomment/index.html</loc>
+    
+    <lastmod>2025-08-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.imoyan.top/message/index.html</loc>
+    
+    <lastmod>2025-08-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.imoyan.top/friend.json</loc>
     
     <lastmod>2025-08-14</lastmod>
@@ -14,24 +59,6 @@
     <loc>https://blog.imoyan.top/fcircle/index.html</loc>
     
     <lastmod>2025-08-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.imoyan.top/Update/index.html</loc>
-    
-    <lastmod>2025-08-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.imoyan.top/Privacy/index.html</loc>
-    
-    <lastmod>2025-08-12</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -83,15 +110,6 @@
   </url>
   
   <url>
-    <loc>https://blog.imoyan.top/status/index.html</loc>
-    
-    <lastmod>2025-08-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.imoyan.top/music/index.html</loc>
     
     <lastmod>2025-08-11</lastmod>
@@ -102,33 +120,6 @@
   
   <url>
     <loc>https://blog.imoyan.top/posts/f305/</loc>
-    
-    <lastmod>2025-08-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.imoyan.top/recentcomment/index.html</loc>
-    
-    <lastmod>2025-08-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.imoyan.top/message/index.html</loc>
-    
-    <lastmod>2025-08-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.imoyan.top/links/index.html</loc>
     
     <lastmod>2025-08-11</lastmod>
     
