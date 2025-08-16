@@ -125,8 +125,15 @@ window.addEventListener("load", () => {
     }
 
     function search(query) {
-        const regex = new RegExp(query.split('').join('.*'), 'i');
-        return store.filter(page => regex.test(page.title) || regex.test(page.content));
+        // 使用更高效的搜索方式，避免正则表达式的性能问题
+        const queryLower = query.toLowerCase();
+        return store.filter(page => {
+            const titleLower = page.title.toLowerCase();
+            const contentLower = page.content.toLowerCase();
+            
+            // 检查标题和内容是否包含查询字符串
+            return titleLower.includes(queryLower) || contentLower.includes(queryLower);
+        });
     }
 
     function renderResults(results, page) {
