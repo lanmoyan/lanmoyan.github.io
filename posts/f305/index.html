@@ -1,0 +1,937 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>推荐一些博客常用的服务搭建教程 | 陌颜Hao</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=3.0.19"><!-- inject head--><link rel="canonical" href="https://blog.imoyan.top/posts/f305/index.html"><link rel="stylesheet" href="https://cdn.jsdmirror.com/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- aplayer--><link rel="stylesheet" href="https://cdn.jsdmirror.com/npm/aplayer@1.10.1/dist/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://cdn.jsdmirror.com/npm/swiper@11.0.5/swiper-bundle.min.css"><!-- fancybox ui--><!-- katex--><!-- Open Graph--><meta name="description" content="本文教程中大部分参考：UptimeKuma默认状态页面美化使用Docker搭建Umami统计，显示近一年的pv、uv数据的API搭建Twikoo腾讯云函数部署转移到私有部署转载请注明出处！ 近况最近在折腾博客，根据现有情况（博客运行多年，没有更新文章。。。ps：其实有更新几篇，但大多数的文章都是引荐"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="陌颜Hao"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg"><link rel="apple-touch-icon" href="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg" sizes="180x180"><script>console.log(' %c Solitude %c ' + '3.0.19' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script defer src="https://um.imoyan.cc/script.js" data-website-id="1d97b558-6969-4d45-a9be-4cb5688a1646"></script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+            },
+            diffDateFormat: (selector) => {
+                selector.forEach(item => {
+                    const date = new Date(item.getAttribute('datetime') || item.textContent);
+                    item.textContent = (date.getMonth() + 1).toString()+'/'+date.getDate().toString();
+                });
+            },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: {"preload":true,"path":"/search.xml"},
+    runtime: '2025-08-05 00:00:00',
+    lazyload: {
+        enable: true,
+        error: '/img/error_load.avif'
+    },
+    copyright: {"limit":50,"author":"作者: 懒陌颜","link":"链接: ","source":"来源: 陌颜Hao","info":"著作权归作者所有。 商业转载请联系作者获得授权，非商业转载请注明出处。"},
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","search":{"empty":"找不到你查询的内容：${query}","hit":"找到 ${hits} 条结果，用时 ${time} 毫秒","placeholder":"输入关键词快速查找","count":"共 <b>${count}</b> 条结果。","loading":"搜索中..."},"barrage":{"title":"热评"}},
+    aside: {
+        state: {
+            morning: "✨ 早上好，新的一天开始了",
+            noon: "🍲 午餐时间",
+            afternoon: "🌞 下午好",
+            night: "早点休息",
+            goodnight: "晚安 😴",
+        },
+        witty_words: ["你可以的","你一定可以的","祝你好运，陌生人"],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: {"avatar":"https://gravatar.com/avatar","commentBarrage":true},
+    lightbox: 'null',
+    right_menu: {"mode":{"dark":"深色模式","light":"浅色模式"},"img_error":"此图片无法复制与下载","music":{"start":"播放音乐","stop":"暂停音乐"},"barrage":{"open":"显示热评","close":"关闭热评"},"translate":true},
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: {"jump":"404 Not Found","back":"ヾ(≧∇≦*)ゝHey, hey, you fell for it."},
+    expire: {"time":30,"position":"top","text_prev":"This article expired ","text_next":" day ago, if the content does not match, please contact the webmaster to update it."},
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: true,
+    ai_text: false,
+    color: false,
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="陌颜Hao" type="application/atom+xml">
+</head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- background img--><!-- loading--><div id="loading-box" onclick="preloader.endLoading();" style="zoom:1"><div class="loading-bg"><img class="loading-img nolazyload" src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg" alt="loading image"></div></div><script>const preloader = {
+    isLoaded: false,
+    endLoading: () => {
+        if (!preloader.isLoaded) {
+            document.getElementById('loading-box').classList.add('loaded');
+            preloader.isLoaded = true;
+            preloader.togglePaceDone();
+        }
+    },
+    initLoading: () => {
+        document.getElementById('loading-box').classList.remove('loaded');
+        preloader.isLoaded = false;
+        preloader.togglePaceDone();
+    },
+    togglePaceDone: () => {
+        document.getElementById('body').className = preloader.isLoaded ? 'pace-done' : '';
+    }
+}
+
+window.addEventListener('load', () => {
+    preloader.endLoading();
+});
+
+window.addEventListener('pjax:send', () => {
+    preloader.initLoading();
+});
+
+document.addEventListener('pjax:complete', () => {
+    preloader.endLoading();
+});
+
+setTimeout(() => {
+    preloader.endLoading();
+}, 5000);</script><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fas fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">互动</div><div class="author-content-item-title">最新评论<a class="recent-comment-more" href="/recentcomments/" title="最近评论"><i class="solitude fas fa-circle-chevron-right"></i></a></div></div><div class="console_recentcomments"><script pjax>(async () => {
+    document.querySelector('.console-card .console_recentcomments').textContent = `加载中...`
+    const emojiReg = /<img class="tk-owo-emotion" [^>]+>/g
+    let cache = utils.saveToLocal.get('twikoo-recent-comments-console')
+    if (cache) {
+        setHtml(document.querySelector('.console-card .console_recentcomments'), cache)
+        return
+    }
+    let ls = []
+
+    await fetch('https://twikoo.imoyan.top/', {
+        method: "POST",
+        body: JSON.stringify({
+            "event": "GET_RECENT_COMMENTS",
+            "includeReply": true,
+            "pageSize": 6
+        }),
+        headers: {'Content-Type': 'application/json'}
+    }).then(res => res.json()).then(async ({data}) => {
+        for (const i of data) {
+            if (i.avatar === undefined) i.avatar = 'https://gravatar.com/avatar/avatar/d615d5793929e8c7d70eab5f00f7f5f1?d=mp'
+            let title = ''
+            if (i.url) {
+                await fetch(i.url).then(res => res.text()).then(html => {
+                    const parser = new DOMParser()
+                    const doc = parser.parseFromString(html, 'text/html')
+                    title = doc.querySelector('title').innerText
+                }).catch(() => {
+                    title = i.url
+                })
+            }
+            if (title.indexOf('|') > 0) {
+                title = title.split('|')[0]
+            }
+            ls.push({
+                avatar: i.avatar,
+                nick: i.nick,
+                title: title,
+                content: i.comment,
+                url: i.url + '#' + i.id,
+                time: i.created
+            })
+        }
+        setHtml(document.querySelector('.console-card .console_recentcomments'), ls)
+        utils.saveToLocal.set('twikoo-recent-comments-console', ls, 0.2)
+    });
+
+    function setHtml(el, data) {
+        el.innerHTML = data.length !== 0 ? data.map(i => `
+            <div class="comment-card" title="${i.title}" onclick="pjax.loadUrl('${i.url}')">
+                <div class="comment-info">
+                    <img src="${i.avatar}" class="nolazyload" alt="${i.nick}">
+                    <div>
+                        <span class="comment-user">${i.nick}</span>
+                    </div>
+                    <time class="comment-time" datetime="${new Date(i.time)}"></time>
+                </div>
+                <div class="comment-content">${formatContent(i.content)}</div>
+                <div class="comment-title">
+                <i class="solitude fas fa-comment"></i>
+                ${i.title}</div>
+            </div>
+        `).join('') : `暂无评论...`
+        if (typeof utils !== 'undefined') utils.diffDateFormat(document.querySelectorAll('.comment-time'))
+        else {
+            document.addEventListener('pjax:complete', () => utils.diffDateFormat(document.querySelectorAll('.comment-time')))
+            document.addEventListener('DOMContentLoaded', () => utils.diffDateFormat(document.querySelectorAll('.comment-time')))
+        }
+    }
+
+    function formatContent(content) {
+        content = content.replace(emojiReg, '表情')
+        content = content.replace(/<\/*br>|[\s\uFEFF\xA0]+/g, '');
+        content = content.replace(/<img.*?>/g, '[图片]');
+        content = content.replace(/<a.*?>.*?<\/a>/g, '[链接]');
+        content = content.replace(/<pre.*?>.*?<\/pre>/g, '[代码]');
+        content = content.replace(/<.*?>/g, '');
+        return content
+    }
+})()</script></div></div></div><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">博客教程<sup>1</sup></a><a href="/tags/Uptime-Kuma/">Uptime Kuma<sup>1</sup></a><a href="/tags/Umami/">Umami<sup>1</sup></a><a href="/tags/Twikoo/">Twikoo<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="item"><a href="/archives/2025/05/"><span class="date">2025/05</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/"><span class="date">全部文章</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude fas fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div><div class="console-btn-item" id="consoleKeyboard" onclick="sco.switchKeyboard()"><span class="keyboardSwitch" title="键盘快捷键"><i class="solitude fas fa-keyboard"></i></span></div><div class="console-btn-item" id="consoleMusic" onclick="sco.musicToggle()"><span class="music-switch" title="音乐开关"><i class="solitude fas fa-compact-disc"></i></span></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="sco.switchCommentBarrage()"><span class="commentBarrage"><i class="solitude fas fa-comment"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/recentcomments/"><div class="headline">评论</div><div class="length-num" id="twikoo_allcount"><i class="solitude fas fa-spinner fa-spin"></i></div><script pjax="pjax">(async () => {
+  await fetch('https://twikoo.imoyan.top/', {
+    method: "POST",
+    body: JSON.stringify({
+      "event": "GET_RECENT_COMMENTS",
+      "includeReply": true,
+      "pageSize": 999
+    }),
+    headers: {'Content-Type': 'application/json'}
+  }).then(res => res.json()).then(async ({data}) => {
+    document.querySelector('#twikoo_allcount').innerHTML = data.length
+  })
+})()</script></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网站</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/lanmoyan/" title="Github"><img class="nolazyload back-menu-item-icon" src="https://bu.dusays.com/2024/10/12/6709e93b3e05d.jpg" alt="Github"><span class="back-menu-item-text">Github</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://status.imoyan.top/" title="站点监测"><img class="nolazyload back-menu-item-icon" src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg" alt="站点监测"><span class="back-menu-item-text">站点监测</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://um.imoyan.cc/share/67b2gValE0Zy11qf/blog.imoyan.top" title="站点统计"><img class="nolazyload back-menu-item-icon" src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg" alt="站点统计"><span class="back-menu-item-text">站点统计</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li><li><a class="site-page child" href="/fcircle/"><i class="solitude  fas fa-wifi"></i><span>朋友圈</span></a></li><li><a class="site-page child" href="javascript:travelling()"><i class="solitude  fas fa-gift"></i><span>宝藏博主</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="solitude  fa-solid fa-film"></i><span>追番页</span></a></li><li><a class="site-page child" href="/gallery/"><i class="solitude  fa-solid fa-image"></i><span>相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>关于本站</span></a></li><li><a class="site-page child" href="/essay/"><i class="solitude  fas fa-toolbox"></i><span>闲言碎语</span></a></li><li><a class="site-page child" href="/kit/"><i class="solitude  fas fa-laptop"></i><span>我的装备</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"><a href="/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">博客教程<sup>1</sup></a><a href="/tags/Uptime-Kuma/">Uptime Kuma<sup>1</sup></a><a href="/tags/Umami/">Umami<sup>1</sup></a><a href="/tags/Twikoo/">Twikoo<sup>1</sup></a></div></div><span class="sidebar-menu-item-title">网站信息</span><div class="webinfo"><div class="webinfo-item"><div class="item-name">全站字数 :</div><div class="item-count">1.7k</div></div></div></div></div><!-- keyboard--><div id="keyboard-tips"><div class="keyboardTitle">博客快捷键</div><div class="keyboardList"><div class="keyboardItem"><div class="keyGroup"><div class="key">Shift</div><div class="key">K</div></div><div class="keyContent"><div class="content">关闭快捷菜单</div></div></div><div class="keyboardItem"><div class="keyGroup"><div class="key">Shift</div><div class="key">A</div></div><div class="keyContent"><div class="content">打开控制台</div></div></div><div class="keyboardItem"><div class="keyGroup"><div class="key">Shift</div><div class="key">M</div></div><div class="keyContent"><div class="content">播放/暂停音乐</div></div></div><div class="keyboardItem"><div class="keyGroup"><div class="key">Shift</div><div class="key">L</div></div><div class="keyContent"><div class="content">打开友链</div></div></div></div></div><script>const keyboard_addKeyup = (e) => {
+    if (e.key === 'Shift') {
+        document.getElementById('keyboard-tips').classList.remove('show');
+    }
+}
+
+const keyboard_addKeydown = (e) => {
+    const keyboards = [{"name":"关闭快捷菜单","key":"K","func":"keyboard"},{"name":"打开控制台","key":"A","sco":"showConsole"},{"name":"播放/暂停音乐","key":"M","sco":"musicToggle"},{"name":"打开友链","key":"L","url":"/links/"}];
+    if (e.key === 'Shift') {
+        document.getElementById('keyboard-tips').classList.add('show');
+    }
+
+    for (let i = 0; i < keyboards.length; i++) {
+        if (keyboards[i].url) {
+            if (keyboards[i].url.startsWith('http')) {
+                if (e.key === keyboards[i].key) {
+                    window.open(keyboards[i].url);
+                }
+            } else {
+                if (e.key === keyboards[i].key) {
+                    pjax.loadUrl(keyboards[i].url);
+                }
+            }
+        } else if (keyboards[i].sco) {
+            if (e.key === keyboards[i].key) {
+                sco[keyboards[i].sco]();
+            }
+        } else if (keyboards[i].func) {
+            if (e.key === keyboards[i].key) {
+                window[keyboards[i].func]();
+            }
+        }
+    }
+}
+
+function openKeyboard() {
+
+    window.addEventListener('keyup', keyboard_addKeyup);
+
+    window.addEventListener('keydown', keyboard_addKeydown);
+}
+function closeKeyboard() {
+
+    window.removeEventListener('keyup', keyboard_addKeyup);
+
+    window.removeEventListener('keydown', keyboard_addKeydown);
+}
+
+var sco_keyboards = localStorage.getItem('keyboard') === 'true'
+if (sco_keyboards) {
+    openKeyboard();
+    let keyboard = document.getElementById('consoleKeyboard');
+    keyboard?.classList.add('on');
+}</script><!-- righhtside--><div class="needEndHide" id="rightside"><div class="rs_hide"><button class="translate" type="button" title="简繁转换">简</button><button class="mode" type="button" title="显示模式切换" onclick="sco.switchDarkMode()"><i class="fas fa-circle-half-stroke"></i></button><button class="aside pc" type="button" title="侧边栏" onclick="sco.switchHideAside()"><i class="fas fa-arrows-alt-h"></i></button><button class="keyboard pc" type="button" title="键盘快捷键" onclick="sco.switchKeyboard()"><i class="fas fa-keyboard"></i></button></div><div class="rs_show"><button class="config" type="button" title="扩展" onclick="document.querySelector(&quot;.rs_hide&quot;).classList.toggle(&quot;show&quot;)"><i class="fas fa-gear fa-spin"></i></button><button class="mobile toc" type="button" title="目录" onclick="document.querySelector('#card-toc').classList.toggle('open')"><i class="fas fa-list"></i></button><button class="comment" type="button" title="评论" onclick="sco.scrollTo('post-comment')"><i class="fas fa-comment"></i></button><button class="barrage pc" type="button" title="弹" onclick="sco.switchCommentBarrage()"><span>弹</span></button><button class="top" type="button" title="返回顶部" onclick="sco.toTop()"><i class="fas fa-arrow-up"></i><span id="percent">0</span></button></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="back-home-button-icon solitude fas fa-bars-progress"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网站</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/lanmoyan/" title="Github"><img class="nolazyload back-menu-item-icon" src="https://bu.dusays.com/2024/10/12/6709e93b3e05d.jpg" alt="Github"><span class="back-menu-item-text">Github</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://status.imoyan.top/" title="站点监测"><img class="nolazyload back-menu-item-icon" src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg" alt="站点监测"><span class="back-menu-item-text">站点监测</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://um.imoyan.cc/share/67b2gValE0Zy11qf/blog.imoyan.top" title="站点统计"><img class="nolazyload back-menu-item-icon" src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg" alt="站点统计"><span class="back-menu-item-text">站点统计</span></a></div></div></div></div><a id="site-name" href="/" title="返回博客主页"><span class="title">Hao</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">推荐一些博客常用的服务搭建教程</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li><li><a class="site-page child" href="/fcircle/"><i class="solitude  fas fa-wifi"></i><span>朋友圈</span></a></li><li><a class="site-page child" href="javascript:travelling()"><i class="solitude  fas fa-gift"></i><span>宝藏博主</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="solitude  fa-solid fa-film"></i><span>追番页</span></a></li><li><a class="site-page child" href="/gallery/"><i class="solitude  fa-solid fa-image"></i><span>相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>关于本站</span></a></li><li><a class="site-page child" href="/essay/"><i class="solitude  fas fa-toolbox"></i><span>闲言碎语</span></a></li><li><a class="site-page child" href="/kit/"><i class="solitude  fas fa-laptop"></i><span>我的装备</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title=""><i class="solitude fas fa-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude fas fa-dice-d6"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude fas fa-magnifying-glass"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><label><i class="left"></i><i class="center"></i><i class="right"></i></label></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="https://bu.dusays.com/2025/07/28/6887566b63dd6.png" alt="推荐一些博客常用的服务搭建教程"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">博客教程</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>博客教程</span></a><a class="post-meta__tags" href="/tags/Uptime-Kuma/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>Uptime Kuma</span></a><a class="post-meta__tags" href="/tags/Umami/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>Umami</span></a><a class="post-meta__tags" href="/tags/Twikoo/"><span class="tags-name tags-punctuation"><i class="solitude fas fa-hashtag"></i>Twikoo</span></a></div></div></div></div><h1 class="post-title">推荐一些博客常用的服务搭建教程</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2025-05-26 22:49:05"><i class="post-meta-icon solitude fas fa-calendar-days"></i><time datetime="2025-05-26T14:49:05.000Z">2025-05-26T14:49:05.000Z</time></span><span class="post-meta-date" title="最后更新于 2025-08-11 12:00:00"><i class="post-meta-icon solitude fas fa-arrows-rotate"></i><time datetime="2025-08-11T04:00:00.000Z">2025-08-11T04:00:00.000Z</time></span><span class="post-meta-wordcount"><i class="post-meta-icon solitude fas fa-file-word" title="文章字数"></i><span class="word-count">1.7k</span><span class="post-meta-separator"></span><i class="post-meta-icon solitude fas fa-clock" title="阅读耗时"></i><span>8 分钟</span></span><span class="post-meta-position" title="作者IP归属地为江门"><i class="post-meta-icon solitude fas fa-location-dot"></i><span>江门</span></span><a class="post-meta-pv" href="/posts/f305/" title="文章热度"><i class="post-meta-icon solitude fas fa-fire-flame-curved"></i><span id="twikoo_visitors"><i class="solitude fas fa-spinner fa-spin"></i></span></a><span class="post-meta-commentcount" title="评论数" onclick="sco.scrollTo('post-comment')"><i class="solitude fas fa-comment"></i><a href="/posts/f305/#post-comment"><span class="twikoo-count"><i class="solitude fas fa-spinner fa-spin"></i></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content article-container"><p><code>本文教程</code>中大部分参考：<br><a target="_blank" rel="noopener" href="https://blog.trfox.top/posts/develope/make-uptimekuma-statuspage-beautiful">UptimeKuma默认状态页面美化</a><br><a target="_blank" rel="noopener" href="https://blog.zhheo.com/p/61e9.html">使用Docker搭建Umami统计，显示近一年的pv、uv数据的API搭建</a><br><a target="_blank" rel="noopener" href="https://blog.zhheo.com/p/99d020fe.html">Twikoo腾讯云函数部署转移到私有部署</a><br><code>转载请注明出处！</code></p>
+<h2 id="近况"><a href="#近况" class="headerlink" title="近况"></a>近况</h2><p>最近在折腾博客，根据现有情况（博客运行多年，没有更新文章。。。ps：其实有更新几篇，但大多数的文章都是引荐大佬的教程所制作，没有形成写作习惯。。。无非就是我特懒）</p>
+<h2 id="服务集合"><a href="#服务集合" class="headerlink" title="服务集合"></a>服务集合</h2><p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888a5b0b4721.png" alt="Uptime Kuma预览"></p>
+<p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888e6b85b18f.png" alt="umami预览"></p>
+<h2 id="uptime-kuma"><a href="#Uptime-Kuma" class="headerlink" title="Uptime Kuma"></a>Uptime Kuma</h2><ul>
+<li>我这边服务器用的是 <a target="_blank" rel="noopener" href="https://bt.cn/">宝塔面板</a> ，宝塔面板左侧菜单点击<code>终端</code>，输入以下<code>命令行</code></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1</span><br></pre></td></tr></table></figure>
+
+<p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888a15ceb315.png" alt="安装Uptime Kuma"></p>
+<ul>
+<li>点击Docker，再点击容器，点击最右侧的管理按钮，这里简单设置一下<code>反代与SSL</code></li>
+</ul>
+<p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888a15d4c915.png" alt="设置反代&amp;SSL"></p>
+<ul>
+<li>这时可以在浏览器地址栏输入这个域名访问，设置好你的账号及密码，进入后台配置页面</li>
+</ul>
+<p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888a15be6bfa.png" alt="Uptime Kuma后台"></p>
+<ul>
+<li>点击添加监控项，显示名称输入名称- -输入URL- -心跳间隔（这里推荐先选择初始60s，保存之后再修改为600s）–最后保存</li>
+</ul>
+<p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888a15c40a67.png" alt="添加监控项"></p>
+<ul>
+<li>状态页面–新的状态页–填写名称及路径–下一步</li>
+</ul>
+<p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888a15c540b3.png" alt="新建状态页"> </p>
+<p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888a31852b59.png" alt="新建状态页"></p>
+<ul>
+<li><p>底部自定义文本（这里可设置备案号）;显示标签（这个可以去首页右上角头像设置–标签–添加新标签）;显示Powered By（按需设置）显示证书有效期（按需设置）</p>
+</li>
+<li><p>添加分组–添加监控项……</p>
+</li>
+</ul>
+<p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888a42a743a8.png" alt="设置状态页"></p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>所有样式的版权均归张洪Heo所有，如有侵权可联系删除</p>
+<p>洪哥相似的CSS样式：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attr">--global-bg</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attr">--hr-border</span>: <span class="number">#97bcfb</span>;</span><br><span class="line">  <span class="attr">--hr-before-color</span>: <span class="number">#6ea2f9</span>;</span><br><span class="line">  <span class="attr">--search-bg</span>: <span class="number">#f6f8fa</span>;</span><br><span class="line">  <span class="attr">--search-input-color</span>: <span class="number">#4c4948</span>;</span><br><span class="line">  <span class="attr">--search-result-title</span>: <span class="number">#4c4948</span>;</span><br><span class="line">  <span class="attr">--preloader-bg</span>: <span class="number">#37474f</span>;</span><br><span class="line">  <span class="attr">--preloader-color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attr">--tab-border-color</span>: <span class="number">#f0f0f0</span>;</span><br><span class="line">  <span class="attr">--tab-button-bg</span>: <span class="number">#f0f0f0</span>; <span class="comment">/* 修正拼写错误：botton → button */</span></span><br><span class="line">  <span class="attr">--tab-button-color</span>: <span class="number">#1f2d3d</span>; <span class="comment">/* 修正拼写错误 */</span></span><br><span class="line">  <span class="attr">--tab-button-hover-bg</span>: <span class="number">#dcdcdc</span>; <span class="comment">/* 修正拼写错误 */</span></span><br><span class="line">  <span class="attr">--tab-button-active-bg</span>: <span class="number">#fff</span>; <span class="comment">/* 修正拼写错误 */</span></span><br><span class="line">  <span class="attr">--sidebar-bg</span>: <span class="number">#f6f8fa</span>;</span><br><span class="line">  <span class="attr">--btn-hover-color</span>: <span class="number">#ff7242</span>;</span><br><span class="line">  <span class="attr">--btn-color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attr">--btn-bg</span>: <span class="number">#307af6</span>;</span><br><span class="line">  <span class="attr">--text-bg-hover</span>: <span class="number">#307af6</span>;</span><br><span class="line">  <span class="attr">--light-grey</span>: <span class="number">#eee</span>;</span><br><span class="line">  <span class="attr">--text-highlight-color</span>: <span class="number">#1f2d3d</span>;</span><br><span class="line">  <span class="attr">--blockquote-color</span>: <span class="number">#6a737d</span>;</span><br><span class="line">  <span class="attr">--blockquote-bg</span>: <span class="built_in">rgba</span>(<span class="number">73</span>, <span class="number">177</span>, <span class="number">245</span>, <span class="number">0.1</span>);</span><br><span class="line">  <span class="attr">--reward-pop</span>: <span class="number">#f5f5f5</span>;</span><br><span class="line">  <span class="attr">--toc-link-color</span>: <span class="number">#666261</span>;</span><br><span class="line">  <span class="attr">--card-box-shadow</span>: <span class="number">0</span> <span class="number">3px</span> <span class="number">8px</span> <span class="number">6px</span> <span class="built_in">rgba</span>(<span class="number">7</span>, <span class="number">17</span>, <span class="number">27</span>, <span class="number">0.06</span>);</span><br><span class="line">  <span class="attr">--card-hover-box-shadow</span>: <span class="number">0</span> <span class="number">3px</span> <span class="number">8px</span> <span class="number">6px</span> <span class="built_in">rgba</span>(<span class="number">7</span>, <span class="number">17</span>, <span class="number">27</span>, <span class="number">0.15</span>);</span><br><span class="line">  <span class="attr">--heo-theme</span>: <span class="number">#425AEF</span>;</span><br><span class="line">  <span class="attr">--heo-theme-op</span>: <span class="number">#4259ef23</span>;</span><br><span class="line">  <span class="attr">--heo-theme-op-deep</span>: <span class="number">#4259efdd</span>;</span><br><span class="line">  <span class="attr">--heo-theme-op-light</span>: <span class="number">#4259ef0d</span>;</span><br><span class="line">  <span class="attr">--heo-theme-none</span>: <span class="number">#4259ef01</span>;</span><br><span class="line">  <span class="attr">--heo-blue</span>: <span class="number">#425AEF</span>;</span><br><span class="line">  <span class="attr">--heo-red</span>: <span class="number">#f04a63</span>;</span><br><span class="line">  <span class="attr">--heo-pink</span>: <span class="number">#FF7C7C</span>;</span><br><span class="line">  <span class="attr">--heo-green</span>: <span class="number">#57bd6a</span>;</span><br><span class="line">  <span class="attr">--heo-yellow</span>: <span class="number">#936900</span>;</span><br><span class="line">  <span class="attr">--heo-yellow-op</span>: <span class="number">#d99c001a</span>;</span><br><span class="line">  <span class="attr">--heo-orange</span>: <span class="number">#e38100</span>;</span><br><span class="line">  <span class="attr">--heo-purple</span>: <span class="number">#7a60d2</span>;</span><br><span class="line">  <span class="attr">--heo-fontcolor</span>: <span class="number">#363636</span>;</span><br><span class="line">  <span class="attr">--heo-background</span>: <span class="number">#f7f9fe</span>;</span><br><span class="line">  <span class="attr">--heo-reverse</span>: <span class="number">#000</span>;</span><br><span class="line">  <span class="attr">--heo-maskbg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.6</span>);</span><br><span class="line">  <span class="attr">--heo-maskbgdeep</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.85</span>);</span><br><span class="line">  <span class="attr">--heo-hovertext</span>: <span class="built_in">var</span>(--heo-theme); <span class="comment">/* 修正：使用已定义的变量 */</span></span><br><span class="line">  <span class="attr">--heo-ahoverbg</span>: <span class="number">#F7F7FA</span>;</span><br><span class="line">  <span class="attr">--heo-lighttext</span>: <span class="built_in">var</span>(--heo-theme); <span class="comment">/* 修正：使用已定义的变量 */</span></span><br><span class="line">  <span class="attr">--heo-secondtext</span>: <span class="built_in">rgba</span>(<span class="number">60</span>, <span class="number">60</span>, <span class="number">67</span>, <span class="number">0.8</span>);</span><br><span class="line">  <span class="attr">--heo-scrollbar</span>: <span class="built_in">rgba</span>(<span class="number">60</span>, <span class="number">60</span>, <span class="number">67</span>, <span class="number">0.4</span>);</span><br><span class="line">  <span class="attr">--heo-card-btn-bg</span>: <span class="number">#edf0f7</span>;</span><br><span class="line">  <span class="attr">--heo-post-blockquote-bg</span>: <span class="number">#fafcff</span>;</span><br><span class="line">  <span class="attr">--heo-post-tabs-bg</span>: <span class="number">#f2f5f8</span>;</span><br><span class="line">  <span class="attr">--heo-secondbg</span>: <span class="number">#f7f7f9</span>;</span><br><span class="line">  <span class="attr">--heo-shadow-nav</span>: <span class="number">0</span> <span class="number">5px</span> <span class="number">12px</span> -<span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">102</span>, <span class="number">68</span>, <span class="number">68</span>, <span class="number">0.05</span>);</span><br><span class="line">  <span class="attr">--heo-card-bg</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attr">--heo-card-bg-op</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.05</span>); <span class="comment">/* 修正：定义这个变量 */</span></span><br><span class="line">  <span class="attr">--heo-card-bg-none</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0</span>);</span><br><span class="line">  <span class="attr">--heo-shadow-lightblack</span>: <span class="number">0</span> <span class="number">5px</span> <span class="number">12px</span> -<span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">102</span>, <span class="number">68</span>, <span class="number">68</span>, <span class="number">0.00</span>);</span><br><span class="line">  <span class="attr">--heo-shadow-light2black</span>: <span class="number">0</span> <span class="number">5px</span> <span class="number">12px</span> -<span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">102</span>, <span class="number">68</span>, <span class="number">68</span>, <span class="number">0.00</span>);</span><br><span class="line">  <span class="attr">--heo-card-border</span>: <span class="number">#e3e8f7</span>;</span><br><span class="line">  <span class="attr">--heo-shadow-border</span>: <span class="number">0</span> <span class="number">8px</span> <span class="number">16px</span> -<span class="number">4px</span> <span class="number">#2c2d300c</span>;</span><br><span class="line">  <span class="attr">--style-border</span>: <span class="number">1px</span> solid <span class="built_in">var</span>(--heo-card-border);</span><br><span class="line">  <span class="attr">--style-border-always</span>: <span class="number">1px</span> solid <span class="built_in">var</span>(--heo-card-border);</span><br><span class="line">  <span class="attr">--style-border-hover</span>: <span class="number">1px</span> solid <span class="built_in">var</span>(--heo-theme); <span class="comment">/* 修正：使用已定义的变量 */</span></span><br><span class="line">  <span class="attr">--style-border-hover-always</span>: <span class="number">1px</span> solid <span class="built_in">var</span>(--heo-theme); <span class="comment">/* 修正 */</span></span><br><span class="line">  <span class="attr">--style-border-dashed</span>: <span class="number">1px</span> dashed <span class="built_in">var</span>(--heo-theme-op);</span><br><span class="line">  <span class="attr">--style-border-forever</span>: <span class="number">2px</span> solid <span class="built_in">var</span>(--heo-theme); <span class="comment">/* 修正 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--heo-background); <span class="comment">/* 使用已定义的变量 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.shadow-box</span> &#123;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="built_in">var</span>(--heo-shadow-border);</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--heo-card-bg);</span><br><span class="line">  <span class="attribute">border</span>: <span class="built_in">var</span>(--style-border);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.item-name</span> &#123;</span><br><span class="line">  <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.btn-primary</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--heo-green);</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--btn-color); <span class="comment">/* 使用已定义的变量 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hp-bar-big</span> <span class="selector-class">.beat</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--heo-green);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bg-primary</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--heo-green) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.title-flex</span> &#123;</span><br><span class="line">  <span class="attribute">justify-content</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.refresh-info</span><span class="selector-class">.mb-2</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.mt-3</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">3rem</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">text-decoration</span>: none <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.monitor-list</span> <span class="selector-class">.monitor-list</span> &#123;</span><br><span class="line">  <span class="attribute">min-height</span>: <span class="number">46px</span>;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="built_in">repeat</span>(<span class="number">2</span>, <span class="number">1</span>fr);</span><br><span class="line">  <span class="attribute">gap</span>: <span class="number">1rem</span>; <span class="comment">/* 添加间距 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">768px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.monitor-list</span> <span class="selector-class">.monitor-list</span> &#123;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: <span class="number">1</span>fr;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="selector-class">.col-md-8</span>, <span class="selector-class">.col-md-4</span> &#123;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.overall-status</span> <span class="selector-class">.ok</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--heo-green) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.item</span> <span class="selector-class">.row</span> &#123;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">  <span class="attribute">align-items</span>: center; <span class="comment">/* 添加垂直居中 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.col-md-8</span> &#123;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">  <span class="attribute">flex-direction</span>: column;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.col-md-4</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bg-danger</span>, <span class="selector-class">.bg-warning</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0.25rem</span> <span class="number">0.5rem</span>; <span class="comment">/* 添加内边距 */</span></span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">4px</span>; <span class="comment">/* 添加圆角 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.monitor-list</span> <span class="selector-class">.item</span> <span class="selector-class">.info</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">  <span class="attribute">gap</span>: <span class="number">0.5rem</span>; <span class="comment">/* 添加间距 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bg-primary</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 添加响应式调整 */</span></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">max-width</span>: <span class="number">576px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.item</span> <span class="selector-class">.row</span> &#123;</span><br><span class="line">    <span class="attribute">flex-direction</span>: column;</span><br><span class="line">    <span class="attribute">align-items</span>: flex-start;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="selector-class">.col-md-8</span>, <span class="selector-class">.col-md-4</span> &#123;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="umami部署"><a href="#umami部署" class="headerlink" title="umami部署"></a>umami部署</h2><h3 id="添加站点amp拉取镜像"><a href="#添加站点-拉取镜像" class="headerlink" title="添加站点&amp;拉取镜像"></a>添加站点&amp;拉取镜像</h3><ul>
+<li>在宝塔面板中添加站点，输入域名，点击确定</li>
+</ul>
+<p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888dab7c7371.png" alt="添加站点"></p>
+<ul>
+<li>进入根目录，新建 <code>docker-compose.yaml</code> 文件，填写下面的内容：</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">umami:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">umami</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">umamisoftware/umami:postgresql-latest</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;3000:3000&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">DATABASE_URL:</span> <span class="string">postgresql://umami:umami@db:5432/umami</span></span><br><span class="line">      <span class="attr">DATABASE_TYPE:</span> <span class="string">postgresql</span></span><br><span class="line">      <span class="attr">HASH_SALT:</span> <span class="string">replace-me-with-a-random-string</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">db</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">  <span class="attr">db:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">umami-db</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">postgres:12-alpine</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">POSTGRES_DB:</span> <span class="string">umami</span></span><br><span class="line">      <span class="attr">POSTGRES_USER:</span> <span class="string">umami</span></span><br><span class="line">      <span class="attr">POSTGRES_PASSWORD:</span> <span class="string">umami</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./sql/schema.postgresql.sql:/docker-entrypoint-initdb.d/schema.postgresql.sql:ro</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./umami-db-data:/var/lib/postgresql/data</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>然后点击终端执行 <code>docker-compose up -d</code> 即可配置完成。</li>
+</ul>
+<p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888dab68760a.png" alt="拉取镜像"></p>
+<ul>
+<li>添加反代，目标URL 填 <code>http://127.0.0.1:3000</code>, 发送域名 填 <code>$host</code></li>
+</ul>
+<p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888dab8ea0bc.png" alt="添加反代"></p>
+<h3 id="设置信息"><a href="#设置信息" class="headerlink" title="设置信息"></a>设置信息</h3><ul>
+<li>输入域名，umami默认的用户名为 <code>admin</code>，默认密码为 <code>umami</code>。登录之后右上角更改一下语言选项，调成中文。</li>
+</ul>
+<p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888dab7345d2.png" alt="更改语言"></p>
+<ul>
+<li>添加网站，输入<code>网站名及域名</code>，点击保存。</li>
+</ul>
+<p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888dab5a2a57.png" alt="添加网站"></p>
+<h3 id="如何插入统计代码"><a href="#如何插入统计代码" class="headerlink" title="如何插入统计代码"></a>如何插入统计代码</h3><h3 id="关于我页面数据"><a href="#“关于我”页面数据" class="headerlink" title="“关于我”页面数据"></a>“关于我”页面数据</h3><p>基于林木木的 <a target="_blank" rel="noopener" href="https://immmmm.com/hi-umami-api/">前端调用Umami API 数据</a>,我们可以写一个新的api。</p>
+<p>首先进入Hoppscotch，获取token： <a target="_blank" rel="noopener" href="https://hoppscotch.io/">https://hoppscotch.io/</a></p>
+<p><code>https://你的地址/api/auth/login</code></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;username&quot;</span><span class="punctuation">:</span> <span class="string">&quot;your name&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;password&quot;</span><span class="punctuation">:</span> <span class="string">&quot;your password&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>成功后会返回token信息：</p>
+<h2 id="twikoo私有部署"><a href="#Twikoo私有部署" class="headerlink" title="Twikoo私有部署"></a>Twikoo私有部署</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name twikoo -e TWIKOO_THROTTLE=1000 -p 8080:8080 -v $&#123;PWD&#125;/data:/app/data -d imaegoo/twikoo</span><br></pre></td></tr></table></figure>
+
+<p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888a94880a8f.png" alt="一键部署Twikoo"></p>
+<ul>
+<li>设置反代&amp;SSL，完成之后访问域名即可</li>
+</ul>
+<p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888a9b7a7583.png" alt="设置反代&amp;SSL"></p>
+<ul>
+<li>如果显示如图的字幕输出，则API部署好了</li>
+</ul>
+<p><img src= "" data-lazy-src="https://bu.dusays.com/2025/07/29/6888a94865d82.png" alt="Twikoo API正常"></p>
+<ul>
+<li>进入博客文件夹 <code>_config.anzhiyu.yml</code> 全局搜索 <code>comments</code>，use: Twikoo</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Comments System</span></span><br><span class="line"><span class="comment"># --------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="comment"># Up to two comments system, the first will be shown as default</span></span><br><span class="line">  <span class="comment"># Choose: Valine/Waline/Twikoo/Artalk</span></span><br><span class="line">  <span class="attr">use:</span> <span class="string">Twikoo</span> <span class="comment"># Twikoo/Waline</span></span><br><span class="line">  <span class="attr">text:</span> <span class="literal">true</span> <span class="comment"># Display the comment name next to the button</span></span><br><span class="line">  <span class="comment"># lazyload: The comment system will be load when comment element enters the browser&#x27;s viewport.</span></span><br><span class="line">  <span class="comment"># If you set it to true, the comment count will be invalid</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">count:</span> <span class="literal">false</span> <span class="comment"># Display comment count in post&#x27;s top_img</span></span><br><span class="line">  <span class="attr">card_post_count:</span> <span class="literal">false</span> <span class="comment"># Display comment count in Home Page</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Twikoo</span></span><br><span class="line"><span class="comment"># https://github.com/imaegoo/twikoo</span></span><br><span class="line"><span class="attr">twikoo:</span></span><br><span class="line">  <span class="attr">envId:</span> <span class="string">https://twikoo.imoyan.cc/</span></span><br><span class="line">  <span class="attr">region:</span></span><br><span class="line">  <span class="attr">visitor:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">option:</span></span><br></pre></td></tr></table></figure>
+
+<p><code>envId </code> 中填写 <code>服务器公网IP:8080</code> 或者 设置二级域名如 <code>https://twikoo.imoyan.cc/</code>，之后再进行hexo三连</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo ge</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2></article><div class="post-copyright"><div class="post-copyright__author_group"><div class="post-copyright__author_img"><img class="post-copyright__author_img_front" src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg"></div><div class="post-copyright__author_name">懒陌颜</div><div class="post-copyright__author_desc">这篇文章介绍了博客常用的服务搭建教程近况，包括服务集合、Uptime Kuma、umami部署以及Twikoo私有部署等内容。作者分享了自己使用宝塔面板进行站点监控、站点统计和评论系统搭建的过程，并详细说明了如何配置和部署这些服务。</div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div><div class="post-reward"><div class="reward-button" title="赞赏作者" onclick="AddRewardMask()"><i class="solitude fas fa-heart"></i>赞赏作者</div><div class="reward-main"><ul class="reward-all"><span class="reward-title"></span><ul class="reward-group"><li class="reward-item"><a target="_blank" rel="noopener" href="https://github.com/sponsors/everfu"><img class="post-qr-code-img nolazyload" src="https://bu.dusays.com/2024/10/12/6709e06bbaaf4.png" alt="微信" style="border-color: var(--efu-black)"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/"><img class="post-qr-code-img nolazyload" src="https://bu.dusays.com/2024/10/12/6709e06bbaa76.png" alt="支付宝" style="border-color: var(--efu-black)"></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/"><div class="reward-text">赞赏名单</div><div class="reward-dec"></div></a></ul></div></div><script>function RemoveRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "none";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "none";
+    }
+}
+
+function AddRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "flex";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "flex";
+    }
+}</script></div></div><div class="social-share"><a class="social-share-ico icon-qq" target="_blank" rel="noopener" href="https://connect.qq.com/widget/shareqq/index.html?url=https%3A%2F%2Fblog.imoyan.top%2Fposts%2Ff305%2F&amp;title=%E6%8E%A8%E8%8D%90%E4%B8%80%E4%BA%9B%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E7%9A%84%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B&amp;desc=undefined&amp;summary=undefined&amp;site=%E6%8E%A8%E8%8D%90%E4%B8%80%E4%BA%9B%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E7%9A%84%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B&amp;pics=https%3A%2F%2Fbu.dusays.com%2F2025%2F07%2F28%2F6887566b63dd6.png" title="分享到QQ"><i class="solitude fab fa-qq"></i></a><a class="social-share-ico icon-weibo" target="_blank" rel="noopener" href="http://service.weibo.com/share/share.php?url=https%3A%2F%2Fblog.imoyan.top%2Fposts%2Ff305%2F&amp;title=%E6%8E%A8%E8%8D%90%E4%B8%80%E4%BA%9B%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E7%9A%84%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B&amp;pic=https%3A%2F%2Fbu.dusays.com%2F2025%2F07%2F28%2F6887566b63dd6.png" title="分享到微博"><i class="solitude fab fa-weibo"></i></a><a class="social-share-ico icon-linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fblog.imoyan.top%2Fposts%2Ff305%2F&amp;title=%E6%8E%A8%E8%8D%90%E4%B8%80%E4%BA%9B%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E7%9A%84%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B&amp;summary=undefined&amp;source=%E6%8E%A8%E8%8D%90%E4%B8%80%E4%BA%9B%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E7%9A%84%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B" title="分享到LinkedIn"><i class="solitude fab fa-linkedin"></i></a><div class="social-share-ico icon-link" onclick="utils.copy(&quot;https://blog.imoyan.top/posts/f305/&quot;)" title="复制文章链接"><i class="solitude fas fa-link"></i></div><div class="social-share-ico icon-qrcode" title="使用手机扫码阅读这篇文章"><i class="solitude fas fa-qrcode"></i><div class="share-main"><div class="share-main-all"><div id="qrcode"></div><div class="reward-dec">使用手机扫码阅读这篇文章</div></div></div><script pjax>typeof QRCode === 'function' && new QRCode(document.getElementById("qrcode"), {
+    text: 'https://blog.imoyan.top/posts/f305/',
+    correctLevel : QRCode.CorrectLevel.L
+});
+window.addEventListener('DOMContentLoaded', () => {
+    new QRCode(document.getElementById("qrcode"), {
+        text: 'https://blog.imoyan.top/posts/f305/',
+        correctLevel : QRCode.CorrectLevel.L
+    });
+});
+</script></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">陌颜Hao</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>博客教程<span class="tagsPageCount">1</span></span></a><a class="post-meta__tags" href="/tags/Uptime-Kuma/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>Uptime Kuma<span class="tagsPageCount">1</span></span></a><a class="post-meta__tags" href="/tags/Umami/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>Umami<span class="tagsPageCount">1</span></span></a><a class="post-meta__tags" href="/tags/Twikoo/"><span class="tags-punctuation"><i class="solitude fas fa-hashtag"></i>Twikoo<span class="tagsPageCount">1</span></span></a></div></div></div><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude fas fa-comment"></i><span> 评论</span><span class="count"> (<span class="twikoo-count"><i class="solitude fas fa-spinner fa-spin"></i></span>)</span></div></div><div class="comment-wrap"><div id="twikoo-wrap"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg"></div><div class="description"></div><div class="bottom-group"><span class="left"><div class="name">懒陌颜</div><div class="desc">只有迎风，风筝才能飞得更高。</div></span><div class="social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/lanmoyan/" title="Github"><i class="solitude  fab fa-github"></i></a><a class="social-icon" target="_blank" rel="noopener" href="https://space.bilibili.com/1329819902" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fas fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%91%E5%86%B5"><span class="toc-text">近况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E9%9B%86%E5%90%88"><span class="toc-text">服务集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#uptime-kuma"><span class="toc-text">Uptime Kuma</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#umami%E9%83%A8%E7%BD%B2"><span class="toc-text">umami部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%AB%99%E7%82%B9amp%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F"><span class="toc-text">添加站点&amp;拉取镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E4%BF%A1%E6%81%AF"><span class="toc-text">设置信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E6%8F%92%E5%85%A5%E7%BB%9F%E8%AE%A1%E4%BB%A3%E7%A0%81"><span class="toc-text">如何插入统计代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%88%91%E9%A1%B5%E9%9D%A2%E6%95%B0%E6%8D%AE"><span class="toc-text">“关于我”页面数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#twikoo%E7%A7%81%E6%9C%89%E9%83%A8%E7%BD%B2"><span class="toc-text">Twikoo私有部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-text">写在最后</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/posts/f305/" title="推荐一些博客常用的服务搭建教程"><div class="thumbnail"><img alt="推荐一些博客常用的服务搭建教程" src="https://bu.dusays.com/2025/07/28/6887566b63dd6.png"></div><div class="content"><span class="title" href="/posts/f305/" title="推荐一些博客常用的服务搭建教程">推荐一些博客常用的服务搭建教程</span><span class="categories" href="/posts/f305/">博客教程</span></div></a></div></div></div></div></main><footer id="footer"><div id="st-footer-bar"><div class="footer-logo"><span>Hao</span></div><div class="footer-bar-description"></div><a class="footer-bar-link" href="/about/"></a></div><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/lanmoyan/" title="Github"><i class="solitude  fab fa-github"></i></a><a class="deal_link" href="mailto:o@imoyanblog@qq.com" title="Mail"><i class="solitude  far fa-envelope"></i></a><div class="nolazyload footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src= "" data-lazy-src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg" alt="返回顶部"></div><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/382175696/" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://v.douyin.com/_lmROB2NKp0/" title="Douyin"><i class="solitude  fab fa-tiktok"></i></a></div><div id="st-footer"><div class="footer-group"><h3 class="footer-title">服务</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://um.imoyan.cc/share/67b2gValE0Zy11qf/blog.imoyan.top" title="umami统计">umami统计</a><a class="footer-item" target="_blank" rel="noopener" href="https://www.foreverblog.cn/" title="十年之约">十年之约</a><a class="footer-item" target="_blank" rel="noopener" href="https://github.com/travellings-link/travellings" title="开往">开往</a></div></div><div class="footer-group"><h3 class="footer-title">生活</h3><div class="footer-links"><a class="footer-item" href="/kit/" title="我的装备">我的装备</a><a class="footer-item" target="_blank" rel="noopener" href="https://xc.imoyan.top/" title="时光记忆">时光记忆</a><a class="footer-item" href="/Update/" title="本站更新日志">本站更新日志</a></div></div><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/essay/" title="即刻短文">即刻短文</a><a class="footer-item" href="/message/" title="留言板">留言板</a></div></div><div class="footer-group"><h3 class="footer-title">协议</h3><div class="footer-links"><a class="footer-item" href="/Privacy/" title="隐私协议">隐私协议</a><a class="footer-item" href="/Cookies/" title="Cookies">Cookies</a><a class="footer-item" href="/Copyright/" title="版权协议">版权协议</a></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2025 By&nbsp;<a class="footer-bar-link" href="/"><img class="author-avatar" src= "" data-lazy-src="https://bu.dusays.com/2024/10/12/6709ddf3513c5.jpg">懒陌颜</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://beian.miit.gov.cn/" title="赣ICP备-2023017053号-1"><span class="beian-name">赣ICP备-2023017053号-1</span></a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude">主题：Solitude</a><a class="footer-bar-link" id="service-status" href="https://status.imoyan.top/" target="_blank" title="查看服务状态详情" data-api-url="https://status.imoyan.top/api/status-page/heartbeat/lmy" data-timeout="3000" data-refresh-interval="300000"><span class="status-indicator"><span class="status-dot"></span><span class="ripple"></span></span><span class="status-text">正在加载状态...</span></a></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="/message/" alt="留言">留言</a><a class="footer-bar-link" href="/atom.xml" alt="订阅">订阅</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude/blob/main/LICENSE" alt="License"><i class="solitude fas fa-copyright"></i><i class="solitude fab fa-creative-commons-by"></i><i class="solitude fab fa-creative-commons-nc"></i><i class="solitude fab fa-creative-commons-nd"></i></a></div></div></div><div class="comment-barrage needEndHide"></div><style>#service-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none !important;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--efu-secondtext);
+    transition: color 0.3s ease;
+}
+#service-status:hover {
+    color: var(--efu-main);
+    background: none !important;
+}
+.status-indicator {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #aaa; /* 默认灰色 */
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+.ripple {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: rgba(170, 170, 170, 0.3);
+    z-index: 1;
+    animation: ripple 1.5s infinite;
+}
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+.status-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* 服务正常状态 */
+#service-status.status-normal .status-dot {
+    background-color: #4caf50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+#service-status.status-normal .ripple {
+    background-color: rgba(76, 175, 80, 0.3);
+}
+
+/* 服务异常状态 */
+#service-status.status-warning .status-dot {
+    background-color: #ff9800;
+    box-shadow: 0 0 8px rgba(255, 152, 0, 0.4);
+}
+#service-status.status-warning .ripple {
+    background-color: rgba(255, 152, 0, 0.3);
+}
+
+/* 检测失败状态 */
+#service-status.status-error .status-dot {
+    background-color: #f44336;
+    box-shadow: 0 0 8px rgba(244, 67, 54, 0.4);
+}
+#service-status.status-error .ripple {
+    background-color: rgba(244, 67, 54, 0.3);
+}
+
+/* 检测中状态 */
+#service-status.status-loading .status-dot {
+    background-color: #2196f3;
+    box-shadow: 0 0 8px rgba(33, 150, 243, 0.4);
+}
+#service-status.status-loading .ripple {
+    background-color: rgba(33, 150, 243, 0.3);
+}
+</style><script>// 修复递归问题的状态管理器（无手动刷新按钮）
+(function() {
+    // 全局单例检查
+    if (window.__UptimeStatusManager) {
+        window.__UptimeStatusManager.refreshElement();
+        return;
+    }
+    
+    // 配置
+    const CACHE_KEY = 'uptime_status_cache';
+    const CACHE_TTL = 300000; // 5分钟
+    let managerInstance = null;
+    
+    // 状态管理器类
+    class UptimeStatusManager {
+        constructor(serviceElement) {
+            if (managerInstance) return managerInstance;
+            managerInstance = this;
+            
+            this.serviceElement = serviceElement;
+            this.config = {
+                apiUrl: serviceElement.dataset.apiUrl,
+                timeout: parseInt(serviceElement.dataset.timeout) || 3000,
+                refreshInterval: parseInt(serviceElement.dataset.refreshInterval) || 300000
+            };
+            
+            this.init();
+        }
+        
+        init() {
+            // 显示初始状态
+            this.displayCachedStatus();
+            
+            // 后台更新状态
+            setTimeout(() => this.updateStatus(), 100);
+            
+            // 设置定时刷新
+            this.refreshTimer = setInterval(() => this.updateStatus(), this.config.refreshInterval);
+            
+            // 监听页面可见性变化
+            document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState === 'visible') {
+                    this.updateStatus();
+                }
+            });
+            
+            // 监听storage事件（跨标签页同步）
+            window.addEventListener('storage', this.handleStorageEvent.bind(this));
+            
+            // 标记为已初始化
+            window.__UptimeStatusManager = this;
+        }
+        
+        displayCachedStatus() {
+            const cache = this.getCache();
+            if (cache) {
+                this.updateUI(cache.data);
+            } else {
+                this.showLoadingState();
+            }
+        }
+        
+        updateStatus() {
+            // 如果已有更新中的请求，跳过
+            if (this.isUpdating) return;
+            this.isUpdating = true;
+            
+            // 显示加载状态
+            this.showLoadingState();
+            
+            // 发起API请求
+            const apiUrl = `${this.config.apiUrl}?t=${Date.now()}`;
+            fetch(apiUrl, { 
+                signal: AbortSignal.timeout(this.config.timeout),
+                cache: 'no-store'
+            })
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP错误: ${response.status}`);
+                return response.json();
+            })
+            .then(data => {
+                // 更新缓存
+                this.setCache(data);
+                
+                // 更新UI
+                this.updateUI(data);
+                
+                // 广播更新到其他标签页
+                this.broadcastUpdate();
+            })
+            .catch(error => {
+                console.error('状态检测失败:', error);
+                
+                // 使用现有缓存（如有）
+                const cache = this.getCache();
+                if (cache) {
+                    this.updateUI(cache.data);
+                } else {
+                    this.showErrorState();
+                }
+            })
+            .finally(() => {
+                this.isUpdating = false;
+            });
+        }
+        
+        updateUI(data) {
+            if (!this.serviceElement) return;
+            
+            // 解析状态
+            const status = this.parseStatus(data);
+            
+            // 更新元素类
+            this.serviceElement.classList.remove(
+                'status-loading', 'status-normal', 'status-warning', 'status-error'
+            );
+            
+            if (status.allNormal) {
+                this.serviceElement.classList.add('status-normal');
+                this.serviceElement.querySelector('.status-text').textContent = '全部服务正常';
+            } else if (status.anyDown) {
+                this.serviceElement.classList.add('status-warning');
+                this.serviceElement.querySelector('.status-text').textContent = '部分服务异常';
+            } else {
+                this.serviceElement.classList.add('status-normal');
+                this.serviceElement.querySelector('.status-text').textContent = '全部服务正常';
+            }
+            
+            const updateTime = new Date().toLocaleTimeString();
+            this.serviceElement.title = `服务状态: ${this.serviceElement.querySelector('.status-text').textContent} | 更新: ${updateTime}`;
+        }
+        
+        showLoadingState() {
+            if (!this.serviceElement) return;
+            this.serviceElement.classList.remove('status-normal', 'status-warning', 'status-error');
+            this.serviceElement.classList.add('status-loading');
+            this.serviceElement.querySelector('.status-text').textContent = '更新中...';
+        }
+        
+        showErrorState() {
+            if (!this.serviceElement) return;
+            this.serviceElement.classList.remove('status-loading');
+            this.serviceElement.classList.add('status-error');
+            this.serviceElement.querySelector('.status-text').textContent = '检测失败';
+        }
+        
+        parseStatus(data) {
+            const services = Object.values(data.heartbeatList);
+            let allNormal = true;
+            let anyDown = false;
+            
+            services.forEach(service => {
+                if (service.length > 0) {
+                    const lastStatus = service[service.length - 1].status;
+                    if (lastStatus === 0) {
+                        anyDown = true;
+                        allNormal = false;
+                    }
+                }
+            });
+            
+            return { allNormal, anyDown };
+        }
+        
+        getCache() {
+            try {
+                const cacheStr = localStorage.getItem(CACHE_KEY);
+                if (!cacheStr) return null;
+                
+                const cache = JSON.parse(cacheStr);
+                
+                // 检查缓存有效期
+                if (Date.now() - cache.timestamp > CACHE_TTL) {
+                    localStorage.removeItem(CACHE_KEY);
+                    return null;
+                }
+                
+                return cache;
+            } catch (e) {
+                return null;
+            }
+        }
+        
+        setCache(data) {
+            const cache = {
+                data: data,
+                timestamp: Date.now()
+            };
+            
+            try {
+                localStorage.setItem(CACHE_KEY, JSON.stringify(cache));
+            } catch (e) {
+                console.warn('缓存写入失败', e);
+            }
+        }
+        
+        broadcastUpdate() {
+            try {
+                const cache = this.getCache();
+                if (cache) {
+                    localStorage.setItem(CACHE_KEY, JSON.stringify(cache));
+                }
+            } catch (e) {
+                console.warn('广播更新失败', e);
+            }
+        }
+        
+        handleStorageEvent(event) {
+            if (event.key === CACHE_KEY && event.newValue) {
+                try {
+                    const cache = JSON.parse(event.newValue);
+                    if (cache) {
+                        this.updateUI(cache.data);
+                    }
+                } catch (e) {
+                    console.warn('缓存解析失败', e);
+                }
+            }
+        }
+        
+        refreshElement() {
+            const newElement = document.getElementById('service-status');
+            if (!newElement) return;
+            
+            // 更新元素引用
+            this.serviceElement = newElement;
+            
+            // 显示当前缓存状态
+            const cache = this.getCache();
+            if (cache) {
+                this.updateUI(cache.data);
+            } else {
+                this.showLoadingState();
+            }
+        }
+    }
+    
+    // 初始化函数
+    function initUptimeStatus() {
+        const serviceElement = document.getElementById('service-status');
+        if (!serviceElement) return;
+        
+        // 单例检查
+        if (window.__UptimeStatusManager) {
+            window.__UptimeStatusManager.refreshElement();
+            return;
+        }
+        
+        // 创建新实例
+        new UptimeStatusManager(serviceElement);
+    }
+    
+    // 页面加载完成后初始化
+    document.addEventListener('DOMContentLoaded', function() {
+        // 延迟初始化以避免阻塞
+        setTimeout(initUptimeStatus, 50);
+    });
+    
+    // PJAX兼容性：在PJAX页面加载完成后更新
+    if (window.pjax) {
+        document.addEventListener('pjax:complete', function() {
+            if (window.__UptimeStatusManager) {
+                window.__UptimeStatusManager.refreshElement();
+            } else {
+                initUptimeStatus();
+            }
+        });
+    }
+})();</script></footer></div><!-- right_menu--><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="solitude fas fa-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="solitude fas fa-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="solitude fas fa-arrows-rotate"></i></div><div class="rightMenu-item" id="menu-top"><i class="solitude fas fa-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="solitude fas fa-clone"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="solitude fas fa-clipboard"></i><span>粘贴文本</span></div><div class="rightMenu-item" id="menu-commenttext"><i class="solitude fas fa-comment-medical"></i><span>引用到评论</span></div><div class="rightMenu-item" id="menu-newwindow"><i class="solitude far fa-window-maximize"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="solitude fas fa-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="solitude fas fa-clone"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="solitude fas fa-cloud-arrow-down"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="solitude fas fa-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="solitude fas fa-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="solitude fas fa-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="solitude fas fa-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="solitude fas fa-clone"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-randomPost" onclick="toRandomPost()||rm.hideRightMenu()"><i class="solitude fas fa-tower-broadcast"></i><span>随机文章</span></div><div class="rightMenu-item" onclick="pjax.loadUrl('/categories/')||rm.hideRightMenu()"><i class="solitude fas fa-clone"></i><span>全部分类</span></div><div class="rightMenu-item" onclick="pjax.loadUrl('/tags/')||rm.hideRightMenu()"><i class="solitude fas fa-tags"></i><span>全部标签</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-commentBarrage" onclick="sco.switchCommentBarrage()"><i class="solitude fas fa-comment"></i><span class="menu-commentBarrage-text">关闭热评</span></div><div class="rightMenu-item" id="menu-darkmode" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></div><div class="rightMenu-item" id="menu-translate"><i class="solitude fas fa-language"></i><span>轉為繁體</span></div></div></div><div id="rightmenu-mask"></div><!-- inject body--><div><script src="/js/utils.js?v=3.0.19"></script><script src="/js/main.js?v=3.0.19"></script><script src="/js/third_party/waterfall.min.js?v=3.0.19"></script><script src="https://cdn.jsdmirror.com/npm/pjax@0.2.8/pjax.min.js"></script><script src="https://cdn.jsdmirror.com/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script src="/js/third_party/universe.min.js?v=3.0.19"></script><script>dark()
+</script><script src="/js/tw_cn.js?v=3.0.19"></script><script src="https://cdn.jsdmirror.com/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdmirror.com/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script src="https://cdn.jsdmirror.com/npm/swiper@11.0.5/swiper-bundle.min.js"></script><script src="/js/post_ai.js?v=3.0.19"></script><script>var meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script src="https://cdn.jsdmirror.com/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdmirror.com/npm/meting@2.0.1/dist/Meting.min.js"></script><script src="https://cdn.jsdmirror.com/npm/colorthief@2.6.0/dist/color-thief.min.js"></script><script src="/js/covercolor/local.js?v=3.0.19"></script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://cdn.jsdmirror.com/npm/pace-js@1.2.4/pace.min.js"></script><script src="/js/right_menu.js?v=3.0.19"></script><div class="js-pjax"><script>(() => {
+    const getCount = () => {
+        const ele = document.querySelectorAll('.twikoo-count')
+        if (!ele) return
+        twikoo.getCommentsCount({
+            envId: 'https://twikoo.imoyan.top/',
+            region: '',
+            urls: [window.location.pathname],
+            includeReply: false
+        }).then(res => {
+            ele.forEach(item => item.textContent = res[0].count)
+        }).catch(err => {
+            console.error(err)
+        })
+    }
+    const init = () => {
+        twikoo.init(Object.assign({
+            el: '#twikoo-wrap',
+            envId: 'https://twikoo.imoyan.top/',
+            region: '',
+            path: window.location.pathname,
+            onCommentLoaded: () => {
+                GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+            }
+        }, null))
+
+         && getCount()
+        sco.owoBig({
+            body: '.OwO-body',
+            item: '.OwO-items li'
+        })
+
+        true && barrageTwikoo()
+    }
+
+    const loadTwikoo = () => {
+        if (typeof twikoo === 'object') setTimeout(init,0)
+        else utils.getScript('https://cdn.jsdmirror.com/npm/twikoo@1.6.41/dist/twikoo.all.min.js').then(init)
+    }
+
+    if ('Twikoo' === 'Twikoo' || true) {
+        if (true) utils.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+        else loadTwikoo()
+    } else {
+        window.loadTwoComment = loadTwikoo
+    }
+})()
+</script><script>async function barrageTwikoo() {
+    await fetch("https://twikoo.imoyan.top/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            event: "COMMENT_GET",
+            accessToken: "",
+            url: window.location.pathname
+        })
+    }).then(async res => {
+        if (!res.ok) throw new Error("HTTP error! status: " + res.status)
+        const data = await res.json();
+        const init = () => {
+            initializeCommentBarrage((data.data).map(item => Object.assign({
+                content: item.comment,
+                nick: item.nick,
+                mailMd5: item.mailMd5,
+                id: item.id
+            })))
+        }
+        if (typeof initializeCommentBarrage === "undefined") await utils.getScript('/js/third_party/barrage.min.js?v=3.0.19').then(init)
+        else init()
+    }).catch(error => console.error("An error occurred while fetching comments: ", error))
+}</script></div></div><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- google adsense--><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="solitude fas fa-xmark"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/tags/Hexo/')">Hexo</a><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/tags/umami/')">umami</a></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=3.0.19"></script><!-- music--><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips"><i class="music-control-btn fas fa-backward-step" id="music-prev" onclick="sco.musicSkipBack()"></i><i class="music-control-btn fas fa-pause" id="music-pause" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-play" id="music-play" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-forward-step" id="music-next" onclick="sco.musicSkipForward()"></i></div><meting-js id="6854173103" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></body></html>
+        <script>
+            const posts = ["posts/f305/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>
