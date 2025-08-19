@@ -281,12 +281,21 @@ const sco = {
     );
   },
   changeWittyWord() {
-    const greetings = GLOBAL_CONFIG.aside.witty_words;
+    const greetings = GLOBAL_CONFIG.aside.witty_words || [];
+    if (greetings.length === 0) {
+      document.getElementById("sayhi").textContent = "Solitude";
+      this.lastWittyWord = null;
+      return;
+    }
     const greetingElement = document.getElementById("sayhi");
     let randomGreeting;
-    do {
-      randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
-    } while (randomGreeting === this.lastWittyWord);
+    if (greetings.length === 1) {
+      randomGreeting = greetings[0];
+    } else {
+      do {
+        randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+      } while (randomGreeting === this.lastWittyWord);
+    }
     greetingElement.textContent = randomGreeting;
     this.lastWittyWord = randomGreeting;
   },
