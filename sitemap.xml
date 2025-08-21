@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.imoyan.top/friend.json</loc>
+    
+    <lastmod>2025-08-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.imoyan.top/recentcomments/index.html</loc>
     
     <lastmod>2025-08-17</lastmod>
@@ -59,15 +68,6 @@
     <loc>https://blog.imoyan.top/message/index.html</loc>
     
     <lastmod>2025-08-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.imoyan.top/friend.json</loc>
-    
-    <lastmod>2025-08-14</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -139,7 +139,7 @@
 
   <url>
     <loc>https://blog.imoyan.top/</loc>
-    <lastmod>2025-08-20</lastmod>
+    <lastmod>2025-08-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -147,28 +147,28 @@
   
   <url>
     <loc>https://blog.imoyan.top/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2025-08-20</lastmod>
+    <lastmod>2025-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.imoyan.top/tags/Uptime-Kuma/</loc>
-    <lastmod>2025-08-20</lastmod>
+    <lastmod>2025-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.imoyan.top/tags/Umami/</loc>
-    <lastmod>2025-08-20</lastmod>
+    <lastmod>2025-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.imoyan.top/tags/Twikoo/</loc>
-    <lastmod>2025-08-20</lastmod>
+    <lastmod>2025-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -177,7 +177,7 @@
   
   <url>
     <loc>https://blog.imoyan.top/categories/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2025-08-20</lastmod>
+    <lastmod>2025-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
